@@ -1,0 +1,12 @@
+{
+  "attempt_id": "attempt_0001",
+  "cohort": "target",
+  "completed_at": "2026-08-18T05:37:30.192725+00:00",
+  "completion_reason": "COMPONENTS_COMPLETE",
+  "dpca_status": "COMPLETE",
+  "llm_status": "COMPLETE",
+  "lot_status": "COMPLETE",
+  "mock": false,
+  "simulation_run": 444,
+  "status": "COMPLETE"
+}

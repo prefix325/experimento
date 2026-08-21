@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BANCA Opinion",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["opinion_id", "research_commit", "snapshot_hash", "mode", "criteria", "findings", "questions", "outcome", "confidence", "status"],
+  "properties": {
+    "opinion_id": {"type": "string", "minLength": 1},
+    "research_commit": {"type": "string", "pattern": "^[a-f0-9]{40,64}$"},
+    "snapshot_hash": {"type": "string", "pattern": "^[a-f0-9]{40,64}$"},
+    "mode": {"type": "string", "minLength": 1},
+    "criteria": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "findings": {"type": "array", "items": {"type": "object"}},
+    "questions": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "outcome": {"enum": ["PASS", "PASS_WITH_WARNINGS", "REMEDIATION_REQUIRED", "INCONCLUSIVE"]},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "status": {"const": "ISSUED"}
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "classification": "OPERATIONAL_CONSTRUCT_ONLY_PASS",
+  "gate_status": "REAL START READY",
+  "formal_sha256": "c8affff60f9e64af02698ef1b03a0ea4a2fdf07d8ef73d52de1e38bba7bf2a66",
+  "formal_powershell_command": [
+    "powershell",
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "X:\PSQZA_TEP_LOCAL\repo\scripts\run_formal_batch_offline.ps1",
+    "-RunOrdinal",
+    "1",
+    "-Cohort",
+    "target",
+    "-Detector",
+    "dpca",
+    "-ResultsDirectory",
+    "X:\PSQZA_TEP_LOCAL\results\formal\TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH\target",
+    "-ConstructOnly"
+  ],
+  "cwd": "X:\PSQZA_TEP_LOCAL\results\formal\TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH",
+  "cwd_exists": true,
+  "results_directory_exists": true,
+  "process_started": false,
+  "docker_executed": false,
+  "formal_run_started": false,
+  "formal_lots_started": 0,
+  "llm_inference_count": 0,
+  "dataset_files_opened": 0
+}

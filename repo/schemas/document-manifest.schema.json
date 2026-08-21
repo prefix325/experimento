@@ -1,0 +1,18 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties":false,
+  "properties":{
+    "bibliography":{"minLength":1,"type":"string"},
+    "build_required":{"const":true},
+    "canonical_source":{"const":"LATEX"},
+    "document_id":{"minLength":1,"type":"string"},
+    "kind":{"enum":["PREPROJECT","ARTICLE","DISSERTATION","DOCTORAL_AGENDA"]},
+    "main_tex":{"minLength":1,"type":"string"},
+    "source_commit":{"type":["string","null"]},
+    "source_tree_sha256":{"type":["string","null"]},
+    "status":{"enum":["DRAFT","PROVISIONAL","FROZEN","SUBMITTED","SUPERSEDED"]}
+  },
+  "required":["document_id","kind","status","canonical_source","main_tex","bibliography","source_commit","source_tree_sha256","build_required"],
+  "title":"Academic Document Manifest",
+  "type":"object"
+}

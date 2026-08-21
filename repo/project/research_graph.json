@@ -1,0 +1,196 @@
+{
+  "constraints": [
+    "Accepted claims require supporting accepted evidence.",
+    "Results do not imply claims without a recorded interpretation decision.",
+    "Doctoral-agenda entities cannot be promoted to THESIS without new authorization.",
+    "The local execution condition must be evidenced rather than merely asserted.",
+    "The TEP experiment may demonstrate non-externalization architecture but not confidentiality of real industrial secrets.",
+    "The study must not be framed as a mere replacement of a commercial GPT model by an open local model.",
+    "Zero-shot is defined with respect to the fault: the LLM may know the process and normal operation but must not receive fault-specific training, labeled IDV(13) examples, or the IDV(13) description in the primary condition.",
+    "DPCA is an independent statistical reference and not ground truth; simulator-controlled fault onset provides the experimental ground truth."
+  ],
+  "entities": [
+    {
+      "id": "dataset.tep",
+      "type": "DATASET",
+      "status": "PROVISIONAL",
+      "label": "Tennessee Eastman Process",
+      "role": "Initial public and simulated study environment",
+      "open_items": [
+        "Confirm exact dataset version and lineage.",
+        "Freeze sampling interval, run structure and fault injection protocol."
+      ]
+    },
+    {
+      "id": "problem.local_llm_gradual_fault",
+      "type": "PROBLEM",
+      "status": "PROVISIONAL",
+      "statement": "Investigate whether a general-purpose LLM, executed locally and contextualized only with process knowledge and normal operation, can detect the emergence of an abnormal condition in a multivariate industrial system under a fault-zero-shot protocol."
+    },
+    {
+      "id": "question.local_llm_idv13",
+      "type": "QUESTION",
+      "status": "PROVISIONAL",
+      "statement": "Can a general-purpose LLM, without fault-specific training and contextualized only with knowledge of the process and its normal operation, detect in a fault-zero-shot setting the emergence of an abnormal condition in a multivariate industrial system? The Tennessee Eastman Process with IDV(13) is the focal experimental case."
+    },
+    {
+      "id": "hypothesis.h1_zero_shot_detection",
+      "type": "HYPOTHESIS",
+      "status": "PROVISIONAL",
+      "label": "H1 — Zero-shot detection capability",
+      "statement": "A general-purpose LLM contextualized only with process knowledge and normal operation can detect an abnormal condition caused by a previously unseen fault without fault-specific training.",
+      "negative_result_allowed": true
+    },
+    {
+      "id": "hypothesis.h2_temporal_evidence_accumulation",
+      "type": "HYPOTHESIS",
+      "status": "PROVISIONAL",
+      "label": "H2 — Temporal accumulation of evidence",
+      "statement": "The LLM's anomaly-detection capability increases as multivariate fault evidence accumulates across causal temporal windows, producing an observable transition from NORMAL or EVIDENCE_INSUFFICIENT to ANOMALY after the true fault onset.",
+      "negative_result_allowed": true
+    },
+    {
+      "id": "hypothesis.h3_multivariate_evidence_coherence",
+      "type": "HYPOTHESIS",
+      "status": "PROVISIONAL",
+      "label": "H3 — Multivariate evidence coherence",
+      "statement": "When the LLM indicates an anomaly, the variables and trends cited in its justification correspond to changes actually observable in the system, even without prior knowledge of the IDV(13) identity.",
+      "negative_result_allowed": true
+    },
+    {
+      "id": "method.dpca_reference",
+      "type": "METHOD",
+      "status": "PROPOSED",
+      "label": "DPCA with T-squared and SPE/Q",
+      "role": "Independent statistical reference for detection timing and contributing variables; not ground truth and not an input to the LLM in the primary condition",
+      "not_a_competitive_target": true
+    },
+    {
+      "id": "method.local_llm",
+      "type": "METHOD",
+      "status": "PROPOSED",
+      "label": "Open general-purpose LLM executed locally",
+      "requirements": [
+        "No external inference API.",
+        "Offline execution must be testable.",
+        "The primary condition must use no fault-specific fine-tuning or training.",
+        "The primary condition may expose process semantics and normal-operation reference information.",
+        "The primary condition must not expose labeled IDV(13) examples, the IDV(13) description, hidden simulator fault flags, or DPCA outputs.",
+        "Model, quantization, prompt, parameters and hashes must be recorded.",
+        "RAM, VRAM, latency, tokens and outbound traffic must be measured.",
+        "The model must support an evidence-insufficient response."
+      ]
+    },
+    {
+      "id": "experiment.progressive_windows",
+      "type": "EXPERIMENT",
+      "status": "PROPOSED",
+      "scope": {
+        "environment": "Tennessee Eastman Process",
+        "focal_fault": "IDV(13)",
+        "primary_task": "Fault-zero-shot detection of abnormality rather than nominal identification of IDV(13)",
+        "ground_truth": "Simulator-controlled IDV(13) activation schedule",
+        "protocol": "Progressive causal windows without access to future observations",
+        "conditions": [
+          "DPCA independent numerical reference",
+          "Fault-blind local LLM with process knowledge, normal-operation reference and structured temporal representation, without DPCA output",
+          "Local LLM assisted by DPCA evidence, pending scope decision as a secondary condition"
+        ],
+        "metrics": [
+          "Detection delay from true fault onset",
+          "False alarms during normal operation",
+          "Consistency",
+          "Explanation fidelity and evidence coherence",
+          "Inference latency",
+          "RAM and VRAM consumption",
+          "Token consumption",
+          "Outbound network activity"
+        ]
+      }
+    },
+    {
+      "id": "contribution.reproducible_local_llm_protocol",
+      "type": "CONTRIBUTION",
+      "status": "PROPOSED",
+      "statement": "A reproducible protocol for evaluating fault-zero-shot anomaly detection by general-purpose local LLMs on multivariate industrial temporal data, including normal-reference context, structured causal windows, alarm and abstention rules, evidence-coherence evaluation and verifiable local execution."
+    },
+    {
+      "id": "reference.triad.xing_2024",
+      "type": "REFERENCE",
+      "status": "PROVISIONAL",
+      "citation_key": "Xing2024",
+      "title": "An Optimal Spatio-Temporal Hybrid Model Based on Wavelet Transform for Early Fault Detection",
+      "role": "Early detection, slow fault evolution and temporal windows",
+      "full_text_verification": "PENDING"
+    },
+    {
+      "id": "reference.triad.khan_2024",
+      "type": "REFERENCE",
+      "status": "PROVISIONAL",
+      "citation_key": "Khan2024FaultExplainer",
+      "title": "FaultExplainer: Leveraging Large Language Models for Interpretable Fault Detection and Diagnosis",
+      "role": "Direct antecedent for LLM use in TEP, explanation and hallucination risks",
+      "full_text_verification": "PENDING"
+    },
+    {
+      "id": "reference.triad.kai_2025",
+      "type": "REFERENCE",
+      "status": "PROVISIONAL",
+      "citation_key": "Kai2025",
+      "title": "Supervised deep learning algorithms for process fault detection and diagnosis under different temporal subsequence length of process data",
+      "role": "Control of temporal subsequence length",
+      "full_text_verification": "PENDING"
+    },
+    {
+      "id": "decision.avoid_model_swap_framing",
+      "type": "DECISION",
+      "status": "PROVISIONAL",
+      "statement": "Do not frame the project as replacing GPT-4o or o1-preview with a local open model; locality is an experimental condition and the contribution must be methodological."
+    },
+    {
+      "id": "result.tep_formal_progress_run58_failure",
+      "type": "RESULT",
+      "status": "PROVISIONAL",
+      "label": "Formal TARGET progress stopped at simulationRun 58",
+      "statement": "TARGET simulationRuns 1-57 are COMPLETE. In simulationRun 58, DPCA is COMPLETE, LLM attempt 0001 is FAILED, and the lot is FAILED because JSON serialization was truncated at the frozen 768-token generation ceiling.",
+      "evidence_ref": "evidence/tep-formal-run58-output-truncation-20260816.json"
+    },
+    {
+      "id": "decision.post_freeze_operational_amendment_001",
+      "type": "DECISION",
+      "status": "PROVISIONAL",
+      "statement": "Apply a prospective runtime overlay changing only /llm/max_output_tokens from 768 to 1024, without changing methodological logic or using detection outcomes for tuning, subject to synthetic technical acceptance before run 58 LLM attempt 0002."
+    },
+    {
+      "id": "limitation.post_freeze_operational_acceptance_gpu_memory",
+      "type": "LIMITATION",
+      "status": "PROVISIONAL",
+      "statement": "The first technical acceptance launch ended before inference because insufficient free GPU memory resulted in 0/29 layers offloaded; the real-start gate remains blocked and the one required synthetic inference remains pending.",
+      "evidence_ref": "evidence/tep-post-freeze-operational-acceptance-blocked-20260816.json"
+    },
+    {
+      "id": "result.post_freeze_operational_acceptance_pass",
+      "type": "RESULT",
+      "status": "PROVISIONAL",
+      "label": "Operational amendment synthetic technical acceptance passed",
+      "statement": "The single pending synthetic inference passed with 29/29 GPU layers offloaded, JSON parser PASS, 567 completion tokens, finish_reason=stop, network none, and zero TARGET/fault-free testing access; this is not a scientific result.",
+      "evidence_ref": "evidence/tep-post-freeze-operational-acceptance-pass-20260816.json"
+    }
+  ],
+  "required_entity_types": [
+    "PROBLEM",
+    "QUESTION",
+    "HYPOTHESIS",
+    "METHOD",
+    "DATASET",
+    "EXPERIMENT",
+    "RESULT",
+    "CLAIM",
+    "LIMITATION",
+    "CONTRIBUTION",
+    "REFERENCE",
+    "DECISION"
+  ],
+  "schema_version": "1.0.0",
+  "status": "PROVISIONAL"
+}

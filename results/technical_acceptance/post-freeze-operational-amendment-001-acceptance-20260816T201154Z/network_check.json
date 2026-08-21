@@ -1,0 +1,7 @@
+{
+  "dns_resolution_failed": true,
+  "external_https_failed": true,
+  "dns_error": "gaierror: [Errno -3] Temporary failure in name resolution",
+  "https_error": "URLError: <urlopen error [Errno -3] Temporary failure in name resolution>",
+  "network_none_verified": true
+}

@@ -1,0 +1,69 @@
+\documentclass[a4paper,12pt]{abntex2}
+\usepackage[left=3cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\input{../shared/latex/packages.tex}
+\input{../shared/latex/commands.tex}
+\input{../shared/latex/metadata.tex}
+\hypersetup{hidelinks}
+\begin{document}
+\begin{titlingpage}\centering
+{\bfseries\Large PRÉ-PROJETO DE PESQUISA\par}\vspace{3cm}
+{\Large \ResearchTitlePT\par}\vfill
+\researchauthor\par\researchinstitution\par\researchyear
+\end{titlingpage}
+\tableofcontents\newpage
+
+\section{Resumo}
+Este pré-projeto investiga o uso de uma LLM aberta e executada localmente para acompanhar a evolução temporal de uma falha gradual no Tennessee Eastman Process. O estudo adota a DPCA como referência instrumental, utiliza janelas progressivas sem acesso a observações futuras e separa desempenho de detecção, qualidade explicativa e custo computacional. A pesquisa permanece provisória: a falha IDV(13), a linhagem exata do conjunto de dados, o modelo local e a literatura de suporte ainda dependem de congelamento e verificação. O resultado esperado é um protocolo reproduzível, e não uma alegação prévia de superioridade da LLM.
+
+\textbf{Palavras-chave}: modelos de linguagem; diagnóstico de falhas; séries temporais; Tennessee Eastman Process; execução local; reprodutibilidade.
+
+\section{Introdução}
+\ResearchProblemPT
+
+A execução local é tratada como condição experimental verificável. Ela deve ser demonstrada por ausência de API externa, operação offline, controle de versão e hash, medição de tráfego de saída e registro dos recursos utilizados. \ResearchLimitationsPT
+
+\section{Problema e pergunta de pesquisa}
+O problema delimitado é: \ResearchProblemPT
+
+A pergunta de pesquisa vigente é:
+
+\begin{quote}
+\ResearchQuestionPT
+\end{quote}
+
+\section{Objetivos}
+\subsection{Objetivo geral}
+\ResearchObjectivePT
+
+\subsection{Objetivos específicos}
+\begin{enumerate}
+  \item congelar a linhagem do conjunto de dados, o intervalo de amostragem e o protocolo de injeção da IDV(13);
+  \item implementar a referência DPCA e registrar T2, SPE/Q, instante de alarme e variáveis contribuintes;
+  \item selecionar e versionar uma LLM aberta, sua quantização, o ambiente local de inferência e a representação temporal;
+  \item executar avaliações janela a janela com regras explícitas de alarme, persistência e abstenção;
+  \item comparar atraso, falsos alarmes, consistência, fidelidade explicativa, latência e uso de recursos;
+  \item preservar artefatos, parâmetros, prompts, hashes e logs necessários à reprodução.
+\end{enumerate}
+
+\section{Referencial teórico}
+\LiteratureStatusPT
+
+A revisão deverá distinguir detecção estatística, diagnóstico de falhas, explicação por modelos de linguagem, representação temporal e execução local. Trabalhos descobertos somente poderão sustentar alegações após verificação de identidade bibliográfica, texto integral legítimo, locador preciso e aderência à afirmação correspondente.
+
+\section{Metodologia}
+\ResearchMethodPT
+
+O protocolo preliminar contém três condições: DPCA como referência numérica; LLM local analisando representação temporal estruturada sem receber a saída da DPCA; e LLM local assistida por evidências da DPCA, cuja inclusão no primeiro estudo ainda depende de decisão de escopo. A saída da LLM será restrita a normal, anomalia ou evidência insuficiente, acompanhada de justificativa rastreável.
+
+\ResearchHypothesisPT
+
+\section{Cronograma}
+O trabalho será organizado em seis etapas sequenciais: verificação bibliográfica; congelamento de dados e protocolo; implementação da DPCA; seleção e preparação da LLM local; execução experimental; análise, redação e revisão. Datas institucionais serão incorporadas após confirmação do calendário acadêmico e não serão inferidas pelo sistema.
+
+\section{Resultados esperados}
+\ResearchContributionPT
+
+Não se pressupõe superioridade da LLM sobre a DPCA. São admissíveis resultados positivos, negativos ou inconclusivos, desde que o protocolo, os artefatos e os critérios de interpretação sejam preservados. \ResearchLimitationsPT
+
+\printbibliography[title={Referências}]
+\end{document}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["decision", "evidence", "summary", "confidence"],
+  "properties": {
+    "decision": {
+      "type": "string",
+      "enum": ["NORMAL", "EVIDENCE_INSUFFICIENT", "ANOMALY"]
+    },
+    "evidence": {
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["variable", "claim", "observation"],
+        "properties": {
+          "variable": {"type": "string"},
+          "claim": {
+            "type": "string",
+            "enum": ["HIGH", "LOW", "INCREASE", "REDUCTION", "VARIABILITY"]
+          },
+          "observation": {"type": "string"}
+        }
+      }
+    },
+    "summary": {"type": "string"},
+    "confidence": {"type": "null"}
+  }
+}

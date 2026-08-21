@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/prefix325/psqza-research/main/schemas/checkpoint.schema.json",
+  "title": "PSQZA Academic Continuity Checkpoint",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "status", "generated_from_commit", "updated_at",
+    "current_state", "research_graph", "history_index", "latest_conversation_summary",
+    "relevant_conversation_summaries", "latest_orientation", "latest_opinion",
+    "open_decisions", "pending_gates", "bootstrap_policy"
+  ],
+  "properties": {
+    "schema_version": {"enum": ["1.0.0", "1.1.0", "1.2.0", "1.3.0"]},
+    "status": {"enum": ["PROVISIONAL", "ACCEPTED", "BLOCKED"]},
+    "generated_from_commit": {"type": "string", "pattern": "^[a-f0-9]{40,64}$"},
+    "commit_lineage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_state_commit", "source_state_role", "checkpoint_container_commit_policy", "self_reference_prohibited"],
+      "properties": {
+        "source_state_commit": {"type": "string", "pattern": "^[a-f0-9]{40,64}$"},
+        "source_state_role": {"const": "STATE_SUMMARIZED_BY_CHECKPOINT"},
+        "checkpoint_container_commit_policy": {"const": "DERIVE_FROM_GIT_HISTORY"},
+        "self_reference_prohibited": {"const": true}
+      }
+    },
+    "governance_binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "agent_suite_repository", "agent_suite_commit", "veras_path", "veras_package_version",
+        "component_lock_schema_version", "component_lock_source_base_commit", "control_plane",
+        "execution_capability", "legacy_route_policy"
+      ],
+      "properties": {
+        "agent_suite_repository": {"const": "prefix325/agentes"},
+        "agent_suite_commit": {"type": "string", "pattern": "^[a-f0-9]{40,64}$"},
+        "veras_path": {"const": "active/specialized/VERAS"},
+        "veras_package_version": {"type": "string", "minLength": 1},
+        "component_lock_schema_version": {"type": "string", "minLength": 1},
+        "component_lock_source_base_commit": {"type": "string", "pattern": "^[a-f0-9]{40,64}$"},
+        "control_plane": {"const": "VERSA"},
+        "execution_capability": {"const": "RESTRICTED_WRITE_EXECUTION"},
+        "legacy_route_policy": {"const": "PRESERVE_PRE_VERAS_3_AS_HISTORICAL_ONLY"}
+      }
+    },
+    "updated_at": {"type": ["string", "null"], "format": "date-time"},
+    "current_state": {"const": "project/current_state.md"},
+    "research_graph": {"const": "project/research_graph.json"},
+    "research_ledger": {"const": "project/research_ledger.jsonl"},
+    "session_state": {"const": "project/session_state.json"},
+    "document_projection_map": {"const": "project/document_projection_map.json"},
+    "history_index": {"const": "history_conversation/index.json"},
+    "latest_conversation_summary": {"type": ["string", "null"], "pattern": "^history_conversation/[0-9]{12}_[a-z0-9]+(?:_[a-z0-9]+)*\\.md$"},
+    "relevant_conversation_summaries": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^history_conversation/[0-9]{12}_[a-z0-9]+(?:_[a-z0-9]+)*\\.md$"}},
+    "latest_orientation": {"type": ["string", "null"]},
+    "latest_opinion": {"type": ["string", "null"]},
+    "open_decisions": {"type": "array", "items": {"type": "string"}},
+    "pending_gates": {"type": "array", "items": {"type": "string"}},
+    "bootstrap_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["always_load", "selective_history", "maximum_additional_summaries", "on_failure"],
+      "properties": {
+        "always_load": {"type": "array", "minItems": 4, "uniqueItems": true, "items": {"type": "string"}},
+        "selective_history": {"const": true},
+        "maximum_additional_summaries": {"type": "integer", "minimum": 0},
+        "on_failure": {"const": "CONTEXT_LOAD_BLOCKED"}
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"schema_version": {"enum": ["1.1.0", "1.2.0", "1.3.0"]}}, "required": ["schema_version"]},
+      "then": {"required": ["commit_lineage"]}
+    },
+    {
+      "if": {"properties": {"schema_version": {"enum": ["1.2.0", "1.3.0"]}}, "required": ["schema_version"]},
+      "then": {"required": ["governance_binding"]}
+    },
+    {
+      "if": {"properties": {"schema_version": {"const": "1.3.0"}}, "required": ["schema_version"]},
+      "then": {
+        "required": ["research_ledger", "session_state", "document_projection_map"],
+        "properties": {
+          "bootstrap_policy": {
+            "properties": {
+              "always_load": {
+                "allOf": [
+                  {"minItems": 7},
+                  {"contains": {"const": "project/research_ledger.jsonl"}},
+                  {"contains": {"const": "project/session_state.json"}},
+                  {"contains": {"const": "project/document_projection_map.json"}}
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

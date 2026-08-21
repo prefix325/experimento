@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/prefix325/psqza-research/main/schemas/conversation-history-index.schema.json",
+  "title": "Conversation History Index — VERAS 3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "updated_at", "latest", "records"],
+  "properties": {
+    "schema_version": {"const": "1.1.0"},
+    "updated_at": {"type": ["string", "null"], "format": "date-time"},
+    "latest": {"type": ["string", "null"], "pattern": "^history_conversation/[0-9]{12}_[a-z0-9]+(?:_[a-z0-9]+)*\\.md$"},
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "filename", "path", "title", "summary", "created_at", "personas", "control_components", "legacy_components", "topics", "academic_status", "route_record_ids", "created_commit", "superseded_by", "privacy"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[0-9]{12}$"},
+          "filename": {"type": "string", "pattern": "^[0-9]{12}_[a-z0-9]+(?:_[a-z0-9]+)*\\.md$"},
+          "path": {"type": "string", "pattern": "^history_conversation/[0-9]{12}_[a-z0-9]+(?:_[a-z0-9]+)*\\.md$"},
+          "title": {"type": "string", "minLength": 1},
+          "summary": {"type": "string", "minLength": 1},
+          "created_at": {"type": "string", "format": "date-time"},
+          "personas": {"type": "array", "uniqueItems": true, "items": {"enum": ["PSQZA", "MECAI", "BANCA"]}},
+          "control_components": {"type": "array", "uniqueItems": true, "items": {"enum": ["VERSA"]}},
+          "legacy_components": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+          "topics": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+          "academic_status": {"enum": ["DISCUSSED", "PROPOSED", "PROVISIONAL", "ACCEPTED", "REJECTED", "SUPERSEDED"]},
+          "route_record_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+          "created_commit": {"type": ["string", "null"], "pattern": "^[a-f0-9]{40,64}$"},
+          "superseded_by": {"type": ["string", "null"], "pattern": "^history_conversation/[0-9]{12}_[a-z0-9]+(?:_[a-z0-9]+)*\\.md$"},
+          "privacy": {"type": "object"}
+        }
+      }
+    }
+  }
+}

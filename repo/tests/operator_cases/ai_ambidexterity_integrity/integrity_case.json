@@ -1,0 +1,196 @@
+{
+  "case_id": "operator-ai-ambidexterity-integrity-001",
+  "topic": "Ambidestria organizacional, assimilação de inteligência artificial e desempenho em PMEs",
+  "documents": [
+    "tests/operator_cases/ai_ambidexterity_integrity/article.md",
+    "tests/operator_cases/ai_ambidexterity_integrity/research_project.md",
+    "tests/operator_cases/ai_ambidexterity_integrity/masters_reflection.md",
+    "tests/operator_cases/ai_ambidexterity_integrity/doctoral_preagenda.md"
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-ZHOU-2021",
+      "title": "Ambidexterity in Social Capital, Dynamic Capability, and SMEs’ Performance: Quadratic Effect of Dynamic Capability and Moderating Role of Market Orientation",
+      "authors": ["Luanping Zhou", "Michael Yao-Ping Peng", "Lijin Shao", "Hsin-Yi Yen", "Ku-Ho Lin", "Muhammad Khalid Anser"],
+      "year": 2021,
+      "venue": "Frontiers in Psychology",
+      "doi": "10.3389/fpsyg.2020.584969",
+      "canonical_url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2020.584969/full",
+      "retrieved_at": "2026-08-06T14:50:00-03:00",
+      "access_scope": "FULL_TEXT",
+      "identity_verified": true,
+      "full_text_verified": true,
+      "license": "CC-BY",
+      "version": "VERSION_OF_RECORD",
+      "status": "CITABLE",
+      "metadata_hash": "4df5bb6e6c702484a542b2a849c793a8ec877123f0dcd295a28fbc97c2d66bf5",
+      "content_hash": "ab13b60a15c4dea9725c4a41ecc9b073460f556a3be0997b3c0f365d8fd231b6",
+      "fingerprints": ["ambidexterity and its interaction with market orientation have positive influence"]
+    },
+    {
+      "source_id": "SRC-CLAUSS-2021",
+      "title": "Organizational ambidexterity and competitive advantage: The role of strategic agility in the exploration-exploitation paradox",
+      "authors": ["Thomas Clauss", "Sascha Kraus", "Friedrich Lukas Kallinger", "Peter M. Bican", "Alexander Brem", "Norbert Kailer"],
+      "year": 2021,
+      "venue": "Journal of Innovation & Knowledge",
+      "doi": "10.1016/j.jik.2020.07.003",
+      "canonical_url": "https://www.sciencedirect.com/science/article/pii/S2444569X20300317",
+      "retrieved_at": "2026-08-06T14:51:00-03:00",
+      "access_scope": "FULL_TEXT",
+      "identity_verified": true,
+      "full_text_verified": true,
+      "license": "OPEN_ACCESS",
+      "version": "VERSION_OF_RECORD",
+      "status": "CITABLE",
+      "metadata_hash": "4090c4c22cbfde7abdc3cbfc9106c28e7a658658b118d949c3788ba070c49357",
+      "content_hash": "629d4fc848a705a11d4248a5e2cbe5cb313b3fcb65904882e6a83c2526ff8e37",
+      "fingerprints": ["an ambidextrous strategy seems to even negatively influence the competitive advantage"]
+    },
+    {
+      "source_id": "SRC-WAHAB-2024",
+      "title": "The impact of AI assimilation on firm performance in small and medium-sized enterprises: A moderated multi-mediation model",
+      "authors": ["Mohamad Deeb Abdul Wahab", "Mehrshad Radmehr"],
+      "year": 2024,
+      "venue": "Heliyon",
+      "doi": "10.1016/j.heliyon.2024.e29580",
+      "canonical_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11040060/",
+      "retrieved_at": "2026-08-06T14:52:00-03:00",
+      "access_scope": "FULL_TEXT",
+      "identity_verified": true,
+      "full_text_verified": true,
+      "license": "CC-BY",
+      "version": "VERSION_OF_RECORD",
+      "status": "CITABLE",
+      "metadata_hash": "0d710205148e2ec6f193ca40c038054efcb8b4d25074c44bae81ab50d645654b",
+      "content_hash": "9f16fb2982274ae2974aa406d2556be2cfc4e6c9f9fa0163dae20314d8435fd1",
+      "fingerprints": ["absorptive capacity and customer agility as parallel mediators"]
+    },
+    {
+      "source_id": "SRC-SANCHEZ-2025",
+      "title": "Navigating Uncertainty Through AI Adoption: Dynamic Capabilities, Strategic Innovation Performance, and Competitiveness in Ecuadorian SMEs",
+      "authors": ["Alexander Sánchez-Rodríguez", "Gelmar García-Vidal", "Yandi Fernández-Ochoa", "Rodobaldo Martínez-Vivar", "Andrea Estefanía Gavilanes-Venegas", "Reyner Pérez-Campdesuñer"],
+      "year": 2025,
+      "venue": "Administrative Sciences",
+      "doi": "10.3390/admsci15120468",
+      "canonical_url": "https://www.mdpi.com/2076-3387/15/12/468",
+      "retrieved_at": "2026-08-06T14:53:00-03:00",
+      "access_scope": "FULL_TEXT",
+      "identity_verified": true,
+      "full_text_verified": true,
+      "license": "CC-BY",
+      "version": "VERSION_OF_RECORD",
+      "status": "CITABLE",
+      "metadata_hash": "38fa9342ad8cea98a06db388346be4bb8b2630ec51de84741d448e5697f4d113",
+      "content_hash": "3ee94c587420ab622276c3c7f51a0e937f5a22cc5c2a5212e15078be4be05932",
+      "fingerprints": ["sense opportunities seize them through innovation and reconfigure resources"]
+    }
+  ],
+  "source_evidence": {
+    "SRC-ZHOU-2021": {"locator": "Abstract; Introduction; Methodology; Results; Conclusion", "summary": "Study of 234 Taiwanese SMEs reports nonlinear effects of exploration and exploitation and a positive interaction involving ambidexterity and market orientation.", "support_type": "SUPPORTING_OR_CONTEXTUAL"},
+    "SRC-CLAUSS-2021": {"locator": "Abstract; methods and results sections", "summary": "Mixed-method study of 150 German mid-sized firms reports that ambidexterity did not uniformly improve competitive advantage and could have a negative association without strategic fit.", "support_type": "CONTRADICTING_OR_BOUNDARY"},
+    "SRC-WAHAB-2024": {"locator": "Abstract; Introduction; Methods; Results; Discussion", "summary": "Cross-sectional study of 417 Lebanese SMEs tests AI assimilation, absorptive capacity, customer agility, organizational agility and firm performance, supporting mediated and moderated associations.", "support_type": "SUPPORTING_WITH_LIMITATIONS"},
+    "SRC-SANCHEZ-2025": {"locator": "Abstract; Theoretical Framework; Research Instrument; Results; Limitations", "summary": "Open-access study of 385 Ecuadorian SMEs reports uneven AI adoption, barriers in skills, data and finance, and associations between adoption, dynamic capabilities and strategic innovation performance.", "support_type": "SUPPORTING_WITH_CONTEXT"}
+  },
+  "source_conflicts": [
+    {
+      "conflict_id": "CONFLICT-AMBIDEXTERITY-PERFORMANCE",
+      "claim_scope": "Effect of organizational ambidexterity on performance and competitive advantage",
+      "supporting_source_ids": ["SRC-ZHOU-2021"],
+      "contradicting_source_ids": ["SRC-CLAUSS-2021"],
+      "context_difference": "The studies use different countries, firm populations, constructs, outcomes and operationalizations; one emphasizes SME performance and market orientation, while the other examines competitive advantage and strategic agility in German mid-sized firms.",
+      "resolution": "Treat ambidexterity as a contingent and potentially nonlinear architecture. Require tests of curvature, strategic agility and resource constraints rather than a universal positive hypothesis.",
+      "status": "RECORDED"
+    },
+    {
+      "conflict_id": "CONFLICT-AI-PERFORMANCE-CAUSALITY",
+      "claim_scope": "Whether AI assimilation or adoption causes superior SME performance",
+      "supporting_source_ids": ["SRC-WAHAB-2024", "SRC-SANCHEZ-2025"],
+      "contradicting_source_ids": ["SRC-CLAUSS-2021"],
+      "context_difference": "The AI studies report cross-sectional associations and mediation models in Lebanon and Ecuador, whereas the ambidexterity study shows that simultaneous strategic orientations can reduce competitive advantage under coordination costs.",
+      "resolution": "Frame AI-performance relationships as provisional associations mediated by organizational capabilities. Do not claim causality without temporal or quasi-experimental evidence.",
+      "status": "RECORDED"
+    }
+  ],
+  "similarity_findings": [
+    {
+      "finding_id": "SIM-ITER1-SANCHEZ-PHRASE",
+      "iteration": 1,
+      "method": "LOCAL_SOURCE_FINGERPRINT",
+      "query_or_fingerprint": "sense opportunities seize them through innovation and reconfigure resources",
+      "matched_source_id": "SRC-SANCHEZ-2025",
+      "risk": "DIRECT_COPY_RISK",
+      "finding": "The initial draft reproduced a distinctive sequence from the source's abstract without quotation marks.",
+      "remediation": "Replaced with independently structured wording: identificar sinais, comprometer recursos e redesenhar rotinas; retained the source citation and recorded the remediation.",
+      "status": "REMEDIATED",
+      "reviewed_at": "2026-08-06T15:02:00-03:00"
+    },
+    {
+      "finding_id": "SIM-ITER2-WEB-ARTICLE",
+      "iteration": 2,
+      "method": "WEB_EXACT_PHRASE",
+      "query_or_fingerprint": "prontidão organizacional antecede assimilação de IA",
+      "matched_source_id": null,
+      "risk": "NONE",
+      "finding": "No exact external match was identified for the tested distinctive phrase.",
+      "remediation": "None required.",
+      "status": "NO_MATCH",
+      "reviewed_at": "2026-08-06T15:05:00-03:00"
+    },
+    {
+      "finding_id": "SIM-ITER2-WEB-PROJECT",
+      "iteration": 2,
+      "method": "WEB_EXACT_PHRASE",
+      "query_or_fingerprint": "a coexistência de exploração e exploração pode impor custos de coordenação",
+      "matched_source_id": null,
+      "risk": "NONE",
+      "finding": "No exact external match was identified for the tested Portuguese formulation.",
+      "remediation": "None required.",
+      "status": "NO_MATCH",
+      "reviewed_at": "2026-08-06T15:06:00-03:00"
+    },
+    {
+      "finding_id": "SIM-ITER2-LOCAL-FINGERPRINTS",
+      "iteration": 2,
+      "method": "EXACT_NGRAM",
+      "query_or_fingerprint": "all registered source fingerprints against all final documents",
+      "matched_source_id": null,
+      "risk": "NONE",
+      "finding": "No final document contains an unquoted registered source fingerprint of eight or more normalized words.",
+      "remediation": "None required.",
+      "status": "NO_MATCH",
+      "reviewed_at": "2026-08-06T15:07:00-03:00"
+    }
+  ],
+  "ai_use_disclosure": {
+    "disclosure_id": "AI-DISCLOSURE-AMBIDEXTERITY-001",
+    "tools": ["OpenAI GPT-5.6 Thinking", "Consensus academic search", "GitHub connector", "Web exact-phrase search"],
+    "purposes": ["Literature discovery and source organization", "Drafting and restructuring provisional academic text", "Creation of claim, citation and evidence registries", "Execution of similarity and consistency tests"],
+    "human_responsibilities": ["Approve or reject the research direction", "Verify source identity and access", "Review every substantive claim and citation", "Decide whether the manuscript may be submitted", "Comply with institutional and journal AI-use policies"],
+    "source_verification": true,
+    "text_review": true,
+    "private_reasoning_included": false,
+    "status": "DISCLOSED"
+  },
+  "human_decision": {
+    "decision_id": "decision-ai-ambidexterity-001",
+    "decision": "PARTIALLY_APPROVED",
+    "approved_actions": ["LITERATURE_SYNTHESIS", "CONCEPTUAL_MODEL", "ARTICLE", "RESEARCH_PROJECT", "MASTERS_REFLECTION", "DOCTORAL_PREAGENDA"],
+    "rejected_actions": ["CLAIM_CAUSALITY_FROM_CROSS_SECTIONAL_DATA"],
+    "recorded_at": "2026-08-06T14:55:00-03:00",
+    "presented_by": "PSQZA"
+  },
+  "external_similarity_mode": "WEB_EXACT_PHRASE_ONLY",
+  "target_score": 990,
+  "score_rubric": {
+    "source_identity_and_access": 140,
+    "citation_round_trip": 140,
+    "claim_evidence_binding": 160,
+    "evidence_fidelity": 120,
+    "quotation_and_secondary_citation": 80,
+    "counterevidence_and_conflict": 90,
+    "similarity_review": 100,
+    "ai_use_disclosure": 50,
+    "cross_document_consistency": 60,
+    "provenance_and_human_authority": 50
+  }
+}

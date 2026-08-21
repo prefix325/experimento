@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "X:\PSQZA_TEP_LOCAL\repo\tools\formal_monitor\real_mode.py", line 332, in run_one
+    self._run_component(lot, "dpca", lot.dpca_ordinal)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "X:\PSQZA_TEP_LOCAL\repo\tools\formal_monitor\real_mode.py", line 293, in _run_component
+    raise RuntimeError(f"Formal {lot.cohort} {detector} batch exited with {exit_code}")
+RuntimeError: Formal target dpca batch exited with 1

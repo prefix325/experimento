@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "tep-formal-run58-output-truncation-20260816",
+  "status": "ROOT_CAUSE_PROVEN",
+  "recorded_at": "2026-08-16T16:36:28-03:00",
+  "cohort": "target",
+  "simulation_run": 58,
+  "llm_ordinal": 7,
+  "blind_run_id": "BLIND_D5E4EF532B1077E5",
+  "preserved_state": {
+    "simulation_runs_1_57": "COMPLETE_IMMUTABLE",
+    "simulation_run_58_dpca": "COMPLETE_IMMUTABLE",
+    "simulation_run_58_llm_attempt_0001": "FAILED_IMMUTABLE",
+    "simulation_run_58_lot": "FAILED"
+  },
+  "root_cause": {
+    "code": "LLM_OUTPUT_TRUNCATION_AT_MAX_OUTPUT_TOKENS",
+    "finish_reason": "length",
+    "completion_tokens": 768,
+    "json_truncation_location": "tenth evidence item",
+    "looping_or_degeneration": false
+  },
+  "complete_response_distribution": {
+    "count": 294,
+    "p50": 453.5,
+    "p90": 587.7,
+    "p95": 624.1,
+    "p99": 670.14,
+    "maximum": 729,
+    "complete_responses_reaching_768": 0
+  },
+  "selection_basis_excluded": [
+    "detection_rate",
+    "detection_delay",
+    "H1",
+    "H2",
+    "H3",
+    "IDV(13) performance"
+  ],
+  "artifact_sha256": {
+    "monitor_attempt_0001_status": "2a15c4e31145dacc720b1aa108775ab16b3e0812ae7664a672b9fc34f0afefbc",
+    "monitor_attempt_0001_error": "4aa1335634a1e20d61fdbe5af32a4b279aab284b67bdcccd5a527e793df02d29",
+    "llm_command": "0785bdb0d6bc820431e29ccb07528c198620f8972d0ac403e51f1e4808a69757",
+    "llm_stderr": "75403628fd3be15f6554087781269b58651526c4de4773c65819b8593610fb4f",
+    "dpca_complete_marker": "4ce4bd4709598989a1f51abd12296ca362209323c89a3b6b05a37a06e492efe8",
+    "llm_checkpoint_attempt_0001_status": "a0d8ae0d7bc0cb4b6c3a0f7edb509c3e9b4a0bddb294e10c0d8ff3bcf174fb54",
+    "llm_checkpoint_attempt_0001_decisions": "fa795d803c269a7c1b7895cbab1018b506899a1a3e7aec372e45a5fe22e9660e"
+  },
+  "scientific_claim_status": "NONE_CREATED"
+}

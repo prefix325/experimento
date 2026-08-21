@@ -1,0 +1,31 @@
+{
+  "artifacts": [
+    {
+      "name": "dpca_metrics.jsonl",
+      "sha256": "f541eab7e489eed0851776c59028268e63782b49f6e99c7dc706de0d59ea2153",
+      "size_bytes": 258332
+    }
+  ],
+  "attempt": 1,
+  "blind_run_id": "BLIND_3C9F62C1C157E3AC",
+  "counts": {
+    "dpca_records": 960
+  },
+  "ended_at": "2026-08-18T08:07:29.220456+00:00",
+  "frozen_hashes": {
+    "configuration_sha256": "87a15a1b6acd2ca8a81e66bcb848fe8dfb3060213bd0eaf497a12b4382b5dbe4",
+    "dpca_artifact_sha256": "889351e2e87b47456a55e97769dcb34057457c23806b0aadb3b9ac8a6f194f40",
+    "dpca_reference_sha256": "6f5d534559f7802e788c643c04654c8a6ec4b427a48c291f987aebb274bf558e",
+    "evaluation_contract_sha256": "f7ca83deddcee2a02f7b4cd0a4c1ec362403a22f91441551d091db4d3990c5f4",
+    "h3_reference_sha256": "3dffd455d721e77ebfe2f2a85ef19e8ba4f6bd56cc94dd190e09d700592109e6",
+    "image_digest": "psqza-tep-local@sha256:4f3fb9457770f769573f76c997142ffd1b4ecf9508842c82c50ef1fecbd324ed",
+    "methodological_amendment_sha256": "e159018aa6916b7b1eddbba56edbe005d2b91606a739b3042090c581899f71b1",
+    "model_sha256": "1875fb29e8c91c86615c00e92d8b4114e56bc24359adb5a8db8b36452fae4a49",
+    "output_schema_sha256": "d796158037b8f421ba278b1aea8bde3d5e03fdd03d174b554d8fd6f59381677d",
+    "prompt_sha256": "72c2305b2b2637ecd920e88ba16947bbbfba12d2ab18a3cc3c36110eef3c0da6",
+    "representation_contract_sha256": "a9a7518fe568861496a5defcf9a9b14222d8709ff95bf0bb7aa76069e0f0955b",
+    "run_selection_sha256": "9263bc65a911fe1957bab57c9904a50f56a814434bec1b6022b4330e13ccf004"
+  },
+  "started_at": "2026-08-18T08:07:16.832483+00:00",
+  "status": "COMPLETE"
+}

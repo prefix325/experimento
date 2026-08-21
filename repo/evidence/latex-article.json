@@ -1,0 +1,14 @@
+{
+  "document_id": "psqza.article",
+  "source_commit": "85f113f77db0f18b55e730723912a32284a3fe11",
+  "source_tree_sha256": "a584ed23bd7074025820af2527338ed36c47d6398dec107ffff76b5cd2a276cd",
+  "toolchain": "Latexmk, John Collins, 11 Dec. 2024. Version 4.86; pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+  "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex",
+  "exit_code": 0,
+  "warnings": ["Initial skeleton has an empty bibliography."],
+  "unresolved_citations": [],
+  "missing_assets": [],
+  "log_sha256": "8094ec41ae04259cd89e0fcdd1e4f40300cc38ec78f954ee1989a41047969203",
+  "pdf_sha256": "f9beffbd693eab53762957358be9bbb44bf8a6e44be6094f06add843173d8152",
+  "status": "PASS"
+}

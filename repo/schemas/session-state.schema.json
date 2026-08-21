@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/prefix325/psqza-research/main/schemas/session-state.schema.json",
+  "title": "VERAS Research Flow Session State",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "session_id",
+    "status",
+    "flow_mode",
+    "scientific_status",
+    "active_branch",
+    "open_threads",
+    "background_routes",
+    "resume_policy",
+    "ledger_path",
+    "live_writing_dir",
+    "updated_at"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "session_id": {"type": "string", "minLength": 1},
+    "status": {"enum": ["ACTIVE", "PAUSED", "CLOSED"]},
+    "flow_mode": {"const": "RESEARCH_FLOW"},
+    "scientific_status": {"enum": ["DISCUSSED", "PROPOSED", "PROVISIONAL", "ACCEPTED", "BLOCKED"]},
+    "active_branch": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["branch_id", "label", "current_question", "source_entity_ids"],
+      "properties": {
+        "branch_id": {"type": "string", "minLength": 1},
+        "label": {"type": "string", "minLength": 1},
+        "current_question": {"type": "string", "minLength": 1},
+        "source_entity_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "open_threads": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "background_routes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["route_id", "kind", "status", "return_branch_id"],
+        "properties": {
+          "route_id": {"type": "string", "minLength": 1},
+          "kind": {"enum": ["LITERATURE", "MECAI", "PERSISTENCE", "EVIDENCE", "PROJECTION", "VALIDATION", "OTHER"]},
+          "status": {"enum": ["REQUESTED", "RUNNING", "COMPLETED", "BLOCKED"]},
+          "return_branch_id": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "resume_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["after_background_route", "topic_change_requires_explicit_researcher_change", "persistence_is_background_effect"],
+      "properties": {
+        "after_background_route": {"const": "RETURN_TO_CURRENT_BRANCH"},
+        "topic_change_requires_explicit_researcher_change": {"const": true},
+        "persistence_is_background_effect": {"const": true}
+      }
+    },
+    "ledger_path": {"const": "project/research_ledger.jsonl"},
+    "live_writing_dir": {"const": "writing/compiled"},
+    "updated_at": {"type": "string", "format": "date-time"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"status": {"const": "ACTIVE"}}, "required": ["status"]},
+      "then": {"required": ["active_branch"], "properties": {"active_branch": {"type": "object"}}}
+    },
+    {
+      "if": {"properties": {"status": {"const": "CLOSED"}}, "required": ["status"]},
+      "then": {"properties": {"active_branch": {"type": "null"}}}
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "cohort": "target",
+  "component": "dpca",
+  "error_summary": "Formal operational component failed",
+  "error_type": "ValueError",
+  "exit_code": 1,
+  "historical": false,
+  "log_path": "X:\\PSQZA_TEP_LOCAL\\results\\formal\\monitor_controller\\attempts\\target\\run_402\\attempt_0001\\run-event-ecf96c9e4b154847ae61ea4d4b1e0220-traceback.log",
+  "message": "I/O operation on closed file.",
+  "operational_only": true,
+  "run_event_id": "run-event-ecf96c9e4b154847ae61ea4d4b1e0220",
+  "simulation_run": 402,
+  "status": "ACTIVE",
+  "timestamp": "2026-08-18T02:35:01.876158+00:00",
+  "traceback": "Traceback (most recent call last):\n  File \"X:\\PSQZA_TEP_LOCAL\\repo\\tools\\formal_monitor\\real_mode.py\", line 376, in run_one\n    self._run_component(lot, \"dpca\", lot.dpca_ordinal)\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"X:\\PSQZA_TEP_LOCAL\\repo\\tools\\formal_monitor\\real_mode.py\", line 303, in _run_component\n    exit_code = self.controller.wait()\n  File \"X:\\PSQZA_TEP_LOCAL\\repo\\tools\\formal_monitor\\process_control.py\", line 209, in wait\n    self._close_logs()\n    ~~~~~~~~~~~~~~~~^^\n  File \"X:\\PSQZA_TEP_LOCAL\\repo\\tools\\formal_monitor\\process_control.py\", line 142, in _close_logs\n    handle.flush()\n    ~~~~~~~~~~~~^^\nValueError: I/O operation on closed file.\n"
+}

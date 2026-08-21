@@ -1,0 +1,16 @@
+{
+  "cohort": "target",
+  "component": "dpca",
+  "error_summary": "Formal operational component failed",
+  "error_type": "RuntimeError",
+  "exit_code": 1,
+  "historical": false,
+  "log_path": "X:\\PSQZA_TEP_LOCAL\\results\\formal\\monitor_controller\\attempts\\target\\run_001\\attempt_0006\\run-event-33daf864bc5143deb8a89215368bf7e9-traceback.log",
+  "message": "Formal target dpca batch exited with 1; first causal stderr: Traceback (most recent call last):",
+  "operational_only": true,
+  "run_event_id": "run-event-33daf864bc5143deb8a89215368bf7e9",
+  "simulation_run": 1,
+  "status": "ACTIVE",
+  "timestamp": "2026-08-15T20:03:36.802884+00:00",
+  "traceback": "Traceback (most recent call last):\n  File \"X:\\PSQZA_TEP_LOCAL\\repo\\tools\\formal_monitor\\real_mode.py\", line 343, in run_one\n    self._run_component(lot, \"dpca\", lot.dpca_ordinal)\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"X:\\PSQZA_TEP_LOCAL\\repo\\tools\\formal_monitor\\real_mode.py\", line 301, in _run_component\n    raise RuntimeError(\n    ...<2 lines>...\n    )\nRuntimeError: Formal target dpca batch exited with 1; first causal stderr: Traceback (most recent call last):\n"
+}

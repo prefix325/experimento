@@ -1,0 +1,360 @@
+{
+  "schema_version": "2.0.0-formal-freeze",
+  "status": "FORMAL_FROZEN_PENDING_TECHNICAL_ACCEPTANCE",
+  "created_at": "2026-08-14T09:39:51.406562Z",
+  "git_commit": "c5ec02ecfff54845262238cd02558ea98f21b14d",
+  "git_tree": "0e59747ec978ed115cfd7f02b636217ccdd7c698",
+  "git_branch": "infra/local-llm-dpca-offline",
+  "git_dirty": false,
+  "docker_version": "29.7.2",
+  "docker_image_tag": "psqza-tep-local:c5ec02e-formal",
+  "docker_image_id": "sha256:4f3fb9457770f769573f76c997142ffd1b4ecf9508842c82c50ef1fecbd324ed",
+  "docker_image_digest": "psqza-tep-local@sha256:4f3fb9457770f769573f76c997142ffd1b4ecf9508842c82c50ef1fecbd324ed",
+  "docker_image_revision_label": "c5ec02ecfff54845262238cd02558ea98f21b14d",
+  "llama_cpp_base_digest": "sha256:6b0bf4974521b2c16a498c7dd0715f4eb077725f1483e0ee0f617679005b1e1f",
+  "llama_cpp_version": "version: 0.1.0-dev (build 10398, commit 8e7f22b67)\nbuilt with GNU 14.2.0 for Linux x86_64",
+  "model_name": "Qwen/Qwen2.5-7B-Instruct-GGUF",
+  "model_file": "qwen2.5-7b-instruct-q4_k_m.gguf",
+  "model_quantization": "Q4_K_M",
+  "model_size_bytes": 4683073536,
+  "model_sha256": "1875fb29e8c91c86615c00e92d8b4114e56bc24359adb5a8db8b36452fae4a49",
+  "model_license": "Apache-2.0",
+  "model_origin": "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct-GGUF",
+  "dataset_manifest_sha256": "a2ea5ff89a3380ad20c50f625100277f609f1309c25c46401a03b291c012dba8",
+  "dataset_files": [
+    {
+      "role": "normal_blind",
+      "relative_path": "normal/blind/normal_blind_runs_001_050.csv.gz",
+      "sha256": "febd67ea7009678d6182b0a435d32b5052ce12070160d21ef758c5f23710494f",
+      "rows": 25000
+    },
+    {
+      "role": "normal_blind",
+      "relative_path": "normal/blind/normal_blind_runs_051_100.csv.gz",
+      "sha256": "96d6796de76b8502c364256a15ea7db8ee544a9c0473473722fd89fc5e89f4c1",
+      "rows": 25000
+    },
+    {
+      "role": "normal_blind",
+      "relative_path": "normal/blind/normal_blind_runs_101_150.csv.gz",
+      "sha256": "f0fa5aabd1ac3703a259e2c5efb41176f2a3d65a953de94752ec0ac6ba8c44b5",
+      "rows": 25000
+    },
+    {
+      "role": "normal_blind",
+      "relative_path": "normal/blind/normal_blind_runs_151_200.csv.gz",
+      "sha256": "3c596e2e3c2a556cf58302a8e88317d03bc4f49f36e4b4c8fc20011ffde44179",
+      "rows": 25000
+    },
+    {
+      "role": "normal_blind",
+      "relative_path": "normal/blind/normal_blind_runs_201_250.csv.gz",
+      "sha256": "c9c144211b3a1d5981dcacc7fa83abea515e7776f764452278bf18928ebc8216",
+      "rows": 25000
+    },
+    {
+      "role": "normal_blind",
+      "relative_path": "normal/blind/normal_blind_runs_251_300.csv.gz",
+      "sha256": "75938c45920e2de59341a36f0fa9bd5fa8018282f12d0b43ffe54481a1d87740",
+      "rows": 25000
+    },
+    {
+      "role": "normal_blind",
+      "relative_path": "normal/blind/normal_blind_runs_301_350.csv.gz",
+      "sha256": "b2cdc627d840669be487f032886ca8650fa83a4603e626d64c08781abd9afbb3",
+      "rows": 25000
+    },
+    {
+      "role": "normal_blind",
+      "relative_path": "normal/blind/normal_blind_runs_351_400.csv.gz",
+      "sha256": "cfd51c48327cbfa24e910dbf193b8a76d6a373cacc8f1b8b5ee3572b9d9bfc7d",
+      "rows": 25000
+    },
+    {
+      "role": "normal_blind",
+      "relative_path": "normal/blind/normal_blind_runs_401_450.csv.gz",
+      "sha256": "c52be86f3139f7947c01ad85bda7885e991b5b022510da862a9643bd94bb80e0",
+      "rows": 25000
+    },
+    {
+      "role": "normal_blind",
+      "relative_path": "normal/blind/normal_blind_runs_451_500.csv.gz",
+      "sha256": "ead149e031c172cd2f87806c2c96067d40d0a61200506e3806782a3555a9202c",
+      "rows": 25000
+    },
+    {
+      "role": "test_blind",
+      "relative_path": "test/blind/evaluation_blind_runs_001_050.csv.gz",
+      "sha256": "8e6f4ddbb033df3d2a53c32d939c05b03c8ae2e0c5988a6be73b7b666119bdf7",
+      "rows": 48000
+    },
+    {
+      "role": "ground_truth",
+      "relative_path": "test/ground_truth/ground_truth_runs_001_050.csv.gz",
+      "sha256": "963b6608cef88de3149cd2218829e00b83cfa9688981b14d00e6679ee97d731a",
+      "rows": 48000
+    },
+    {
+      "role": "test_blind",
+      "relative_path": "test/blind/evaluation_blind_runs_051_100.csv.gz",
+      "sha256": "4fee1c0f3cba7ccb70d7de65433dc29a86c2eff26e0d0e4da746d6159dd48860",
+      "rows": 48000
+    },
+    {
+      "role": "ground_truth",
+      "relative_path": "test/ground_truth/ground_truth_runs_051_100.csv.gz",
+      "sha256": "49360199ed2d85b94abec62da05bd3137be80a363332416379522a33dabc9511",
+      "rows": 48000
+    },
+    {
+      "role": "test_blind",
+      "relative_path": "test/blind/evaluation_blind_runs_101_150.csv.gz",
+      "sha256": "2bfb5b0da5ea2c4873358f07af1e44a20ba95be03dbf411840f8d2134dca7805",
+      "rows": 48000
+    },
+    {
+      "role": "ground_truth",
+      "relative_path": "test/ground_truth/ground_truth_runs_101_150.csv.gz",
+      "sha256": "7c2a92ed9974b11357c8f824a75f23e09b2e4ee85d3aa5b44f707cb80ed6eb74",
+      "rows": 48000
+    },
+    {
+      "role": "test_blind",
+      "relative_path": "test/blind/evaluation_blind_runs_151_200.csv.gz",
+      "sha256": "589040f796e9f6bb869b1d259330f414ea8b7df2fe1e2830d14577e4d917c62d",
+      "rows": 48000
+    },
+    {
+      "role": "ground_truth",
+      "relative_path": "test/ground_truth/ground_truth_runs_151_200.csv.gz",
+      "sha256": "0af411f15cd9aeaf56bf6ab40626b3d46ad4aeb790868aa852603501dc448116",
+      "rows": 48000
+    },
+    {
+      "role": "test_blind",
+      "relative_path": "test/blind/evaluation_blind_runs_201_250.csv.gz",
+      "sha256": "c3e70942316e9333a3f3cd98e738501a7a7c3cce7558c4a127fc99a6eb0e1c98",
+      "rows": 48000
+    },
+    {
+      "role": "ground_truth",
+      "relative_path": "test/ground_truth/ground_truth_runs_201_250.csv.gz",
+      "sha256": "b5d965bbcaa83f4e14423f567ec00775900b221634d54964965dc537280bc5bc",
+      "rows": 48000
+    },
+    {
+      "role": "test_blind",
+      "relative_path": "test/blind/evaluation_blind_runs_251_300.csv.gz",
+      "sha256": "31d3f5a83e6326a6d3b8b9bdf70c11620ec75a58c72560b0cd55bddef9f0c4cf",
+      "rows": 48000
+    },
+    {
+      "role": "ground_truth",
+      "relative_path": "test/ground_truth/ground_truth_runs_251_300.csv.gz",
+      "sha256": "af42f4487af255f4aa3ba9c1e8011b1a23ab03b14eeafea31bee7a8c90b4799d",
+      "rows": 48000
+    },
+    {
+      "role": "test_blind",
+      "relative_path": "test/blind/evaluation_blind_runs_301_350.csv.gz",
+      "sha256": "ba18c685a7e9cebd41d5954cf728732228c7fdaa3a78090750f4f5498732c1cd",
+      "rows": 48000
+    },
+    {
+      "role": "ground_truth",
+      "relative_path": "test/ground_truth/ground_truth_runs_301_350.csv.gz",
+      "sha256": "2f4787f59c3c86a8746e2e104e8c9e3cd1b9e4da908205325217ef724bbac19c",
+      "rows": 48000
+    },
+    {
+      "role": "test_blind",
+      "relative_path": "test/blind/evaluation_blind_runs_351_400.csv.gz",
+      "sha256": "153fc83cf6d4c6dffb2c79e1c73fb4ee30bc48b119d1b26251c7bdcd44746df0",
+      "rows": 48000
+    },
+    {
+      "role": "ground_truth",
+      "relative_path": "test/ground_truth/ground_truth_runs_351_400.csv.gz",
+      "sha256": "e7553c9b7d4f00353c7e990344c2d14222b65535c303fce608c2714b06746265",
+      "rows": 48000
+    },
+    {
+      "role": "test_blind",
+      "relative_path": "test/blind/evaluation_blind_runs_401_450.csv.gz",
+      "sha256": "f550b4a429c1baea0df82bd26a3b4ae77b47396eb714735dfca373fab35ed708",
+      "rows": 48000
+    },
+    {
+      "role": "ground_truth",
+      "relative_path": "test/ground_truth/ground_truth_runs_401_450.csv.gz",
+      "sha256": "f0672b6698dac25736efb4a6029a652d27250f07c28a46937e9ca8d19d87d9ce",
+      "rows": 48000
+    },
+    {
+      "role": "test_blind",
+      "relative_path": "test/blind/evaluation_blind_runs_451_500.csv.gz",
+      "sha256": "9af9328881754a5a3ccd80dfbe76c24e89ccbf91b6548d6347c252063622d2df",
+      "rows": 48000
+    },
+    {
+      "role": "ground_truth",
+      "relative_path": "test/ground_truth/ground_truth_runs_451_500.csv.gz",
+      "sha256": "482c94d8881a4a593594c3ea57d9c7e10a06e497714861b58e4b70a2c3182d5c",
+      "rows": 48000
+    },
+    {
+      "role": "normal_holdout_blind",
+      "relative_path": "normal_holdout/blind/normal_holdout_blind_runs_001_050.csv.gz",
+      "sha256": "b579aa3e43d6e38cc60dd776021861d14e87b5d85dfe4fde5511e954e2080cde",
+      "bytes": 5911820,
+      "rows": 48000
+    },
+    {
+      "role": "normal_holdout_blind",
+      "relative_path": "normal_holdout/blind/normal_holdout_blind_runs_051_100.csv.gz",
+      "sha256": "c741e418ade3cfd1146e3fa51fcf0ddfecdb47cd98a33527701211a99fc55c29",
+      "bytes": 5913213,
+      "rows": 48000
+    },
+    {
+      "role": "normal_holdout_blind",
+      "relative_path": "normal_holdout/blind/normal_holdout_blind_runs_101_150.csv.gz",
+      "sha256": "65a8caf1c12f91c211c7401ff0025c88677a049df945510be6586da017ff0d20",
+      "bytes": 5910270,
+      "rows": 48000
+    },
+    {
+      "role": "normal_holdout_blind",
+      "relative_path": "normal_holdout/blind/normal_holdout_blind_runs_151_200.csv.gz",
+      "sha256": "9d2f9c523a5e86fb4a5b994ea1fa34ad5921ec9eeec562a5bc9236a5ffcbffb6",
+      "bytes": 5916393,
+      "rows": 48000
+    },
+    {
+      "role": "normal_holdout_blind",
+      "relative_path": "normal_holdout/blind/normal_holdout_blind_runs_201_250.csv.gz",
+      "sha256": "7f9fddcc5e29ef11e07553016b406ce15cc09eda191366262ddffce7e97c01e5",
+      "bytes": 5911998,
+      "rows": 48000
+    },
+    {
+      "role": "normal_holdout_blind",
+      "relative_path": "normal_holdout/blind/normal_holdout_blind_runs_251_300.csv.gz",
+      "sha256": "724f8978325daa5a32eac332f2d69cf571650ecf23461f3b1672119f5416d31d",
+      "bytes": 5910572,
+      "rows": 48000
+    },
+    {
+      "role": "normal_holdout_blind",
+      "relative_path": "normal_holdout/blind/normal_holdout_blind_runs_301_350.csv.gz",
+      "sha256": "634cd03ac31fae263eeeae5c977ac8b8bfc08be2abf49cd5ee97b6bcaa9920e1",
+      "bytes": 5913539,
+      "rows": 48000
+    },
+    {
+      "role": "normal_holdout_blind",
+      "relative_path": "normal_holdout/blind/normal_holdout_blind_runs_351_400.csv.gz",
+      "sha256": "7a9a1010a17619b56eb67e936d5ccc623affc723182bec895cd8083326fae52a",
+      "bytes": 5912110,
+      "rows": 48000
+    },
+    {
+      "role": "normal_holdout_blind",
+      "relative_path": "normal_holdout/blind/normal_holdout_blind_runs_401_450.csv.gz",
+      "sha256": "d72265a9d0bb05bb28ab97f38fb5b1624e25b0bbe5ff0d86bc4c327ed94aad52",
+      "bytes": 5914390,
+      "rows": 48000
+    },
+    {
+      "role": "normal_holdout_blind",
+      "relative_path": "normal_holdout/blind/normal_holdout_blind_runs_451_500.csv.gz",
+      "sha256": "75dc3dbd8e8517560e0accc2e23aeeca0bc6f8038133874b69eece4d1025bfb7",
+      "bytes": 5908187,
+      "rows": 48000
+    }
+  ],
+  "configuration_sha256": {
+    "smoke.json": "9172ab2c362622686adab568d32ff1c661f6f04f4b11ef9924e240a0b79946d3",
+    "pilot.json": "1596a7ec6e2d701d6799fe1761100288be7d0060d9cf5ae2255f4c4977b8f6eb",
+    "formal.json": "921954a9b8b5822b096259ac7746beab2373200fe095c686740ba51f093a464c",
+    "output_schema.json": "d796158037b8f421ba278b1aea8bde3d5e03fdd03d174b554d8fd6f59381677d"
+  },
+  "prompt_template_sha256": "72c2305b2b2637ecd920e88ba16947bbbfba12d2ab18a3cc3c36110eef3c0da6",
+  "hardware": {
+    "windows": "Microsoft Windows 10 Home Single Language",
+    "windows_version": "10.0.19045",
+    "windows_build": "19045",
+    "cpu": "Intel(R) Xeon(R) CPU E5-2670 v3 @ 2.30GHz",
+    "physical_cores": 12,
+    "logical_threads": 24,
+    "ram_gb": 63.84,
+    "gpu": "NVIDIA GeForce RTX 4060",
+    "nvidia_driver": "610.74",
+    "vram_mib": 8188,
+    "cuda_visible_in_container": "13.3",
+    "wsl": "Versão do WSL: 2.7.11.0\r\nVersão do kernel: 6.18.33.2-2\r\nVersão do WSLg: 1.0.73.2\r\nVersão do MSRDC: 1.2.7214\r\nVersão do Direct3D: 1.611.1-81528511\r\nVersão do DXCore: 10.0.26100.1-240331-1435.ge-release\r\nVersão do Windows: 10.0.19045.6466",
+    "docker_desktop": "4.86.0",
+    "x_free_gb": 394.84
+  },
+  "network_mode": "none",
+  "temporal_label_correction": {
+    "status": "METHODOLOGICAL_OFF_BY_ONE_CORRECTION_APPLIED",
+    "previous_rule": "y = 1 when sample >= 160",
+    "corrected_rule": "y = 1 when sample >= 161",
+    "fault_onset_sample": 161,
+    "correction_manifest": "X:\\PSQZA_TEP_LOCAL\\manifests\\ground_truth_correction_onset_161.json"
+  },
+  "dataset_inventory": {
+    "canonical_sha256": "159e18536ad9fa01d6a8e941357158d1c17a6ba9ed29eed599224d5ef10e9bf0",
+    "canonicalization": "UTF-8 SHA-256 of compact PowerShell ConvertTo-Json -Depth 6 over dataset_files in stored order",
+    "prepared_manifest_source_sha256": "a2ea5ff89a3380ad20c50f625100277f609f1309c25c46401a03b291c012dba8",
+    "prepared_manifest_source_files": 30,
+    "normal_holdout_supplement_files": 10,
+    "total_files_verified_by_preparation_manifest": 40,
+    "note": "FaultFree Testing holdout was materialized after the legacy prepared_manifest.json; its ten hashes are embedded in dataset_files."
+  },
+  "frozen_scientific_artifact_sha256": {
+    "formal.candidate.json": "d4f663837a80d641365caced4493aee1e02d73b9f4d01cab63561726a80e8443",
+    "formal.json": "921954a9b8b5822b096259ac7746beab2373200fe095c686740ba51f093a464c",
+    "representation_contract.json": "92359761b687faeb9fe08767e40de580b466a09fe202b2b1bfc89f9ba6e8985e",
+    "evaluation_contract.json": "a16dff82f4f0082779d9d22a55f86127f8b6c27f07aa3634fea86b69dfe4d928",
+    "output_schema.json": "d796158037b8f421ba278b1aea8bde3d5e03fdd03d174b554d8fd6f59381677d",
+    "prompt_template.txt": "72c2305b2b2637ecd920e88ba16947bbbfba12d2ab18a3cc3c36110eef3c0da6",
+    "formal_run_selection.json": "9263bc65a911fe1957bab57c9904a50f56a814434bec1b6022b4330e13ccf004",
+    "formal_run_selection_list": "2c4cf612fe72162dcd1b27f1f90dfc8145f9086fc5c0a6ac9239518655978adf",
+    "formal_normal_holdout_selection.json": "317de7e995af67828e25235dfd46b4260f2fac08628dd7f55993cba756668098",
+    "formal_normal_holdout_selection_list": "fa86d617142fd5d853f92370c4aa9f10603f74b0e2f440df59c03c15248f84e6",
+    "dpca_reference.json": "6f5d534559f7802e788c643c04654c8a6ec4b427a48c291f987aebb274bf558e",
+    "dpca_reference_model.npz": "889351e2e87b47456a55e97769dcb34057457c23806b0aadb3b9ac8a6f194f40",
+    "h3_evidence_reference.json": "3dffd455d721e77ebfe2f2a85ef19e8ba4f6bd56cc94dd190e09d700592109e6"
+  },
+  "formal_scope": {
+    "llm_target_runs": 50,
+    "llm_normal_holdout_runs": 50,
+    "dpca_target_runs": 500,
+    "dpca_normal_holdout_runs": 500
+  },
+  "execution_gates": {
+    "methodology_frozen": true,
+    "scientific_execution_permitted": false,
+    "formal_execution_performed": false,
+    "second_researcher_gate_required": true
+  },
+  "technical_acceptance": {
+    "status": "PREPARED_NOT_EXECUTED",
+    "command": ".\\scripts\\run_post_freeze_technical_acceptance.ps1 -ResearcherAuthorized",
+    "dataset": "FaultFree Training",
+    "windows": 1,
+    "llm_inferences": 1,
+    "requires_separate_researcher_authorization": true
+  },
+  "verification": {
+    "unit_static_tests": "60 passed",
+    "zero_new_llm_inference": true,
+    "zero_idv13_x_access": true,
+    "zero_faultfree_testing_llm_inference": true,
+    "run_formal_offline_executed": false,
+    "push_performed": false,
+    "merge_performed": false
+  }
+}

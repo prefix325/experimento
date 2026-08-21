@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VERAS Research Delta",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "delta_id",
+    "turn_id",
+    "base_research_commit",
+    "orientation_id",
+    "orientation_decision_id",
+    "approved_action_ids",
+    "affected_entities",
+    "proposed_changes",
+    "evidence_dependencies",
+    "open_decisions",
+    "materiality",
+    "affected_documents",
+    "status"
+  ],
+  "properties": {
+    "delta_id": {"type": "string", "minLength": 1},
+    "turn_id": {"type": "string", "minLength": 1},
+    "base_research_commit": {"type": "string", "pattern": "^[a-f0-9]{40,64}$"},
+    "orientation_id": {"type": "string", "minLength": 1},
+    "orientation_decision_id": {"type": "string", "minLength": 1},
+    "approved_action_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "affected_entities": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "proposed_changes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["entity_id", "operation", "candidate_status", "rationale", "source_record_ids"],
+        "properties": {
+          "entity_id": {"type": "string", "minLength": 1},
+          "operation": {"enum": ["CREATE", "UPDATE", "SUPERSEDE", "REJECT", "NO_CHANGE"]},
+          "candidate_status": {"enum": ["DISCUSSED", "PROPOSED", "PROVISIONAL", "ACCEPTED", "REJECTED", "SUPERSEDED"]},
+          "rationale": {"type": "string", "minLength": 1},
+          "source_record_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+        }
+      }
+    },
+    "evidence_dependencies": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "open_decisions": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "materiality": {"enum": ["ORDINARY", "PROVISIONAL", "MATERIAL", "REJECTED"]},
+    "affected_documents": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["PREPROJECT", "ARTICLE", "DISSERTATION", "DOCTORAL_AGENDA"]}},
+    "status": {"enum": ["CANDIDATE", "FROZEN", "REMEDIATION_REQUIRED", "ADMITTED", "REJECTED", "SUPERSEDED"]}
+  }
+}

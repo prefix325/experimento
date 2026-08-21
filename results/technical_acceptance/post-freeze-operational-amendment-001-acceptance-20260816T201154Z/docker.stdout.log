@@ -1,0 +1,86 @@
+{
+  "status": "POST_FREEZE_OPERATIONAL_AMENDMENT_SYNTHETIC_ACCEPTANCE",
+  "method_freeze_id": "TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH",
+  "scientific_result": false,
+  "methodology_changes_permitted": false,
+  "methodological_logic_changed": false,
+  "target_informed_tuning": false,
+  "inference_runtime_parameter_changed": true,
+  "changed_parameter": "/llm/max_output_tokens",
+  "requested_max_output_tokens": 1024,
+  "base_formal_sha256": "c8affff60f9e64af02698ef1b03a0ea4a2fdf07d8ef73d52de1e38bba7bf2a66",
+  "base_configuration_sha256": "87a15a1b6acd2ca8a81e66bcb848fe8dfb3060213bd0eaf497a12b4382b5dbe4",
+  "effective_configuration_sha256": "7facd21abb90c8bb52e9302775c43bcb12f8435c7cea9b451001d6f9203e0ed2",
+  "operational_amendment_id": "POST_FREEZE_OPERATIONAL_AMENDMENT_001",
+  "operational_amendment_sha256": "9a9972be344ee58cd4d4c9d88a5d63d74a16e18cf4c46783037241355b71e4c6",
+  "input_source": "FIXED_SYNTHETIC_52_VARIABLE_NORMAL_LIKE_V1",
+  "ZERO_TARGET_ACCESS": true,
+  "ZERO_FAULTFREE_TESTING_ACCESS": true,
+  "formal_scientific_execution_started": false,
+  "docker_command": "X:\\Docker\\DockerDesktop\\resources\\bin\\docker.exe run --rm --name post-freeze-operational-amendment-001-acceptance-20260816T201154Z --gpus all --network none --read-only --cap-drop ALL --security-opt no-new-privileges --tmpfs /tmp:rw,nosuid,nodev,size=2g -v X:\\PSQZA_TEP_LOCAL\\repo\\experiments\\tep\\local_llm\\src:/opt/tep/src:ro -v X:\\PSQZA_TEP_LOCAL\\repo\\experiments\\tep\\local_llm\\config:/opt/tep/config:ro -v X:\\PSQZA_TEP_LOCAL\\models:/models:ro -v X:\\PSQZA_TEP_LOCAL\\results\\technical_acceptance\\post-freeze-operational-amendment-001-acceptance-20260816T201154Z:/results:rw -e DOCKER_IMAGE_ID=sha256:4f3fb9457770f769573f76c997142ffd1b4ecf9508842c82c50ef1fecbd324ed -e DOCKER_IMAGE_DIGEST=psqza-tep-local@sha256:4f3fb9457770f769573f76c997142ffd1b4ecf9508842c82c50ef1fecbd324ed psqza-tep-local:c5ec02e-formal technical-acceptance --config /opt/tep/config/formal.json --results /results --models /models --prompt /opt/tep/config/prompt_template.txt --schema /opt/tep/config/output_schema.json --operational-amendment /opt/tep/config/post_freeze_operational_amendment_001.json",
+  "container_image_id": "sha256:4f3fb9457770f769573f76c997142ffd1b4ecf9508842c82c50ef1fecbd324ed",
+  "container_image_digest": "psqza-tep-local@sha256:4f3fb9457770f769573f76c997142ffd1b4ecf9508842c82c50ef1fecbd324ed",
+  "network_mode": "none",
+  "verdict": "PASS",
+  "inference_count": 1,
+  "completed_at": "2026-08-16T20:13:45.571204+00:00",
+  "network_none_verified": true,
+  "mount_permissions": {
+    "checks": [
+      {
+        "path": "/models",
+        "expected": "read_only",
+        "blocked": true,
+        "error": "OSError: [Errno 30] Read-only file system: '/models/.psqza_write_probe'"
+      },
+      {
+        "path": "/opt/tep/config",
+        "expected": "read_only",
+        "blocked": true,
+        "error": "OSError: [Errno 30] Read-only file system: '/opt/tep/config/.psqza_write_probe'"
+      },
+      {
+        "path": "/results",
+        "expected": "writable",
+        "writable": true
+      }
+    ],
+    "all_ok": true
+  },
+  "frozen_artifacts_verified": {
+    "prompt_template": "72c2305b2b2637ecd920e88ba16947bbbfba12d2ab18a3cc3c36110eef3c0da6",
+    "output_schema": "d796158037b8f421ba278b1aea8bde3d5e03fdd03d174b554d8fd6f59381677d",
+    "representation_contract": "a9a7518fe568861496a5defcf9a9b14222d8709ff95bf0bb7aa76069e0f0955b",
+    "evaluation_contract": "f7ca83deddcee2a02f7b4cd0a4c1ec362403a22f91441551d091db4d3990c5f4",
+    "formal_run_selection": "9263bc65a911fe1957bab57c9904a50f56a814434bec1b6022b4330e13ccf004",
+    "formal_normal_holdout_selection": "317de7e995af67828e25235dfd46b4260f2fac08628dd7f55993cba756668098",
+    "dpca_reference": "6f5d534559f7802e788c643c04654c8a6ec4b427a48c291f987aebb274bf558e",
+    "dpca_artifact": "889351e2e87b47456a55e97769dcb34057457c23806b0aadb3b9ac8a6f194f40",
+    "h3_evidence_reference": "3dffd455d721e77ebfe2f2a85ef19e8ba4f6bd56cc94dd190e09d700592109e6"
+  },
+  "model_sha256": "1875fb29e8c91c86615c00e92d8b4114e56bc24359adb5a8db8b36452fae4a49",
+  "prompt_input_sha256": "5f630bc66074978f064b3cf2d9b3c1b416f2db8e6bb22e8872cfa1f7f7cbb4d7",
+  "synthetic_payload_sha256": "e94a15b6da4d1c9aac8114d2d6f7f757d27716a0b6e92127d03c59c8020730b1",
+  "output_sha256": "f770248278b34cac8e981980ffd0972907b6fc38fc970508048f7cd6dd6671ef",
+  "output_parser_result": "PASS",
+  "finish_reason": "stop",
+  "categorical_decision": "NORMAL",
+  "gpu_offload": {
+    "cuda_backend_discovered": true,
+    "gpu_identified": true,
+    "offloaded_layers": 29,
+    "offload_observed": true,
+    "cpu_fallback_warning": false,
+    "pass": true
+  },
+  "startup_seconds": 48.511,
+  "inference_elapsed_seconds": 14.882,
+  "request_latency_ms": 14881,
+  "throughput": {
+    "prompt_tokens": 4011,
+    "completion_tokens": 567,
+    "prompt_tokens_per_request_second": 269.524,
+    "completion_tokens_per_request_second": 38.1
+  },
+  "elapsed_seconds": 109.052
+}

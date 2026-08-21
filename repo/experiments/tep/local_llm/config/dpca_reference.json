@@ -1,0 +1,108 @@
+{
+    "status":  "CANDIDATE_FOR_RESEARCHER_FREEZE",
+    "input_cohort":  "FaultFree Training only",
+    "input_directory":  "data/normal/blind",
+    "input_files":  [
+                        {
+                            "name":  "normal_blind_runs_001_050.csv.gz",
+                            "sha256":  "febd67ea7009678d6182b0a435d32b5052ce12070160d21ef758c5f23710494f"
+                        },
+                        {
+                            "name":  "normal_blind_runs_051_100.csv.gz",
+                            "sha256":  "96d6796de76b8502c364256a15ea7db8ee544a9c0473473722fd89fc5e89f4c1"
+                        },
+                        {
+                            "name":  "normal_blind_runs_101_150.csv.gz",
+                            "sha256":  "f0fa5aabd1ac3703a259e2c5efb41176f2a3d65a953de94752ec0ac6ba8c44b5"
+                        },
+                        {
+                            "name":  "normal_blind_runs_151_200.csv.gz",
+                            "sha256":  "3c596e2e3c2a556cf58302a8e88317d03bc4f49f36e4b4c8fc20011ffde44179"
+                        },
+                        {
+                            "name":  "normal_blind_runs_201_250.csv.gz",
+                            "sha256":  "c9c144211b3a1d5981dcacc7fa83abea515e7776f764452278bf18928ebc8216"
+                        },
+                        {
+                            "name":  "normal_blind_runs_251_300.csv.gz",
+                            "sha256":  "75938c45920e2de59341a36f0fa9bd5fa8018282f12d0b43ffe54481a1d87740"
+                        },
+                        {
+                            "name":  "normal_blind_runs_301_350.csv.gz",
+                            "sha256":  "b2cdc627d840669be487f032886ca8650fa83a4603e626d64c08781abd9afbb3"
+                        },
+                        {
+                            "name":  "normal_blind_runs_351_400.csv.gz",
+                            "sha256":  "cfd51c48327cbfa24e910dbf193b8a76d6a373cacc8f1b8b5ee3572b9d9bfc7d"
+                        },
+                        {
+                            "name":  "normal_blind_runs_401_450.csv.gz",
+                            "sha256":  "c52be86f3139f7947c01ad85bda7885e991b5b022510da862a9643bd94bb80e0"
+                        },
+                        {
+                            "name":  "normal_blind_runs_451_500.csv.gz",
+                            "sha256":  "ead149e031c172cd2f87806c2c96067d40d0a61200506e3806782a3555a9202c"
+                        }
+                    ],
+    "validation":  {
+                       "simulation_runs":  500,
+                       "samples_per_run":  500,
+                       "x_columns":  52,
+                       "rows":  250000,
+                       "target_fault_data_accessed":  false
+                   },
+    "normalization":  {
+                          "method":  "per-variable FaultFree Training mean and sample standard deviation (ddof=1)",
+                          "zero_scale_replacement":  1.0
+                      },
+    "lag_selection":  {
+                          "procedure":  "For lags 1..20, compute within-run pooled autocorrelation for each standardized X variable; aggregate by median absolute autocorrelation; select the smallest lag at or below lag-1 median divided by e; if no crossing exists, cap at 20 and flag capped=true.",
+                          "maximum_lag_samples":  20,
+                          "median_absolute_acf_by_lag":  {
+                                                             "1":  0.5646635105945909,
+                                                             "2":  0.26611139751458157,
+                                                             "3":  0.21915743064922727,
+                                                             "4":  0.2136872282610668,
+                                                             "5":  0.12835563945296258,
+                                                             "6":  0.14303730124206424,
+                                                             "7":  0.12247201168643045,
+                                                             "8":  0.11692139685534719,
+                                                             "9":  0.09926163542806232,
+                                                             "10":  0.0901051365663961,
+                                                             "11":  0.08431618630258268,
+                                                             "12":  0.08036226417842507,
+                                                             "13":  0.07320015595962717,
+                                                             "14":  0.06895588318687473,
+                                                             "15":  0.05803648625778918,
+                                                             "16":  0.05052716978042107,
+                                                             "17":  0.04176000090452664,
+                                                             "18":  0.03549373864377062,
+                                                             "19":  0.03069983922054384,
+                                                             "20":  0.021139043432432135
+                                                         },
+                          "e_fold_threshold":  0.20772809672744288,
+                          "selected_lags":  5,
+                          "capped":  false
+                      },
+    "model":  {
+                  "lag_vector_order":  "current sample, lag 1, ..., lag L; within each block xmeas_1..xmeas_41 then xmv_1..xmv_11",
+                  "lagged_dimension":  312,
+                  "reference_observations":  247500,
+                  "component_rule":  "smallest component count reaching at least 0.95 cumulative variance",
+                  "variance_target":  0.95,
+                  "n_components":  150,
+                  "cumulative_variance":  0.9507794059037505,
+                  "limit_method":  "empirical quantile on the same FaultFree Training reference scores",
+                  "threshold_quantile":  0.99,
+                  "t2_limit":  196.83346394039964,
+                  "spe_q_limit":  27.09260011679274,
+                  "alarm_rule":  "raw exceedance when T2 \u003e t2_limit OR SPE/Q \u003e spe_q_limit",
+                  "persistence_consecutive_exceedances":  3
+              },
+    "frozen_artifact": {
+        "file": "dpca_reference_model.npz",
+        "format": "NumPy NPZ with allow_pickle=false",
+        "sha256": "889351e2e87b47456a55e97769dcb34057457c23806b0aadb3b9ac8a6f194f40",
+        "contents": ["mean", "scale", "lags", "loadings", "eigenvalues", "t2_limit", "spe_limit", "persistence"]
+    }
+}

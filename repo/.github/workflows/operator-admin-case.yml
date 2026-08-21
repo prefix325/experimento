@@ -1,0 +1,17 @@
+name: Operator Admin Case
+on:
+  pull_request:
+  workflow_dispatch:
+concurrency:
+  group: operator-admin-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  operator-case:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install jsonschema
+      - run: python tests/operator_cases/admin_market_orientation/run_case.py

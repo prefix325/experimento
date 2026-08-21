@@ -1,0 +1,8 @@
+{
+  "checks": 31,
+  "errors": [],
+  "evidence_type": "local_source_validation",
+  "executed_at": "2026-08-04T16:45:00Z",
+  "status": "PASS",
+  "tool": "python tools/validate_repository.py"
+}

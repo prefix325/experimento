@@ -1,0 +1,121 @@
+{
+  "schema_version": "4.0.0",
+  "status": "FROZEN_UNCHANGED_BY_FULL_WINDOW_REFRESH",
+  "methodology_frozen": true,
+  "method_freeze_id": "TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH",
+  "representation_id": "NORMAL_REFERENCE_STANDARDIZED_SYMMETRIC_SUMMARY_V1",
+  "scientific_decision_basis": "MECAI pre-formal approval; no LLM responses or target-fault behavior used",
+  "variables": {
+    "count": 52,
+    "ordered_set": "xmeas_1..xmeas_41 followed by xmv_1..xmv_11",
+    "selection": "none; every variable is represented identically",
+    "target_informed_selection": false,
+    "implementation_source": "experiments/tep/local_llm/src/tep_local/constants.py"
+  },
+  "normal_reference": {
+    "dataset": "TEP_FaultFree_Training.RData materialized as data/normal/blind",
+    "simulation_runs": 500,
+    "samples_per_run": 500,
+    "rows": 250000,
+    "fit_scope": "all FaultFree Training rows and all 52 X variables only",
+    "faultfree_testing_used_for_fit": false,
+    "idv13_used_for_fit_or_selection": false,
+    "file_hashes_reference": "experiments/tep/local_llm/config/dpca_reference.json"
+  },
+  "normalization": {
+    "per_variable_formula": "z = (x - mean_training) / sample_std_training",
+    "mean": "arithmetic mean over all 250000 FaultFree Training rows",
+    "scale": "sample standard deviation over all 250000 FaultFree Training rows with ddof=1",
+    "zero_scale_rule": "replace a zero scale with 1.0",
+    "fit_implementation": "Standardizer.fit",
+    "transform_implementation": "Standardizer.transform_frame",
+    "normalization_source_sha256": "7da4550ef9559b2e60e6ac0f8cbc414d5aa93df920637125f4d348da1f08c994"
+  },
+  "window": {
+    "causal": true,
+    "window_samples": 20,
+    "sample_interval_minutes": 3,
+    "nominal_duration_minutes": 60,
+    "first_to_last_timestamp_difference_minutes": 57,
+    "duration_note": "The approved 60-minute duration is 20 observations at a 3-minute cadence; the difference between the first and last sample timestamps is 19 intervals, or 57 minutes.",
+    "stride_samples": 5,
+    "evaluation_interval_minutes": 15,
+    "ordering": "group by blind_run_id, sort each run by sample ascending, then emit complete windows at zero-based row starts 0, 5, 10, ...",
+    "partial_windows": "not emitted",
+    "window_id": "zero-based emission index within each blind_run_id; retained only in the internal scientific record",
+    "windowing_source_sha256": "629aabf429d08aa9a3116241723f7136e15c1ad36984aa758eb5283386dd537c"
+  },
+  "payload": {
+    "top_level_fields": {
+      "sample_interval_minutes": "integer cadence; fixed at 3",
+      "representation": "representation identifier from the run configuration",
+      "variables": "ordered array containing exactly one symmetric summary object for each of the 52 variables"
+    },
+    "metadata_not_delivered": [
+      "simulationRun", "blind_run_id", "window_id", "sample_start", "sample_end"
+    ],
+    "internal_record_only": {
+      "simulation_run_blind_id": "opaque run identifier used for logs, checkpoints, association, evaluation and audit",
+      "window_id": "zero-based window sequence number within the blind run",
+      "sample_start": "absolute source sample index of the first observation",
+      "sample_end": "absolute source sample index of the evaluation point",
+      "relative_time": "minutes from sample 1, computed as (sample_end - 1) * 3"
+    },
+    "per_variable_fields": {
+      "variable": "anonymized identifier from the fixed 52-variable ordered set",
+      "start_z": "first standardized value in the causal window",
+      "end_z": "last standardized value in the causal window",
+      "mean_z": "arithmetic mean of the 20 standardized values",
+      "min_z": "minimum of the 20 standardized values",
+      "max_z": "maximum of the 20 standardized values",
+      "slope_z_per_sample": "ordinary least-squares linear slope of standardized value on positions 0..19, in z units per sample"
+    },
+    "numeric_rounding": "each per-variable numeric statistic is converted to float and rounded with Python round(value, 4)",
+    "raw_time_series_delivered": false,
+    "prompt_serialization": "json.dumps(payload, sort_keys=True, ensure_ascii=False)",
+    "payload_source_sha256": "bbd29d6f6cbf33c3c56a147b33bd642a594f0f10ae244bcabe7a9276beb32f0b"
+  },
+  "prompt_envelope": {
+    "information_delivered_in_addition_to_payload": [
+      "the process is industrial",
+      "there are 52 anonymized process variables",
+      "the summary is standardized against a normal reference",
+      "the allowed states are NORMAL, EVIDENCE_INSUFFICIENT, and ANOMALY",
+      "the model must not infer a named fault",
+      "evidence may cite only payload variable identifiers",
+      "each evidence item must use one structured claim from HIGH, LOW, INCREASE, REDUCTION, VARIABILITY",
+      "the response must conform to the JSON schema and confidence must be null"
+    ],
+    "prompt_template_sha256": "72c2305b2b2637ecd920e88ba16947bbbfba12d2ab18a3cc3c36110eef3c0da6",
+    "output_schema_sha256": "d796158037b8f421ba278b1aea8bde3d5e03fdd03d174b554d8fd6f59381677d",
+    "leakage_validator_sha256": "91de60fdf9bcd7a4a3ca6af1f374c9c0a47a82f6b6c85f2746542475c5e1ca26",
+    "leakage_constants_sha256": "6c1404a9cfd568db20ea5d42bc462a84cc6a121d8f5994747a31b18d5da04659"
+  },
+  "withheld_information": [
+    "faultNumber",
+    "simulationRun",
+    "blind_run_id",
+    "y or is_anomaly",
+    "IDV identity or description",
+    "ground truth",
+    "DPCA, T2, SPE/Q or any detector output",
+    "future samples outside the causal window",
+    "raw unstandardized X values",
+    "window_id, sample_start, sample_end, or any absolute position within the run",
+    "TEP, Tennessee Eastman, IDV, fault identity, process topology, or variable semantics"
+  ],
+  "guarantees": {
+    "all_52_variables": "X_COLUMNS is a fixed 52-element list; build_payload iterates the entire list without filtering",
+    "symmetric_representation": "the same seven fields and the same formulas are applied to every X variable",
+    "no_target_fault_selection": "no target-fault values, labels, statistics, responses or detection results participated in this contract",
+    "leakage_guard": "validate_llm_payload rejects run identifiers, absolute temporal keys, prohibited labels and target/DPCA text patterns before prompt rendering",
+    "opaque_blinding": "simulationRun is replaced internally by a deterministic opaque blind ID for logs and checkpoints; neither source nor blind run identifier is delivered to the LLM"
+  },
+  "implementation_alignment": {
+    "statistics_match_current_code": true,
+    "window_and_stride_supported_without_code_change": true,
+    "divergences": [],
+    "enforcement_note": "window and stride are frozen in formal.json; the derived confirmation refresh is validated as ceil(window_samples / stride_samples) and is not part of the LLM payload"
+  },
+  "llm_inference_executed_for_contract": false
+}

@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/prefix325/psqza-research/main/schemas/research-event.schema.json",
+  "title": "VERAS Research Flow Event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "event_id",
+    "timestamp",
+    "session_id",
+    "branch_id",
+    "event_type",
+    "status",
+    "summary",
+    "source",
+    "affected_entity_ids",
+    "evidence_refs",
+    "supersedes",
+    "projection_targets",
+    "writing_fragments",
+    "route",
+    "acceptance_semantics"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "event_id": {"type": "string", "pattern": "^event:[A-Za-z0-9._:-]+$"},
+    "timestamp": {"type": "string", "format": "date-time"},
+    "session_id": {"type": "string", "minLength": 1},
+    "branch_id": {"type": "string", "minLength": 1},
+    "event_type": {
+      "enum": [
+        "FINDING",
+        "EVIDENCE",
+        "QUESTION",
+        "HYPOTHESIS",
+        "CONTRADICTION",
+        "METHOD_DECISION",
+        "RESULT",
+        "LIMITATION",
+        "CONTRIBUTION_CANDIDATE",
+        "WRITING_FRAGMENT",
+        "SUPERSESSION",
+        "SESSION_CHECKPOINT"
+      ]
+    },
+    "status": {
+      "enum": ["DISCUSSED", "PROPOSED", "PROVISIONAL", "ACCEPTED", "REJECTED", "SUPERSEDED"]
+    },
+    "summary": {"type": "string", "minLength": 1},
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind"],
+      "properties": {
+        "kind": {"enum": ["USER", "PSQZA", "MECAI", "BANCA", "VERSA", "LITERATURE", "EXPERIMENT", "SYSTEM_MIGRATION"]},
+        "record_id": {"type": ["string", "null"]}
+      }
+    },
+    "affected_entity_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "evidence_refs": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "supersedes": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^event:[A-Za-z0-9._:-]+$"}
+    },
+    "projection_targets": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^(PREPROJECT|ARTICLE|DISSERTATION|DOCTORAL_AGENDA)\\.[A-Za-z0-9_ .:-]+$"
+      }
+    },
+    "writing_fragments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["document", "section", "language", "text"],
+        "properties": {
+          "document": {"enum": ["PREPROJECT", "ARTICLE", "DISSERTATION", "DOCTORAL_AGENDA"]},
+          "section": {"type": "string", "minLength": 1},
+          "language": {"enum": ["pt-BR", "en"]},
+          "text": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode"],
+      "properties": {
+        "mode": {"enum": ["NONE", "BACKGROUND_ROUTE", "FOREGROUND_ROUTE"]},
+        "route_id": {"type": ["string", "null"]}
+      }
+    },
+    "acceptance_semantics": {"const": "NOT_MACHINE_VERIFIED"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"event_type": {"const": "SUPERSESSION"}}, "required": ["event_type"]},
+      "then": {"properties": {"supersedes": {"minItems": 1}}}
+    },
+    {
+      "if": {"properties": {"event_type": {"const": "WRITING_FRAGMENT"}}, "required": ["event_type"]},
+      "then": {"properties": {"writing_fragments": {"minItems": 1}}}
+    },
+    {
+      "if": {"properties": {"status": {"const": "SUPERSEDED"}}, "required": ["status"]},
+      "then": {"properties": {"event_type": {"const": "SUPERSESSION"}}}
+    }
+  ]
+}

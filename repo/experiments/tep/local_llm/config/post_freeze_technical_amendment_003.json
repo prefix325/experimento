@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "amendment_id": "POST_FREEZE_TECHNICAL_AMENDMENT_003",
+  "status": "SECOND_SYNTHETIC_ACCEPTANCE_FAILED_REAL_START_BLOCKED",
+  "date": "2026-08-15",
+  "method_freeze_id": "TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH",
+  "scientific_parameters_changed": false,
+  "second_acceptance": {
+    "run": "post-refreeze-synthetic-gpu-acceptance-20260815T053403Z",
+    "verdict": "FAIL",
+    "elapsed_seconds": 94.483,
+    "model_loaded": true,
+    "server_healthy": true,
+    "cuda_backend_textual_evidence": false,
+    "gpu_identity_textual_evidence": false,
+    "offloaded_layers_textual_evidence": false,
+    "offloaded_layers_observed": null,
+    "cpu_only_fallback_warning": false,
+    "inference_count": 0,
+    "parser_result": "NOT_RUN",
+    "network_none_verified": true,
+    "retry_performed": false,
+    "error": "llama-server became healthy without required startup evidence"
+  },
+  "local_gate": {
+    "technical_acceptance": "FAIL",
+    "gpu_offload_acceptance": "FAIL",
+    "offline_network_none_acceptance": "PASS",
+    "scientific_execution_authorized": false,
+    "real_start_ready": false
+  },
+  "ZERO_TARGET_ACCESS": true,
+  "ZERO_FAULTFREE_TESTING_ACCESS": true,
+  "formal_scientific_execution_started": false,
+  "formal_runs_started": false,
+  "scientific_run_selection_modified": false
+}

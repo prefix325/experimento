@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.3.0",
+  "status": "PROVISIONAL",
+  "generated_from_commit": "0f5d8ceea095e0e5b3e8f4fe3bc9c19e224bb445",
+  "commit_lineage": {
+    "source_state_commit": "0f5d8ceea095e0e5b3e8f4fe3bc9c19e224bb445",
+    "source_state_role": "STATE_SUMMARIZED_BY_CHECKPOINT",
+    "checkpoint_container_commit_policy": "DERIVE_FROM_GIT_HISTORY",
+    "self_reference_prohibited": true
+  },
+  "governance_binding": {
+    "agent_suite_repository": "prefix325/agentes",
+    "agent_suite_commit": "c6c9189e6b4a8a96f7da375de2d2414ae33e4bf0",
+    "veras_path": "active/specialized/VERAS",
+    "veras_package_version": "3.0.0",
+    "component_lock_schema_version": "3.0.0",
+    "component_lock_source_base_commit": "adc2439ad02c2982a89b8b24be848bbf1f560fe1",
+    "control_plane": "VERSA",
+    "execution_capability": "RESTRICTED_WRITE_EXECUTION",
+    "legacy_route_policy": "PRESERVE_PRE_VERAS_3_AS_HISTORICAL_ONLY"
+  },
+  "updated_at": "2026-08-16T17:18:06-03:00",
+  "current_state": "project/current_state.md",
+  "research_graph": "project/research_graph.json",
+  "research_ledger": "project/research_ledger.jsonl",
+  "session_state": "project/session_state.json",
+  "document_projection_map": "project/document_projection_map.json",
+  "history_index": "history_conversation/index.json",
+  "latest_conversation_summary": "history_conversation/260805154000_atualizacao_bootstrap_llm_local_tep.md",
+  "relevant_conversation_summaries": [],
+  "latest_orientation": "classification:versa:pr5-post-merge:20260805T161100-0300",
+  "latest_opinion": "review:4867830245",
+  "open_decisions": [
+    "Confirm whether IDV(13) becomes the final focal fault.",
+    "Verify the full texts, bibliographic identities, locators and IDV(13) relevance of the Xing-Khan-Kai triad.",
+    "Build a gap-and-contribution matrix including direct antecedents such as FD-LLM and LLM-TSFD.",
+    "Formalize the research question and hypotheses after the gap-and-contribution matrix.",
+    "Freeze the exact TEP dataset lineage, sampling interval and run protocol.",
+    "Select the local LLM, quantization, hardware and offline inference stack.",
+    "Freeze the structured temporal representation and the DPCA lag configuration.",
+    "Define alarm persistence, abstention, metrics, thresholds and success criteria.",
+    "Decide whether the DPCA-assisted LLM condition belongs to the initial scientific study or a later extension."
+  ],
+  "pending_gates": [
+    "Validar a restauração do bootstrap em uma nova sessão do Projeto PSQZA.",
+    "Validar que uma BACKGROUND_ROUTE retorna ao mesmo ramo científico em uma sessão nova."
+  ],
+  "bootstrap_policy": {
+    "always_load": [
+      "project/checkpoint.json",
+      "project/current_state.md",
+      "project/research_graph.json",
+      "project/session_state.json",
+      "project/research_ledger.jsonl",
+      "project/document_projection_map.json",
+      "history_conversation/index.json"
+    ],
+    "selective_history": true,
+    "maximum_additional_summaries": 5,
+    "on_failure": "CONTEXT_LOAD_BLOCKED"
+  }
+}

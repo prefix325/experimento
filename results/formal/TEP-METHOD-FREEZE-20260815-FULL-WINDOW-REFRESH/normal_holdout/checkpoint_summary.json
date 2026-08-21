@@ -1,0 +1,22 @@
+{
+  "status": "COMPLETE",
+  "lot_status": "COMPLETE",
+  "cohort": "normal_holdout",
+  "detector_request": "dpca",
+  "experiment_id": "tep-local-formal-87a15a1b6acd",
+  "dpca": {
+    "status": "COMPLETE",
+    "formal_runs": 500,
+    "manual_block_runs": 1,
+    "completed_runs": 500,
+    "remaining_runs": 0
+  },
+  "llm": {
+    "status": "COMPLETE",
+    "formal_selected_runs": 50,
+    "manual_block_runs": 50,
+    "completed_runs": 50,
+    "remaining_runs": 0
+  },
+  "completed_at": "2026-08-20T20:01:29.665835+00:00"
+}

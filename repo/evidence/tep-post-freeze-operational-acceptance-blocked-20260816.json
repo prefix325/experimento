@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "TEP-POST-FREEZE-OPERATIONAL-ACCEPTANCE-BLOCKED-20260816",
+  "status": "TECHNICAL_ACCEPTANCE_BLOCKED_BEFORE_INFERENCE",
+  "scientific_result": false,
+  "operational_amendment_id": "POST_FREEZE_OPERATIONAL_AMENDMENT_001",
+  "technical_acceptance_artifact": "results/technical_acceptance/post-freeze-operational-amendment-001-acceptance-20260816T194520Z/technical_acceptance.json",
+  "technical_acceptance_artifact_sha256": "78cdf7cbf1abd87a274a344f17be8b1f43a47b71d4bb4adbecb1ab667d65643d",
+  "verdict": "FAIL",
+  "inference_count": 0,
+  "network_mode": "none",
+  "zero_target_access": true,
+  "zero_faultfree_testing_access": true,
+  "formal_scientific_execution_started": false,
+  "observed_startup": {
+    "gpu": "NVIDIA GeForce RTX 4060",
+    "gpu_total_mib": 8187,
+    "gpu_free_mib": 1259,
+    "offloaded_layers": 0,
+    "total_layers": 29,
+    "cause": "INSUFFICIENT_FREE_GPU_MEMORY_FOR_REQUIRED_OFFLOAD"
+  },
+  "failure": "RuntimeError: llama-server became healthy without required startup evidence",
+  "consequence": "REAL START remains BLOCKED; run58 LLM attempt_0002 was not created and may not start until one synthetic acceptance inference passes."
+}

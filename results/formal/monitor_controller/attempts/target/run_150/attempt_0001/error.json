@@ -1,0 +1,16 @@
+{
+  "cohort": "target",
+  "component": null,
+  "error_summary": "Formal operational component failed",
+  "error_type": "PermissionError",
+  "exit_code": 0,
+  "historical": false,
+  "log_path": "X:\\PSQZA_TEP_LOCAL\\results\\formal\\monitor_controller\\attempts\\target\\run_150\\attempt_0001\\run-event-11546eea87cc4be5bfdf648aedee2648-traceback.log",
+  "message": "[Errno 13] Permission denied: 'X:\\\\PSQZA_TEP_LOCAL\\\\results\\\\formal\\\\monitor_controller\\\\monitor_state.json.tmp'",
+  "operational_only": true,
+  "run_event_id": "run-event-11546eea87cc4be5bfdf648aedee2648",
+  "simulation_run": 150,
+  "status": "ACTIVE",
+  "timestamp": "2026-08-17T03:54:22.741770+00:00",
+  "traceback": "Traceback (most recent call last):\n  File \"X:\\PSQZA_TEP_LOCAL\\repo\\tools\\formal_monitor\\real_mode.py\", line 355, in run_one\n    self.store.update_attempt(\n    ~~~~~~~~~~~~~~~~~~~~~~~~~^\n        self.state,\n        ^^^^^^^^^^^\n    ...<3 lines>...\n        lot_status=\"STARTING\",\n        ^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"X:\\PSQZA_TEP_LOCAL\\repo\\tools\\formal_monitor\\state.py\", line 398, in update_attempt\n    self.save(state)\n    ~~~~~~~~~^^^^^^^\n  File \"X:\\PSQZA_TEP_LOCAL\\repo\\tools\\formal_monitor\\state.py\", line 290, in save\n    atomic_json(self.state_path, state.to_dict())\n    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"X:\\PSQZA_TEP_LOCAL\\repo\\tools\\formal_monitor\\state.py\", line 29, in atomic_json\n    temporary.write_text(json.dumps(value, indent=2, sort_keys=True, ensure_ascii=False) + \"\\n\", encoding=\"utf-8\")\n    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"X:\\aplicacoes\\Anaconda\\Lib\\pathlib\\_local.py\", line 555, in write_text\n    return PathBase.write_text(self, data, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"X:\\aplicacoes\\Anaconda\\Lib\\pathlib\\_abc.py\", line 651, in write_text\n    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"X:\\aplicacoes\\Anaconda\\Lib\\pathlib\\_local.py\", line 537, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nPermissionError: [Errno 13] Permission denied: 'X:\\\\PSQZA_TEP_LOCAL\\\\results\\\\formal\\\\monitor_controller\\\\monitor_state.json.tmp'\n"
+}

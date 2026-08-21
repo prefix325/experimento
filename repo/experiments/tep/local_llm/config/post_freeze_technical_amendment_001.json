@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "amendment_id": "POST_FREEZE_TECHNICAL_AMENDMENT_001",
+  "amendment_type": "POST_FREEZE_TECHNICAL_AMENDMENT",
+  "status": "IMPLEMENTED_IN_WORKTREE_PENDING_RESEARCHER_COMMIT_APPROVAL",
+  "date": "2026-08-14",
+  "base_method_freeze_commit": "c5ec02ecfff54845262238cd02558ea98f21b14d",
+  "base_formal_sha256": "921954a9b8b5822b096259ac7746beab2373200fe095c686740ba51f093a464c",
+  "base_image_tag": "psqza-tep-local:c5ec02e-formal",
+  "base_image_id": "sha256:4f3fb9457770f769573f76c997142ffd1b4ecf9508842c82c50ef1fecbd324ed",
+  "scientific_parameters_changed": false,
+  "llm_inference_performed": false,
+  "methodological_amendment": "post_freeze_methodological_amendment_002.json",
+  "monitor": {
+    "monitor_enabled": true,
+    "monitor_bind": "127.0.0.1",
+    "internet_required": false,
+    "batch_size_runs": 1,
+    "resume_unit": "simulationRun COMPLETE",
+    "disk_state_is_authoritative": true,
+    "telemetry_interval_seconds": 2,
+    "mock_support": true,
+    "real_execution_gate_default": "BLOCKED"
+  },
+  "stop_semantics": {
+    "stop_after_current": "Finish and persist the current valid COMPLETE batch, start no next batch, then set STOPPED_CLEAN.",
+    "stop_now": "Terminate the current process/container in a controlled manner, preserve logs, never write COMPLETE, mark PARTIAL or ABORTED, then set STOPPED_FORCED.",
+    "abrupt_shutdown": "Treat stale RUNNING as interrupted, preserve its attempt and restart that simulationRun from the beginning."
+  },
+  "technical_acceptance": {
+    "current_status": "FAILED_TIMEOUT_CPU_ONLY",
+    "run": "post-freeze-technical-acceptance-20260814T132905Z",
+    "new_acceptance_executed": false,
+    "required_before_real_execution": true
+  },
+  "gpu_timeout_amendment": {
+    "status": "NOT_AUTHORIZED_NOT_IMPLEMENTED",
+    "note": "GPU exposure, offload and timeout remain a separate post-freeze technical decision. The monitor does not change them."
+  },
+  "scientific_execution_permitted": false
+}

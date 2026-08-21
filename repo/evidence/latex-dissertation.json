@@ -1,0 +1,14 @@
+{
+  "document_id": "psqza.dissertation",
+  "source_commit": "85f113f77db0f18b55e730723912a32284a3fe11",
+  "source_tree_sha256": "b1993fe51a67538c75cf868ec38d8ccdfbfa2a691ef8459e8cc2415a641849ae",
+  "toolchain": "Latexmk, John Collins, 11 Dec. 2024. Version 4.86; pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+  "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex",
+  "exit_code": 0,
+  "warnings": ["Initial skeleton has an empty bibliography."],
+  "unresolved_citations": [],
+  "missing_assets": [],
+  "log_sha256": "a6e13c85d627a1ec02808b6e649b53337d167561242f24064ae9a667dd11098e",
+  "pdf_sha256": "6684ec8eac96e329308fb57c8e5d45ee3c8dbf47e80daaff7edf4224ad890367",
+  "status": "PASS"
+}

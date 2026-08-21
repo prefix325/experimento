@@ -1,0 +1,420 @@
+{
+  "status": "CANDIDATE_FOR_RESEARCHER_FREEZE",
+  "source": "FaultFree Training only",
+  "source_files": [
+    {
+      "name": "normal_blind_runs_001_050.csv.gz",
+      "sha256": "febd67ea7009678d6182b0a435d32b5052ce12070160d21ef758c5f23710494f"
+    },
+    {
+      "name": "normal_blind_runs_051_100.csv.gz",
+      "sha256": "96d6796de76b8502c364256a15ea7db8ee544a9c0473473722fd89fc5e89f4c1"
+    },
+    {
+      "name": "normal_blind_runs_101_150.csv.gz",
+      "sha256": "f0fa5aabd1ac3703a259e2c5efb41176f2a3d65a953de94752ec0ac6ba8c44b5"
+    },
+    {
+      "name": "normal_blind_runs_151_200.csv.gz",
+      "sha256": "3c596e2e3c2a556cf58302a8e88317d03bc4f49f36e4b4c8fc20011ffde44179"
+    },
+    {
+      "name": "normal_blind_runs_201_250.csv.gz",
+      "sha256": "c9c144211b3a1d5981dcacc7fa83abea515e7776f764452278bf18928ebc8216"
+    },
+    {
+      "name": "normal_blind_runs_251_300.csv.gz",
+      "sha256": "75938c45920e2de59341a36f0fa9bd5fa8018282f12d0b43ffe54481a1d87740"
+    },
+    {
+      "name": "normal_blind_runs_301_350.csv.gz",
+      "sha256": "b2cdc627d840669be487f032886ca8650fa83a4603e626d64c08781abd9afbb3"
+    },
+    {
+      "name": "normal_blind_runs_351_400.csv.gz",
+      "sha256": "cfd51c48327cbfa24e910dbf193b8a76d6a373cacc8f1b8b5ee3572b9d9bfc7d"
+    },
+    {
+      "name": "normal_blind_runs_401_450.csv.gz",
+      "sha256": "c52be86f3139f7947c01ad85bda7885e991b5b022510da862a9643bd94bb80e0"
+    },
+    {
+      "name": "normal_blind_runs_451_500.csv.gz",
+      "sha256": "ead149e031c172cd2f87806c2c96067d40d0a61200506e3806782a3555a9202c"
+    }
+  ],
+  "normalization": "per-variable mean and sample standard deviation (ddof=1) fitted on all FaultFree Training rows",
+  "window_samples": 20,
+  "stride_samples": 5,
+  "windows_per_run": 97,
+  "total_reference_windows": 48500,
+  "payload_rounding_decimal_places": 4,
+  "quantile_method": "numpy.quantile default linear interpolation",
+  "thresholds": {
+    "xmeas_1": {
+      "high_max_z_q99": 3.1282,
+      "low_min_z_q01": -3.1186,
+      "increase_slope_q99": 0.1469,
+      "reduction_slope_q01": -0.1488,
+      "high_variability_range_q99": 4.531007000000002
+    },
+    "xmeas_2": {
+      "high_max_z_q99": 3.2616,
+      "low_min_z_q01": -3.2578,
+      "increase_slope_q99": 0.1180010000000002,
+      "reduction_slope_q01": -0.116801,
+      "high_variability_range_q99": 5.5108
+    },
+    "xmeas_3": {
+      "high_max_z_q99": 3.2227,
+      "low_min_z_q01": -3.2365,
+      "increase_slope_q99": 0.1289,
+      "reduction_slope_q01": -0.1278,
+      "high_variability_range_q99": 5.087325000000005
+    },
+    "xmeas_4": {
+      "high_max_z_q99": 3.2641,
+      "low_min_z_q01": -3.2442,
+      "increase_slope_q99": 0.1156,
+      "reduction_slope_q01": -0.117,
+      "high_variability_range_q99": 4.9836
+    },
+    "xmeas_5": {
+      "high_max_z_q99": 3.2333,
+      "low_min_z_q01": -3.2021,
+      "increase_slope_q99": 0.0905,
+      "reduction_slope_q01": -0.0904,
+      "high_variability_range_q99": 5.5512
+    },
+    "xmeas_6": {
+      "high_max_z_q99": 3.1595,
+      "low_min_z_q01": -3.2062,
+      "increase_slope_q99": 0.0943,
+      "reduction_slope_q01": -0.094001,
+      "high_variability_range_q99": 5.4642
+    },
+    "xmeas_7": {
+      "high_max_z_q99": 2.9715,
+      "low_min_z_q01": -2.9018,
+      "increase_slope_q99": 0.1453010000000002,
+      "reduction_slope_q01": -0.144701,
+      "high_variability_range_q99": 3.1493
+    },
+    "xmeas_8": {
+      "high_max_z_q99": 3.2082,
+      "low_min_z_q01": -3.2066,
+      "increase_slope_q99": 0.10680100000000022,
+      "reduction_slope_q01": -0.107201,
+      "high_variability_range_q99": 5.175117000000003
+    },
+    "xmeas_9": {
+      "high_max_z_q99": 3.1388,
+      "low_min_z_q01": -3.1411,
+      "increase_slope_q99": 0.0854,
+      "reduction_slope_q01": -0.0858,
+      "high_variability_range_q99": 5.7566
+    },
+    "xmeas_10": {
+      "high_max_z_q99": 3.1458,
+      "low_min_z_q01": -3.1354,
+      "increase_slope_q99": 0.1274,
+      "reduction_slope_q01": -0.1278,
+      "high_variability_range_q99": 4.8318
+    },
+    "xmeas_11": {
+      "high_max_z_q99": 3.1988,
+      "low_min_z_q01": -3.2224,
+      "increase_slope_q99": 0.1209,
+      "reduction_slope_q01": -0.1197,
+      "high_variability_range_q99": 4.2165
+    },
+    "xmeas_12": {
+      "high_max_z_q99": 3.1722,
+      "low_min_z_q01": -3.1685,
+      "increase_slope_q99": 0.0899,
+      "reduction_slope_q01": -0.0893,
+      "high_variability_range_q99": 5.521
+    },
+    "xmeas_13": {
+      "high_max_z_q99": 2.9915,
+      "low_min_z_q01": -2.9329,
+      "increase_slope_q99": 0.1464,
+      "reduction_slope_q01": -0.14580100000000001,
+      "high_variability_range_q99": 3.2037
+    },
+    "xmeas_14": {
+      "high_max_z_q99": 3.2917,
+      "low_min_z_q01": -3.21,
+      "increase_slope_q99": 0.0887,
+      "reduction_slope_q01": -0.088,
+      "high_variability_range_q99": 5.5893
+    },
+    "xmeas_15": {
+      "high_max_z_q99": 3.1751,
+      "low_min_z_q01": -3.2009299999999996,
+      "increase_slope_q99": 0.0894010000000002,
+      "reduction_slope_q01": -0.09,
+      "high_variability_range_q99": 5.4814
+    },
+    "xmeas_16": {
+      "high_max_z_q99": 3.0177,
+      "low_min_z_q01": -2.9489,
+      "increase_slope_q99": 0.1402,
+      "reduction_slope_q01": -0.1401,
+      "high_variability_range_q99": 3.175
+    },
+    "xmeas_17": {
+      "high_max_z_q99": 3.2356,
+      "low_min_z_q01": -3.260517,
+      "increase_slope_q99": 0.08880100000000021,
+      "reduction_slope_q01": -0.087701,
+      "high_variability_range_q99": 5.658
+    },
+    "xmeas_18": {
+      "high_max_z_q99": 2.8059240000000045,
+      "low_min_z_q01": -2.841247,
+      "increase_slope_q99": 0.11670100000000021,
+      "reduction_slope_q01": -0.1127,
+      "high_variability_range_q99": 2.4253230000000046
+    },
+    "xmeas_19": {
+      "high_max_z_q99": 2.87294900000001,
+      "low_min_z_q01": -2.879809,
+      "increase_slope_q99": 0.12160100000000021,
+      "reduction_slope_q01": -0.1203,
+      "high_variability_range_q99": 2.559409000000002
+    },
+    "xmeas_20": {
+      "high_max_z_q99": 2.8479,
+      "low_min_z_q01": -2.9588,
+      "increase_slope_q99": 0.16920100000000018,
+      "reduction_slope_q01": -0.166301,
+      "high_variability_range_q99": 3.4852
+    },
+    "xmeas_21": {
+      "high_max_z_q99": 3.342,
+      "low_min_z_q01": -3.3227,
+      "increase_slope_q99": 0.1381,
+      "reduction_slope_q01": -0.136801,
+      "high_variability_range_q99": 5.4003
+    },
+    "xmeas_22": {
+      "high_max_z_q99": 3.3525,
+      "low_min_z_q01": -3.262738,
+      "increase_slope_q99": 0.0809,
+      "reduction_slope_q01": -0.0824,
+      "high_variability_range_q99": 5.5606
+    },
+    "xmeas_23": {
+      "high_max_z_q99": 3.0612,
+      "low_min_z_q01": -3.0932,
+      "increase_slope_q99": 0.1481,
+      "reduction_slope_q01": -0.145201,
+      "high_variability_range_q99": 4.771534000000006
+    },
+    "xmeas_24": {
+      "high_max_z_q99": 3.0457,
+      "low_min_z_q01": -3.0671,
+      "increase_slope_q99": 0.1244,
+      "reduction_slope_q01": -0.125,
+      "high_variability_range_q99": 4.954529000000006
+    },
+    "xmeas_25": {
+      "high_max_z_q99": 3.0667,
+      "low_min_z_q01": -3.0595,
+      "increase_slope_q99": 0.1228,
+      "reduction_slope_q01": -0.1229,
+      "high_variability_range_q99": 4.2045
+    },
+    "xmeas_26": {
+      "high_max_z_q99": 3.0601280000000055,
+      "low_min_z_q01": -3.0564,
+      "increase_slope_q99": 0.1264010000000002,
+      "reduction_slope_q01": -0.127101,
+      "high_variability_range_q99": 5.3097
+    },
+    "xmeas_27": {
+      "high_max_z_q99": 3.0745,
+      "low_min_z_q01": -3.0412,
+      "increase_slope_q99": 0.1448,
+      "reduction_slope_q01": -0.1452,
+      "high_variability_range_q99": 4.6421
+    },
+    "xmeas_28": {
+      "high_max_z_q99": 3.0064390000000083,
+      "low_min_z_q01": -3.0031,
+      "increase_slope_q99": 0.1232,
+      "reduction_slope_q01": -0.1232,
+      "high_variability_range_q99": 4.9474
+    },
+    "xmeas_29": {
+      "high_max_z_q99": 3.0521,
+      "low_min_z_q01": -3.0709299999999997,
+      "increase_slope_q99": 0.1401,
+      "reduction_slope_q01": -0.1394,
+      "high_variability_range_q99": 4.1897
+    },
+    "xmeas_30": {
+      "high_max_z_q99": 3.0793,
+      "low_min_z_q01": -3.0479,
+      "increase_slope_q99": 0.1321010000000002,
+      "reduction_slope_q01": -0.131701,
+      "high_variability_range_q99": 4.8611
+    },
+    "xmeas_31": {
+      "high_max_z_q99": 3.0626,
+      "low_min_z_q01": -3.0878,
+      "increase_slope_q99": 0.12160100000000021,
+      "reduction_slope_q01": -0.1224,
+      "high_variability_range_q99": 3.6855
+    },
+    "xmeas_32": {
+      "high_max_z_q99": 3.0244,
+      "low_min_z_q01": -3.0101,
+      "increase_slope_q99": 0.1260010000000002,
+      "reduction_slope_q01": -0.124601,
+      "high_variability_range_q99": 5.028503000000001
+    },
+    "xmeas_33": {
+      "high_max_z_q99": 3.0461,
+      "low_min_z_q01": -3.0301,
+      "increase_slope_q99": 0.13880200000000043,
+      "reduction_slope_q01": -0.1409,
+      "high_variability_range_q99": 4.183201
+    },
+    "xmeas_34": {
+      "high_max_z_q99": 2.9928,
+      "low_min_z_q01": -3.0565,
+      "increase_slope_q99": 0.1239,
+      "reduction_slope_q01": -0.122901,
+      "high_variability_range_q99": 4.822001
+    },
+    "xmeas_35": {
+      "high_max_z_q99": 3.048815000000003,
+      "low_min_z_q01": -3.0755,
+      "increase_slope_q99": 0.1254,
+      "reduction_slope_q01": -0.125301,
+      "high_variability_range_q99": 4.3163
+    },
+    "xmeas_36": {
+      "high_max_z_q99": 3.0472,
+      "low_min_z_q01": -3.0643179999999997,
+      "increase_slope_q99": 0.1232,
+      "reduction_slope_q01": -0.1238,
+      "high_variability_range_q99": 4.956
+    },
+    "xmeas_37": {
+      "high_max_z_q99": 2.7131,
+      "low_min_z_q01": -2.7587,
+      "increase_slope_q99": 0.1947,
+      "reduction_slope_q01": -0.196501,
+      "high_variability_range_q99": 4.3599
+    },
+    "xmeas_38": {
+      "high_max_z_q99": 2.8611,
+      "low_min_z_q01": -2.8036,
+      "increase_slope_q99": 0.1624,
+      "reduction_slope_q01": -0.1601,
+      "high_variability_range_q99": 3.028805000000001
+    },
+    "xmeas_39": {
+      "high_max_z_q99": 2.7103,
+      "low_min_z_q01": -2.7558,
+      "increase_slope_q99": 0.19280200000000042,
+      "reduction_slope_q01": -0.195504,
+      "high_variability_range_q99": 4.2993
+    },
+    "xmeas_40": {
+      "high_max_z_q99": 2.8001,
+      "low_min_z_q01": -2.7602,
+      "increase_slope_q99": 0.1926020000000004,
+      "reduction_slope_q01": -0.192302,
+      "high_variability_range_q99": 4.3161
+    },
+    "xmeas_41": {
+      "high_max_z_q99": 2.7582,
+      "low_min_z_q01": -2.77974,
+      "increase_slope_q99": 0.19340100000000018,
+      "reduction_slope_q01": -0.1941,
+      "high_variability_range_q99": 4.327619000000004
+    },
+    "xmv_1": {
+      "high_max_z_q99": 3.2247,
+      "low_min_z_q01": -3.2029,
+      "increase_slope_q99": 0.11740100000000021,
+      "reduction_slope_q01": -0.1194,
+      "high_variability_range_q99": 5.556216000000003
+    },
+    "xmv_2": {
+      "high_max_z_q99": 3.2477,
+      "low_min_z_q01": -3.1995,
+      "increase_slope_q99": 0.12790200000000043,
+      "reduction_slope_q01": -0.1278,
+      "high_variability_range_q99": 5.0802
+    },
+    "xmv_3": {
+      "high_max_z_q99": 3.1338,
+      "low_min_z_q01": -3.114,
+      "increase_slope_q99": 0.1468,
+      "reduction_slope_q01": -0.1485,
+      "high_variability_range_q99": 4.5214
+    },
+    "xmv_4": {
+      "high_max_z_q99": 3.2308,
+      "low_min_z_q01": -3.2204,
+      "increase_slope_q99": 0.0951,
+      "reduction_slope_q01": -0.0942,
+      "high_variability_range_q99": 5.394
+    },
+    "xmv_5": {
+      "high_max_z_q99": 3.1148,
+      "low_min_z_q01": -3.1022,
+      "increase_slope_q99": 0.1539010000000002,
+      "reduction_slope_q01": -0.154301,
+      "high_variability_range_q99": 3.7913380000000076
+    },
+    "xmv_6": {
+      "high_max_z_q99": 3.1607,
+      "low_min_z_q01": -3.0964,
+      "increase_slope_q99": 0.1301020000000004,
+      "reduction_slope_q01": -0.1307,
+      "high_variability_range_q99": 4.7814
+    },
+    "xmv_7": {
+      "high_max_z_q99": 3.1724,
+      "low_min_z_q01": -3.1683,
+      "increase_slope_q99": 0.0899010000000002,
+      "reduction_slope_q01": -0.0893,
+      "high_variability_range_q99": 5.5209
+    },
+    "xmv_8": {
+      "high_max_z_q99": 3.1756,
+      "low_min_z_q01": -3.200926,
+      "increase_slope_q99": 0.0894010000000002,
+      "reduction_slope_q01": -0.09,
+      "high_variability_range_q99": 5.4817
+    },
+    "xmv_9": {
+      "high_max_z_q99": 2.8777,
+      "low_min_z_q01": -2.7239079999999998,
+      "increase_slope_q99": 0.1207,
+      "reduction_slope_q01": -0.119201,
+      "high_variability_range_q99": 2.4712070000000015
+    },
+    "xmv_10": {
+      "high_max_z_q99": 3.2649,
+      "low_min_z_q01": -3.3233,
+      "increase_slope_q99": 0.09410100000000021,
+      "reduction_slope_q01": -0.095901,
+      "high_variability_range_q99": 5.6821
+    },
+    "xmv_11": {
+      "high_max_z_q99": 3.2591210000000044,
+      "low_min_z_q01": -3.2321,
+      "increase_slope_q99": 0.0879,
+      "reduction_slope_q01": -0.0886,
+      "high_variability_range_q99": 5.6522
+    }
+  },
+  "target_fault_data_accessed": false
+}

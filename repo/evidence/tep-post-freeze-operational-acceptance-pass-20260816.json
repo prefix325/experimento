@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "evidence_id": "TEP-POST-FREEZE-OPERATIONAL-ACCEPTANCE-PASS-20260816",
+  "status": "TECHNICAL_ACCEPTANCE_PASS",
+  "scientific_result": false,
+  "operational_amendment_id": "POST_FREEZE_OPERATIONAL_AMENDMENT_001",
+  "technical_acceptance_artifact": "results/technical_acceptance/post-freeze-operational-amendment-001-acceptance-20260816T201154Z/technical_acceptance.json",
+  "technical_acceptance_artifact_sha256": "d4b95d7943531017f5e7e95b2af22d2eb01654ed097850c0a7b486d592754f17",
+  "preserved_prior_fail_artifact": "results/technical_acceptance/post-freeze-operational-amendment-001-acceptance-20260816T194520Z/technical_acceptance.json",
+  "preserved_prior_fail_sha256": "78cdf7cbf1abd87a274a344f17be8b1f43a47b71d4bb4adbecb1ab667d65643d",
+  "precheck_gpu": {
+    "name": "NVIDIA GeForce RTX 4060",
+    "total_mib": 8188,
+    "free_mib": 7297
+  },
+  "verdict": "PASS",
+  "inference_count": 1,
+  "requested_max_output_tokens": 1024,
+  "completion_tokens": 567,
+  "finish_reason": "stop",
+  "output_parser_result": "PASS",
+  "network_none_verified": true,
+  "zero_target_access": true,
+  "zero_faultfree_testing_access": true,
+  "gpu_offload": {
+    "offloaded_layers": 29,
+    "total_layers": 29,
+    "pass": true
+  },
+  "formal_scientific_execution_started": false,
+  "consequence": "Technical gate may be reconciled to REAL START READY; run58 LLM attempt_0002 remains uncreated and requires a separate explicit start."
+}

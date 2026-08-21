@@ -1,0 +1,24 @@
+{
+  "run_event_id": "run-event-4032361621b34803825438de4f35b1d2",
+  "component": "dpca",
+  "argv": [
+    "powershell",
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "X:\\PSQZA_TEP_LOCAL\\repo\\scripts\\run_formal_batch_offline.ps1",
+    "-RunOrdinal",
+    "262",
+    "-Cohort",
+    "target",
+    "-Detector",
+    "dpca",
+    "-ResultsDirectory",
+    "X:\\PSQZA_TEP_LOCAL\\results\\formal\\TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH\\target"
+  ],
+  "cwd": "X:\\PSQZA_TEP_LOCAL\\results\\formal\\TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH",
+  "cwd_exists": true,
+  "results_directory": "X:\\PSQZA_TEP_LOCAL\\results\\formal\\TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH\\target",
+  "results_directory_exists": true
+}

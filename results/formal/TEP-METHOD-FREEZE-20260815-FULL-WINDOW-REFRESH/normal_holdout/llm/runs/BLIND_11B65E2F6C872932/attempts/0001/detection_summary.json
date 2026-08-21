@@ -1,0 +1,15 @@
+{
+  "detection_state": "CONFIRMED_DETECTION",
+  "window_id": 188,
+  "first_indication_window": 5,
+  "confirmation_window": 60,
+  "confirmation_candidate_window": 56,
+  "verification_advance": 0,
+  "verification_advances_required": 4,
+  "pending_candidate_windows": [],
+  "candidate_events": [],
+  "event": "CONFIRMED_DETECTION",
+  "first_indication_status": "FIRST_INDICATION",
+  "confirmed_detection_status": "CONFIRMED_DETECTION",
+  "should_stop": false
+}

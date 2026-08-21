@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "X:\PSQZA_TEP_LOCAL\repo\tools\formal_monitor\real_mode.py", line 352, in run_one
+    self._run_component(lot, "llm", lot.llm_ordinal)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "X:\PSQZA_TEP_LOCAL\repo\tools\formal_monitor\real_mode.py", line 304, in _run_component
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: Formal target llm batch exited with 1; first causal stderr: Traceback (most recent call last):

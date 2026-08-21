@@ -1,0 +1,64 @@
+{
+  "status": "PROPOSED",
+  "dataset": {
+    "name": "Additional Tennessee Eastman Process Simulation Data for Anomaly Detection Evaluation",
+    "authors": ["Cory A. Rieth", "Ben D. Amsel", "Randy Tran", "Maia B. Cook"],
+    "year": 2017,
+    "provider": "Harvard Dataverse",
+    "version": "1",
+    "doi": "10.7910/DVN/6C3JR1"
+  },
+  "source_files": {
+    "normal_reference": "TEP_FaultFree_Training.RData",
+    "normal_holdout": "TEP_FaultFree_Testing.RData",
+    "fault_test": "TEP_Faulty_Testing.RData"
+  },
+  "source_objects": {
+    "normal_reference": "fault_free_training",
+    "normal_holdout": "fault_free_testing",
+    "fault_test": "faulty_testing"
+  },
+  "focal_fault": 13,
+  "metadata_columns": ["faultNumber", "simulationRun", "sample"],
+  "x_columns": [
+    "xmeas_1", "xmeas_2", "xmeas_3", "xmeas_4", "xmeas_5", "xmeas_6", "xmeas_7", "xmeas_8", "xmeas_9", "xmeas_10",
+    "xmeas_11", "xmeas_12", "xmeas_13", "xmeas_14", "xmeas_15", "xmeas_16", "xmeas_17", "xmeas_18", "xmeas_19", "xmeas_20",
+    "xmeas_21", "xmeas_22", "xmeas_23", "xmeas_24", "xmeas_25", "xmeas_26", "xmeas_27", "xmeas_28", "xmeas_29", "xmeas_30",
+    "xmeas_31", "xmeas_32", "xmeas_33", "xmeas_34", "xmeas_35", "xmeas_36", "xmeas_37", "xmeas_38", "xmeas_39", "xmeas_40", "xmeas_41",
+    "xmv_1", "xmv_2", "xmv_3", "xmv_4", "xmv_5", "xmv_6", "xmv_7", "xmv_8", "xmv_9", "xmv_10", "xmv_11"
+  ],
+  "x_count": 52,
+  "y": {
+    "name": "is_anomaly",
+    "type": "binary",
+    "normal_reference": 0,
+    "normal_holdout": 0,
+    "idv13_test_rule": "0 for sample 1..160; 1 for sample 161..960",
+    "fault_onset_sample": 161,
+    "temporal_correction": {
+      "status": "METHODOLOGICAL_OFF_BY_ONE_CORRECTION_APPLIED",
+      "previous_rule": "0 when sample < 160; 1 when sample >= 160",
+      "previous_fault_onset_sample": 160,
+      "reason": "The source-derived test index is 1..960 and the approved convention is 160 normal samples followed by 800 post-fault samples; the fault is introduced after sample 160."
+    },
+    "use": "evaluation_only",
+    "exposed_to_llm": false,
+    "exposed_to_dpca": false
+  },
+  "primary_detector_input": "all 52 x_columns only",
+  "leakage_prohibitions": [
+    "faultNumber is metadata and never part of X",
+    "simulationRun is metadata and never part of X",
+    "sample is temporal metadata and never part of the detector feature vector unless explicitly represented as relative window position",
+    "is_anomaly is withheld from the LLM and DPCA",
+    "no IDV(13)-derived feature selection",
+    "no DPCA output is provided to the LLM in the primary condition"
+  ],
+  "pilot": {
+    "status": "ENGINEERING_ONLY_PENDING_MECAI_FINAL_SAMPLING",
+    "simulation_runs": [1,2,3,4,5,6,7,8,9,10],
+    "rule": "retain every sample and all 52 X variables for each selected run; do not downsample within a run"
+  },
+  "final_sampling": "PENDING_MECAI",
+  "acceptance_semantics": "NOT_MACHINE_VERIFIED"
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VERAS Cross-Document Consistency Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["report_id", "plan_id", "research_commit", "documents_checked", "invariants", "findings", "placeholders_detected", "unsupported_claims_detected", "verdict"],
+  "properties": {
+    "report_id": {"type": "string", "minLength": 1},
+    "plan_id": {"type": "string", "minLength": 1},
+    "research_commit": {"type": "string", "pattern": "^[a-f0-9]{40,64}$"},
+    "documents_checked": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["PREPROJECT", "ARTICLE", "DISSERTATION", "DOCTORAL_AGENDA"]}},
+    "invariants": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "boolean"}},
+    "findings": {"type": "array", "items": {"type": "object"}},
+    "placeholders_detected": {"type": "integer", "minimum": 0},
+    "unsupported_claims_detected": {"type": "integer", "minimum": 0},
+    "verdict": {"enum": ["PASS", "PASS_WITH_WARNINGS", "REMEDIATION_REQUIRED", "INCONCLUSIVE"]}
+  },
+  "allOf": [{"if": {"properties": {"verdict": {"const": "PASS"}}}, "then": {"properties": {"placeholders_detected": {"const": 0}, "unsupported_claims_detected": {"const": 0}}}}]
+}

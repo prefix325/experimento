@@ -1,0 +1,134 @@
+{
+  "schema_version": "4.0.0",
+  "status": "FROZEN_FULL_WINDOW_REFRESH",
+  "methodology_frozen": true,
+  "method_freeze_id": "TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH",
+  "fault_onset_sample": 161,
+  "normal_period": {"first_sample": 1, "last_sample": 160, "count": 160},
+  "post_fault_period": {"first_sample": 161, "last_sample": 960, "count": 800},
+  "sample_interval_minutes": 3,
+  "target_fault_blind_selection": true,
+  "dataset_roles": {
+    "normal_reference_training": {
+      "dataset": "FaultFree Training",
+      "purpose": "normalization, DPCA fit, limits and H3 thresholds only",
+      "evaluation_cohort": false
+    },
+    "llm_target": {
+      "dataset": "IDV(13)",
+      "simulation_runs": 50,
+      "selection": "formal_run_selection.json; seed 42; eligible 11..500; runs 1..10 excluded"
+    },
+    "llm_normal_holdout": {
+      "dataset": "FaultFree Testing",
+      "simulation_runs": 50,
+      "selection": "formal_normal_holdout_selection.json; seed 43; eligible 1..500"
+    },
+    "dpca_target": {
+      "dataset": "IDV(13)",
+      "simulation_runs": 500,
+      "selection": "complete 1..500 universe; no subsampling"
+    },
+    "dpca_normal_holdout": {
+      "dataset": "FaultFree Testing",
+      "simulation_runs": 500,
+      "selection": "complete 1..500 universe; no subsampling"
+    }
+  },
+  "h1": {
+    "unit": "simulationRun",
+    "first_indication_incidence": "runs with at least one eligible post-onset raw ANOMALY divided by all evaluated fault-test runs",
+    "confirmed_detection_incidence": "runs with at least one candidate confirmed by ANOMALY at its own k+R verification window divided by all evaluated fault-test runs",
+    "detection_rate": "runs with at least one confirmed post-onset alarm divided by all evaluated fault-test runs",
+    "no_detection_rate": "runs with no confirmed post-onset alarm divided by all evaluated fault-test runs",
+    "false_alarm_rate_normal_holdout": {
+      "cohort": "FaultFree Testing",
+      "unit": "normal-holdout simulationRun",
+      "raw_anomaly_window_rate": "raw ANOMALY windows divided by all scheduled normal-holdout windows",
+      "raw_false_alarm_run_incidence": "runs with at least one raw ANOMALY divided by all evaluated normal-holdout runs",
+      "confirmed_false_alarm_run_incidence": "runs with at least one full-sample-refresh-confirmed candidate divided by all evaluated normal-holdout runs",
+      "time_to_first_confirmed_false_alarm": "minutes from sample 1 to the first confirmed false-alarm verification endpoint, when present",
+      "denominator": "all evaluated normal-holdout runs"
+    },
+    "false_alarm_rate_prefault": {
+      "cohort": "formal fault-test sample 1..160 only",
+      "unit": "fault-test simulationRun",
+      "numerator": "runs with a candidate and its k+R verification endpoint both in sample 1..160 and both ANOMALY",
+      "denominator": "all evaluated formal fault-test runs"
+    },
+    "opportunity_level_rates": "reported separately for normal holdout and pre-fault; their numerators and denominators are never pooled",
+    "abstentions_in_denominator": "EVIDENCE_INSUFFICIENT does not remove a run from H1 denominators"
+  },
+  "h2": {
+    "confirmation_policy_id": "FIRST_INDICATION_CONCURRENT_FULL_SAMPLE_REFRESH_V1",
+    "llm_first_indication": "earliest eligible post-onset window endpoint whose raw categorical decision is ANOMALY",
+    "llm_confirmed_detection": "earliest candidate k whose own k+R verification window is also ANOMALY",
+    "refresh_strides": {
+      "formula": "ceil(window_samples / stride_samples)",
+      "window_samples": 20,
+      "stride_samples": 5,
+      "derived_value": 4,
+      "independently_tunable": false
+    },
+    "candidate_concurrency": "every eligible ANOMALY starts its own candidate; candidates coexist and resolve independently",
+    "candidate_failure": "a non-ANOMALY at k+R fails only candidate k and does not cancel other pending candidates",
+    "trajectory_end": "each candidate whose k+R is beyond the trajectory is VERIFICATION_INCOMPLETE_END_OF_TRAJECTORY",
+    "no_event_states": ["NO_FIRST_INDICATION", "NO_CONFIRMED_DETECTION"],
+    "dpca_raw_exceedance": "T2 > t2_limit OR SPE/Q > spe_q_limit",
+    "dpca_confirmed_alarm": "third consecutive sample with a raw DPCA exceedance",
+    "dpca_persistence": {"count": 3, "unit": "consecutive samples", "schedule_minutes": 3},
+    "explicit_onset_reset": "LLM candidates and DPCA persistence state are reset at sample 161 for evaluator post-onset metrics",
+    "no_carryover": "a pre-onset candidate cannot verify across sample 161",
+    "post_onset_confirmation": "candidate endpoint k and verification endpoint k+R must both be post-onset eligible",
+    "prefault_confirmation": "candidate and verification endpoints must both be <=160 and are reported only as pre-fault false alarm",
+    "abstention": "EVIDENCE_INSUFFICIENT is a categorical non-ANOMALY; it fails a candidate only when it occurs at that candidate's k+R and remains in denominators",
+    "first_indication_delay_samples": "first eligible post-onset raw ANOMALY endpoint minus 161",
+    "first_indication_delay_minutes": "first_indication_delay_samples multiplied by 3",
+    "confirmed_detection_delay_samples": "first confirmed candidate verification endpoint minus 161",
+    "confirmed_detection_delay_minutes": "confirmed_detection_delay_samples multiplied by 3",
+    "execution_without_detection": "detected=false and detection delay=null; no maximum delay is imputed",
+    "internal_time_only": "window_id, sample_start and sample_end are read from scientific records and are never exposed in the LLM payload",
+    "tie_breaking": "ascending sample/sample_end, then ascending window_id; first confirmed candidate in that deterministic order",
+    "normal_early_stop": false,
+    "alarm_episode_clustering": false
+  },
+  "h3": {
+    "scientific_construct": "PROCESS-EVIDENCE GROUNDEDNESS",
+    "scope": "deterministic verification of structured evidence against the exact numeric payload for the same window",
+    "evidence_schema": {
+      "required_fields": ["variable", "claim", "observation"],
+      "claim_enum": ["HIGH", "LOW", "INCREASE", "REDUCTION", "VARIABILITY"]
+    },
+    "normal_threshold_reference": "h3_evidence_reference.json",
+    "threshold_source": "FaultFree Training only; 48500 causal windows using window=20, stride=5 and representation rounding",
+    "variable_correspondence": "evidence.variable must exactly equal one of the 52 identifiers and be present in the same window payload",
+    "claim_tests": {
+      "HIGH": "max_z >= high_max_z_q99",
+      "LOW": "min_z <= low_min_z_q01",
+      "INCREASE": "slope_z_per_sample >= increase_slope_q99 AND end_z > start_z",
+      "REDUCTION": "slope_z_per_sample <= reduction_slope_q01 AND end_z < start_z",
+      "VARIABILITY": "round(max_z - min_z, 4) >= high_variability_range_q99"
+    },
+    "observation_role": "human-readable audit and secondary qualitative analysis only; observation text never determines the primary claim classification or score",
+    "evidence_item_score": "1 when variable correspondence is valid and the structured claim passes its numeric rule; otherwise 0",
+    "response_score": "mean evidence-item score; ANOMALY with no evidence scores 0; empty evidence for NORMAL or EVIDENCE_INSUFFICIENT is not applicable",
+    "coverage": "numerically verifiable evidence items divided by all evidence items",
+    "run_aggregation": "mean applicable response score within each simulationRun",
+    "overall_aggregation": "macro mean of applicable run scores, with distribution and coverage reported separately",
+    "threshold_target_independence": true,
+    "keyword_inference_used_for_primary_metric": false
+  },
+  "aggregation": {
+    "primary": "macro aggregation across simulationRuns",
+    "counts_always_reported": true,
+    "detected_only_delay_summary": "count, mean, median, q25 and q75 among detected runs, accompanied by no_detection_rate",
+    "llm_and_dpca": "reported separately; DPCA output is never supplied to the LLM primary condition",
+    "llm_target_runs": 50,
+    "llm_normal_holdout_runs": 50,
+    "dpca_target_runs": 500,
+    "dpca_normal_holdout_runs": 500
+  },
+  "implementation": "experiments/tep/local_llm/src/tep_local/evaluation.py",
+  "validation": "synthetic fixtures for confirmation-state tests; no target or FaultFree Testing access",
+  "llm_inference_executed_for_contract": false
+}

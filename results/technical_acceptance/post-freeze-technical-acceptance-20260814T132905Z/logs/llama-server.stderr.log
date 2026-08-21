@@ -1,0 +1,25 @@
+warn: LLAMA_ARG_HOST environment variable is set, but will be overwritten by command line argument --host
+warning: no usable GPU found, --gpu-layers option will be ignored
+warning: one possible reason is that llama.cpp was compiled without GPU support
+warning: consult docs/build.md for compilation instructions
+0.00.101.764 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.101.953 I srv          init: The UI is disabled
+0.00.101.954 I srv          init: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+0.00.102.098 W srv  llama_server: -----------------
+0.00.102.099 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.102.099 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.102.100 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.102.100 W srv  llama_server: -----------------
+0.00.103.575 I srv    load_model: loading model '/models/qwen2.5-7b-instruct-q4_k_m.gguf'
+0.05.473.709 W load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.49.647.558 I srv    load_model: initializing, n_slots = 4, n_ctx_slot = 8192, kv_unified = 'true'
+0.49.654.532 I srv  llama_server: model loaded
+0.49.654.566 I srv  llama_server: listening on http://127.0.0.1:8080
+0.49.654.567 W srv  llama_server: NOTICE: server default port will be changed to :9931 in a future release
+0.49.654.567 W srv  llama_server:         ref: https://github.com/ggml-org/llama.cpp/pull/26508
+0.50.062.138 I slot get_availabl: id  3 | task -1 | selected slot by LRU, t_last = -1
+0.50.062.398 I slot launch_slot_: id  3 | task 0 | processing task, is_child = 0
+2.59.440.506 I slot print_timing: id  3 | task 0 | prompt processing, n_tokens =   2048, progress = 0.45, t = 129.38 s / 15.83 tokens per second
+5.28.213.771 I slot print_timing: id  3 | task 0 | prompt processing, n_tokens =   4096, progress = 0.90, t = 278.16 s / 14.73 tokens per second
+5.51.095.702 W srv          stop: cancel task, id_task = 0
+6.04.145.292 I srv    operator(): operator(): cleaning up before exit...

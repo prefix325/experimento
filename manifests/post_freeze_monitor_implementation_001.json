@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "manifest_id": "POST_FREEZE_MONITOR_IMPLEMENTATION_001",
+  "status": "WORKTREE_IMPLEMENTED_TESTED_PENDING_RESEARCHER_COMMIT_APPROVAL",
+  "created_at": "2026-08-15T00:35:00Z",
+  "append_only": true,
+  "historical_preparation_manifest_overwritten": false,
+  "base_method_freeze": {
+    "commit": "c5ec02ecfff54845262238cd02558ea98f21b14d",
+    "formal_sha256": "921954a9b8b5822b096259ac7746beab2373200fe095c686740ba51f093a464c",
+    "image_tag": "psqza-tep-local:c5ec02e-formal",
+    "image_id": "sha256:4f3fb9457770f769573f76c997142ffd1b4ecf9508842c82c50ef1fecbd324ed"
+  },
+  "amendments": {
+    "methodological": {
+      "file": "experiments/tep/local_llm/config/post_freeze_methodological_amendment_001.json",
+      "sha256": "39569cd0f8178c972cfb1399aeacb70b6afa01805693f0a5d9fdc5cdd79339b4",
+      "scientific_parameters_changed": true
+    },
+    "technical": {
+      "file": "experiments/tep/local_llm/config/post_freeze_technical_amendment_001.json",
+      "sha256": "9816a9fd2d6cf60ee50dc96128cbfab77a3f6c8e6fe08f7eba0ca53a38fa5566",
+      "scientific_parameters_changed": false
+    }
+  },
+  "tests": {
+    "command": "python -m pytest -p no:cacheprovider experiments/tep/local_llm/tests tools/formal_monitor/tests -q",
+    "result": "82 passed in 2.79s",
+    "json_configs": "PASS",
+    "powershell_ast": "PASS",
+    "git_diff_check": "PASS",
+    "real_llm_inference": false
+  },
+  "mock_validation": {
+    "mode": "MOCK",
+    "runs": 50,
+    "window_total_max": 189,
+    "completed_batches": 50,
+    "wall_seconds": 36.3,
+    "state_directory": "X:/cache/Temp/User/MOCK_PSQZA_FORMAL_MONITOR_20260814",
+    "localhost_http_status": 200,
+    "monitor_idle_rss_mib": 27.24,
+    "formal_results_written": false
+  },
+  "gate_state": {
+    "formal_execution": "BLOCKED",
+    "technical_acceptance": "PENDING_AFTER_FAILED_CPU_ONLY_ATTEMPT",
+    "scientific_execution_permitted": false,
+    "real_start_enabled": false,
+    "mock_start_enabled": true
+  },
+  "files_sha256": {
+    "docs/FILE_INVENTORY.md": "2e664694e818525c38f80a8b21a279bb3c461aef75090f14110075ae29f8e0cd",
+    "docs/PROMPT_LEDGER.md": "ea53ef1c3af171d543f9f40706f95b2124392ea9ff9aca62fca53665657cdd53",
+    "docs/REPRODUCIBILITY_MEMORIAL.md": "ef6141bc2d08a449f2e9627231fb8e83bb2a09eff021df81c628c313a857f47d",
+    "docs/technical/METHODOLOGICAL_AMENDMENT_001.md": "929e7dcd3f9345308543eb8c4545d66cb27563a18697b9e39e3bf49172e9f472",
+    "docs/technical/MONITOR_RUNBOOK.md": "906d496ba3499f7e612a832106a97dd15fedebcaae95e3796fae28344584738d",
+    "docs/technical/TECHNICAL_AMENDMENT_001.md": "e4f34a397bf2af7a2979708221fa6e428c69586b9032545d9cacfb41541e4970",
+    "experiments/tep/local_llm/config/post_freeze_methodological_amendment_001.json": "39569cd0f8178c972cfb1399aeacb70b6afa01805693f0a5d9fdc5cdd79339b4",
+    "experiments/tep/local_llm/config/post_freeze_technical_amendment_001.json": "9816a9fd2d6cf60ee50dc96128cbfab77a3f6c8e6fe08f7eba0ca53a38fa5566",
+    "experiments/tep/local_llm/src/tep_local/amendments.py": "4556491f6711f8ba7fe18fd9211b90f55693f767a2e681afd21a0f2a331c8614",
+    "experiments/tep/local_llm/src/tep_local/checkpoint.py": "62a0f194e21f4cf557e4b67f2ce7f1fc6e42776b493e86a0cdd88dc8eed38116",
+    "experiments/tep/local_llm/src/tep_local/cli.py": "ca06c9ee614c6cd1bc6f091f29af1d2825314b3ec7ebb97e3bd4d94548f5240e",
+    "experiments/tep/local_llm/src/tep_local/detection.py": "5ff1ac639db8c0a4634ad21b4f80cfe71a485bbda179b428ddc85a72130ec2ba",
+    "experiments/tep/local_llm/src/tep_local/evaluation.py": "b146351d3823b30faf596820824eec9d92799d27f45648e210930aa5fb3b0271",
+    "experiments/tep/local_llm/src/tep_local/pipeline.py": "104f532a1c56ca957e18bc49cc531a99201e34b809f36e85d7d817959844550c",
+    "experiments/tep/local_llm/tests/test_evaluation_contract.py": "e5f971086862000ae299c1f5e5e5d99084f56caeb9427916958e11a33116667a",
+    "experiments/tep/local_llm/tests/test_full_window_refresh.py": "0126fe76f4eb3893a32e50c5b71cf3704deb677e3b5323768b4ad182f40c148a",
+    "scripts/common.ps1": "f38bf02cb82695a02ad657ee9880a0c92710250df33b7b84e4ae1c3e187ef89f",
+    "scripts/run_formal_batch_offline.ps1": "961125ba43bf48a45d4ecc61720a7ad5a97b0cef0a57c832c2567e5c3fb4f45a",
+    "scripts/run_formal_monitor.ps1": "bcdf1b87717b91392d902c5fe2fad0ad50d30e9750a13d6787684df3343e6390",
+    "tools/formal_monitor/__init__.py": "90d7ac7c0de6cb4fe75a626e164697637b71495073e4345b8fbe0073790cfa8a",
+    "tools/formal_monitor/eta.py": "d0ba0dc9ff542c0bf003b2925f4d62e9c97f434c4b38557b17bc3ea52a929862",
+    "tools/formal_monitor/gates.py": "5f401a58c102938666844062abda6e3cc54b9ad5d2b2402d65038449239aa6fd",
+    "tools/formal_monitor/mock_mode.py": "ae3ece46c15be1f0df1fb64fbd3e9a657bfaaa23013b0f47296600e5b005e849",
+    "tools/formal_monitor/monitor.py": "09eba7b85054ae80f678137268489974935dbf3f4b50602e2a7c7e9ac849c6ef",
+    "tools/formal_monitor/process_control.py": "493d282a8755115b7891421d9d97f08d3c7c17d75359e25badd084ecc9e365d8",
+    "tools/formal_monitor/resource_monitor.py": "42465bd2e317de65469061ed86c51a1f36138e418dce7c7062f5bc97117f1ccd",
+    "tools/formal_monitor/state.py": "bd0edb83cb09ba9fcd78fb0b220c8edd4e279e406c78d5545ff4b1c6d0cdd4a7",
+    "tools/formal_monitor/static/app.js": "9505a803ad20b9474cf039f7e9b8d20a4007490d921ae8a047012b9d7ec89669",
+    "tools/formal_monitor/static/style.css": "bf3e0b12e22f92790b206b62f91b0adae1c341e611e4a83c42370796817a8f32",
+    "tools/formal_monitor/templates/index.html": "15e77e54ac1370a70cd3436c500e4a1e8c3fc95c0b098a4e22e2f4651208843f",
+    "tools/formal_monitor/tests/test_monitor.py": "a9640d8c125c64cb5f418c6abd6700396a9b3d70b77717542879f40efd3c859c"
+  },
+  "assertions": {
+    "ZERO_NEW_LLM_INFERENCE": true,
+    "ZERO_IDV13_ACCESS": true,
+    "ZERO_FAULTFREE_TESTING_ACCESS": true,
+    "FORMAL_EXECUTION_RUN": false,
+    "TECHNICAL_ACCEPTANCE_RUN": false,
+    "FORMAL_JSON_MODIFIED": false,
+    "COMMIT_CREATED": false,
+    "PUSH_PERFORMED": false,
+    "MERGE_PERFORMED": false
+  }
+}

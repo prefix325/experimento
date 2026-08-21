@@ -1,0 +1,58 @@
+\documentclass[a4paper,12pt]{abntex2}
+\usepackage[left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+\input{../shared/latex/packages.tex}
+\input{../shared/latex/commands.tex}
+\input{../shared/latex/metadata.tex}
+\hypersetup{hidelinks}
+\begin{document}
+\begin{titlingpage}\centering
+{\bfseries\Large DISSERTAÇÃO\par}\vspace{3cm}
+{\Large \ResearchTitlePT\par}\vfill
+\researchauthor\par\researchinstitution\par\researchyear
+\end{titlingpage}
+\tableofcontents\newpage
+
+\chapter{Introdução}
+\ResearchProblemPT
+
+A investigação é orientada pela seguinte pergunta:
+
+\begin{quote}
+\ResearchQuestionPT
+\end{quote}
+
+\ResearchObjectivePT\ \ResearchContributionPT
+
+A dissertação funciona como integração progressiva dos objetos científicos admitidos. A presença de conteúdo no repositório não implica aceitação científica; pergunta, hipótese, método, referências, resultados e conclusões somente mudam de estado após avaliação formal e registro de evidência.
+
+\chapter{Fundamentação}
+\LiteratureStatusPT
+
+A fundamentação será estruturada em cinco eixos: monitoramento estatístico multivariado; detecção e diagnóstico de falhas graduais; representação de subsequências temporais; uso de modelos de linguagem para interpretação; e execução local verificável. A síntese final deverá expor convergências, divergências, lacunas, limitações dos estudos e a relação precisa de cada referência com as alegações da pesquisa.
+
+\chapter{Método}
+\ResearchMethodPT
+
+O desenho adota janelas causais progressivas e proíbe acesso a observações futuras. A DPCA fornece referência de detecção e variáveis contribuintes; a LLM é avaliada em condição independente da saída da DPCA e, caso admitido no escopo, em condição assistida por evidência estatística. A classificação deverá permitir abstenção por evidência insuficiente.
+
+\ResearchHypothesisPT
+
+Antes da execução formal serão congelados: versão e linhagem dos dados; intervalo de amostragem; protocolo da falha; lags e limiares da DPCA; modelo, quantização e ambiente de inferência; representação temporal; prompts; regras de alarme, persistência e abstenção; métricas; hardware; seeds aplicáveis; e critérios de sucesso e interrupção.
+
+\chapter{Resultados}
+\ResultsStatusPT
+
+Quando disponíveis, os resultados deverão incluir todas as condições executadas, falhas de execução, métricas predefinidas, intervalos ou medidas de incerteza adequadas, artefatos de reprodução e resultados negativos. Nenhum resultado será convertido em conclusão sem decisão de interpretação registrada e evidência vinculada.
+
+\chapter{Discussão}
+\ResearchLimitationsPT
+
+A discussão deverá separar detecção numérica, reconhecimento de evolução temporal, qualidade explicativa e custo operacional. A DPCA não é tratada como adversária a ser necessariamente superada. A validade externa será limitada pelo caráter público e simulado do TEP, e qualquer extrapolação para ambientes industriais reais exigirá dados autorizados e novo desenho de validação.
+
+\chapter{Conclusão}
+\ResearchContributionPT
+
+A conclusão final será restrita ao que estiver sustentado por resultados reproduzíveis e evidências aceitas. Extensões que excedam o escopo do mestrado serão encaminhadas à agenda doutoral sem serem apresentadas como tese ou compromisso institucional.
+
+\printbibliography[title={Referências}]
+\end{document}

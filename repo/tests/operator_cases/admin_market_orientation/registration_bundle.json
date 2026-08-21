@@ -1,0 +1,438 @@
+{
+  "case_id": "operator-admin-market-orientation-001",
+  "case_status": "TEST_FIXTURE",
+  "canonical_research_mutation": false,
+  "topic": "Orientação para o mercado, capacidade de marketing digital e desempenho em PMEs de serviços",
+  "operator_role": "PSQZA_HUMAN_OPERATOR_SIMULATION",
+  "records": {
+    "academic_turn": {
+      "turn_id": "turn-admin-20260806-001",
+      "research_commit": "506aa2b9916c614a584459429ebaf1d6fafc9555",
+      "classification": "DOCUMENT_DELTA",
+      "academic_relevance": true,
+      "affected_entity_ids": [
+        "admin.question.market_orientation_digital_capability",
+        "admin.model.market_orientation_digital_performance",
+        "admin.method.sme_services_survey"
+      ],
+      "materiality": "PROVISIONAL",
+      "requires_mecai": true,
+      "requires_banca": true,
+      "reason": "The request creates a new literature-grounded article, research project, master's reflection, and doctoral pre-agenda.",
+      "status": "CLASSIFIED"
+    },
+    "orientation": {
+      "orientation_id": "orientation-admin-20260806-001",
+      "research_commit": "506aa2b9916c614a584459429ebaf1d6fafc9555",
+      "objective": "Produce a bounded theoretical article and research project on market orientation and digital marketing capability without fabricating empirical results.",
+      "diagnosis": "The topic is broad and risks confusing Kotler's normative framework with empirical causal evidence. The deliverables require a testable construct model and explicit evidence boundaries.",
+      "directive": "Use Kotler as an integrative management foundation, operationalize market orientation through empirical literature, treat digital marketing as an organizational capability, and keep all causal claims provisional.",
+      "rationale": "This design supports an eight-page theoretical-propositional article and a four-page empirical project while preserving valid extensions for a master's dissertation and a doctoral pre-agenda.",
+      "foundations": [
+        "Kotler supports value creation, segmentation, targeting, positioning, and strategic market planning.",
+        "Market-orientation literature operationalizes intelligence generation, dissemination, responsiveness, customer orientation, competitor orientation, and interfunctional coordination.",
+        "Recent SME studies suggest that marketing and digital capabilities may mediate or condition performance relationships, but results vary by context."
+      ],
+      "required_learning": [
+        "Distinguish normative marketing frameworks from causal empirical evidence.",
+        "Distinguish digital tool adoption from organizational digital marketing capability.",
+        "Distinguish market performance from financial performance."
+      ],
+      "verification": [
+        "The article must state that it presents no empirical results.",
+        "The project must describe hypotheses as provisional.",
+        "The master's reflection must identify measurement and causal-inference limitations.",
+        "The doctoral pre-agenda must explicitly state that it is not a thesis."
+      ],
+      "recommendations": [
+        "Use a theoretical-propositional article as the immediate product.",
+        "Design a cross-sectional SME survey only as a future empirical stage.",
+        "Include classic and recent literature and record counterevidence or contingencies."
+      ],
+      "proposed_actions": [
+        {
+          "action_id": "ADMIN-A1",
+          "sequence": 1,
+          "description": "Build a literature map connecting Kotler, market orientation, customer value, digital orientation, marketing capability, and SME performance.",
+          "affected_entity_ids": ["admin.literature.market_orientation"],
+          "evidence_basis": [
+            "consensus:4c84f61801d453afb66edc9ef3b15f6f",
+            "consensus:a015b4128f6253c1b3f66e6e12d5a59d",
+            "consensus:fc892d4e581a5e29bd40e080d0ee1991"
+          ]
+        },
+        {
+          "action_id": "ADMIN-A2",
+          "sequence": 2,
+          "description": "Define a conceptual model in which digital marketing capability partially mediates the market-orientation and market-performance relationship.",
+          "affected_entity_ids": ["admin.model.market_orientation_digital_performance"],
+          "evidence_basis": [
+            "consensus:56ffd0dc051d5c2c9656b79f28101f4f",
+            "consensus:3ffa50bd9f0d5410aac8653e024e900b",
+            "consensus:8fef5240ab425eb29ff83125e56b0b42"
+          ]
+        },
+        {
+          "action_id": "ADMIN-A3",
+          "sequence": 3,
+          "description": "Draft an approximately eight-page theoretical-propositional scientific article with no fabricated results.",
+          "affected_entity_ids": ["admin.document.article"],
+          "evidence_basis": ["orientation-admin-20260806-001"]
+        },
+        {
+          "action_id": "ADMIN-A4",
+          "sequence": 4,
+          "description": "Draft an approximately four-page research project and propagate scoped reflections to the master's outline and doctoral pre-agenda.",
+          "affected_entity_ids": [
+            "admin.document.preproject",
+            "admin.document.dissertation",
+            "admin.document.doctoral_agenda"
+          ],
+          "evidence_basis": ["orientation-admin-20260806-001"]
+        },
+        {
+          "action_id": "ADMIN-A5",
+          "sequence": 5,
+          "description": "Immediately launch an empirical survey and treat observed associations as causal effects.",
+          "affected_entity_ids": ["admin.method.sme_services_survey"],
+          "evidence_basis": []
+        }
+      ],
+      "affected_documents": ["ARTICLE", "PREPROJECT", "DISSERTATION", "DOCTORAL_AGENDA"],
+      "requires_user_decision": true,
+      "status": "ISSUED"
+    },
+    "orientation_decision": {
+      "decision_id": "decision-admin-20260806-001",
+      "turn_id": "turn-admin-20260806-001",
+      "orientation_id": "orientation-admin-20260806-001",
+      "research_commit": "506aa2b9916c614a584459429ebaf1d6fafc9555",
+      "presented_by": "PSQZA",
+      "decision": "PARTIALLY_APPROVED",
+      "approved_action_ids": ["ADMIN-A1", "ADMIN-A2", "ADMIN-A3", "ADMIN-A4"],
+      "rejected_action_ids": ["ADMIN-A5"],
+      "requested_amendments": [],
+      "rationale": "Approve the literature synthesis, conceptual model, article, project, and document reflections. Reject immediate data collection and any causal interpretation because no field protocol or observations exist.",
+      "status": "RECORDED",
+      "decided_at": "2026-08-06T14:02:00-03:00"
+    },
+    "research_delta": {
+      "delta_id": "delta-admin-20260806-001",
+      "turn_id": "turn-admin-20260806-001",
+      "base_research_commit": "506aa2b9916c614a584459429ebaf1d6fafc9555",
+      "orientation_id": "orientation-admin-20260806-001",
+      "orientation_decision_id": "decision-admin-20260806-001",
+      "approved_action_ids": ["ADMIN-A1", "ADMIN-A2", "ADMIN-A3", "ADMIN-A4"],
+      "affected_entities": [
+        "admin.literature.market_orientation",
+        "admin.model.market_orientation_digital_performance",
+        "admin.document.article",
+        "admin.document.preproject",
+        "admin.document.dissertation",
+        "admin.document.doctoral_agenda"
+      ],
+      "proposed_changes": [
+        {
+          "entity_id": "admin.literature.market_orientation",
+          "operation": "CREATE",
+          "candidate_status": "PROVISIONAL",
+          "rationale": "Create the verified literature basis.",
+          "source_record_ids": ["ADMIN-A1", "decision-admin-20260806-001"]
+        },
+        {
+          "entity_id": "admin.model.market_orientation_digital_performance",
+          "operation": "CREATE",
+          "candidate_status": "PROVISIONAL",
+          "rationale": "Create the testable conceptual model.",
+          "source_record_ids": ["ADMIN-A2", "decision-admin-20260806-001"]
+        },
+        {
+          "entity_id": "admin.document.article",
+          "operation": "CREATE",
+          "candidate_status": "PROVISIONAL",
+          "rationale": "Create the bounded theoretical article.",
+          "source_record_ids": ["ADMIN-A3", "decision-admin-20260806-001"]
+        },
+        {
+          "entity_id": "admin.document.preproject",
+          "operation": "CREATE",
+          "candidate_status": "PROVISIONAL",
+          "rationale": "Create the research project.",
+          "source_record_ids": ["ADMIN-A4", "decision-admin-20260806-001"]
+        },
+        {
+          "entity_id": "admin.document.dissertation",
+          "operation": "CREATE",
+          "candidate_status": "PROVISIONAL",
+          "rationale": "Record master's-level empirical extension.",
+          "source_record_ids": ["ADMIN-A4", "decision-admin-20260806-001"]
+        },
+        {
+          "entity_id": "admin.document.doctoral_agenda",
+          "operation": "CREATE",
+          "candidate_status": "PROVISIONAL",
+          "rationale": "Record doctoral extensions without promoting a thesis.",
+          "source_record_ids": ["ADMIN-A4", "decision-admin-20260806-001"]
+        }
+      ],
+      "evidence_dependencies": [
+        "consensus:4c84f61801d453afb66edc9ef3b15f6f",
+        "consensus:a015b4128f6253c1b3f66e6e12d5a59d",
+        "consensus:3ffa50bd9f0d5410aac8653e024e900b",
+        "consensus:56ffd0dc051d5c2c9656b79f28101f4f",
+        "consensus:fc892d4e581a5e29bd40e080d0ee1991",
+        "consensus:8fef5240ab425eb29ff83125e56b0b42",
+        "consensus:a5e510a60d5e550baecb827040eec5f8",
+        "consensus:fdd54c806d785b08b9103f557d3e394e"
+      ],
+      "open_decisions": [
+        "Select the geographic and sectoral field for a future empirical study.",
+        "Choose and validate the digital marketing capability scale.",
+        "Decide whether objective performance data can be obtained."
+      ],
+      "materiality": "PROVISIONAL",
+      "affected_documents": ["ARTICLE", "PREPROJECT", "DISSERTATION", "DOCTORAL_AGENDA"],
+      "status": "FROZEN"
+    },
+    "banca_opinion": {
+      "opinion_id": "opinion-admin-20260806-001",
+      "research_commit": "506aa2b9916c614a584459429ebaf1d6fafc9555",
+      "snapshot_hash": "1eced901a4dc42c785f8dfb75ccbf74835029a8e",
+      "mode": "TURN_DELTA_REVIEW",
+      "criteria": [
+        "researcher authorization",
+        "scope coherence",
+        "evidence status",
+        "methodological restraint",
+        "cross-document impact"
+      ],
+      "findings": [
+        {
+          "finding_id": "BANCA-F1",
+          "severity": "WARNING",
+          "description": "Kotler is suitable as an integrative management foundation but cannot alone support causal hypotheses.",
+          "required_correction": "Anchor causal propositions in empirical market-orientation and capability literature."
+        },
+        {
+          "finding_id": "BANCA-F2",
+          "severity": "PASS",
+          "description": "The rejected action ADMIN-A5 is absent from the research delta.",
+          "required_correction": "None."
+        }
+      ],
+      "questions": ["Which service sector and performance measures will be used in the empirical stage?"],
+      "outcome": "PASS_WITH_WARNINGS",
+      "confidence": 0.9,
+      "status": "ISSUED"
+    },
+    "projection_plan": {
+      "plan_id": "plan-admin-20260806-001",
+      "delta_id": "delta-admin-20260806-001",
+      "opinion_id": "opinion-admin-20260806-001",
+      "base_research_commit": "506aa2b9916c614a584459429ebaf1d6fafc9555",
+      "documents": [
+        {
+          "document": "ARTICLE",
+          "action": "UPDATE",
+          "sections": ["all"],
+          "entity_ids": ["admin.document.article", "admin.model.market_orientation_digital_performance"],
+          "exclusion_reason": null
+        },
+        {
+          "document": "PREPROJECT",
+          "action": "UPDATE",
+          "sections": ["all"],
+          "entity_ids": ["admin.document.preproject", "admin.method.sme_services_survey"],
+          "exclusion_reason": null
+        },
+        {
+          "document": "DISSERTATION",
+          "action": "UPDATE",
+          "sections": ["scope reflection"],
+          "entity_ids": ["admin.document.dissertation"],
+          "exclusion_reason": null
+        },
+        {
+          "document": "DOCTORAL_AGENDA",
+          "action": "UPDATE",
+          "sections": ["future research"],
+          "entity_ids": ["admin.document.doctoral_agenda"],
+          "exclusion_reason": null
+        }
+      ],
+      "cross_document_invariants": [
+        "QUESTION_CONSISTENT",
+        "HYPOTHESIS_CONSISTENT",
+        "METHOD_CONSISTENT",
+        "EVIDENCE_STATUS_CONSISTENT",
+        "LIMITATIONS_PROPAGATED",
+        "DOCTORAL_AGENDA_NOT_THESIS",
+        "NO_UNSUPPORTED_CLAIMS",
+        "NO_FROZEN_PLACEHOLDERS"
+      ],
+      "status": "PLANNED"
+    },
+    "consistency": {
+      "report_id": "consistency-admin-20260806-001",
+      "plan_id": "plan-admin-20260806-001",
+      "research_commit": "506aa2b9916c614a584459429ebaf1d6fafc9555",
+      "documents_checked": ["ARTICLE", "PREPROJECT", "DISSERTATION", "DOCTORAL_AGENDA"],
+      "invariants": {
+        "QUESTION_CONSISTENT": true,
+        "HYPOTHESIS_CONSISTENT": true,
+        "METHOD_CONSISTENT": true,
+        "EVIDENCE_STATUS_CONSISTENT": true,
+        "LIMITATIONS_PROPAGATED": true,
+        "DOCTORAL_AGENDA_NOT_THESIS": true,
+        "NO_UNSUPPORTED_CLAIMS": true,
+        "NO_FROZEN_PLACEHOLDERS": true
+      },
+      "findings": [],
+      "placeholders_detected": 0,
+      "unsupported_claims_detected": 0,
+      "verdict": "PASS"
+    },
+    "evidence_coverage": {
+      "report_id": "coverage-admin-20260806-001",
+      "research_commit": "506aa2b9916c614a584459429ebaf1d6fafc9555",
+      "claims": [
+        {
+          "claim_id": "claim-market-orientation-value",
+          "claim_status": "PROVISIONAL",
+          "evidence_ids": ["consensus:a015b4128f6253c1b3f66e6e12d5a59d"],
+          "coverage": "PARTIAL"
+        },
+        {
+          "claim_id": "claim-digital-capability-mediation",
+          "claim_status": "PROVISIONAL",
+          "evidence_ids": [
+            "consensus:56ffd0dc051d5c2c9656b79f28101f4f",
+            "consensus:3ffa50bd9f0d5410aac8653e024e900b"
+          ],
+          "coverage": "PARTIAL"
+        },
+        {
+          "claim_id": "claim-causal-financial-performance",
+          "claim_status": "REJECTED",
+          "evidence_ids": [],
+          "coverage": "NONE"
+        }
+      ],
+      "accepted_claims_without_accepted_evidence": 0,
+      "references_without_verified_identity": 0,
+      "verdict": "PASS"
+    }
+  },
+  "literature": [
+    {
+      "id": "4c84f61801d453afb66edc9ef3b15f6f",
+      "title": "Reconceptualizing marketing: An interview with Philip Kotler",
+      "authors": "P. Kotler",
+      "year": 1994,
+      "journal": "European Management Journal",
+      "citations": 110,
+      "status": "PROVISIONAL_FETCHED",
+      "role": "normative_foundation",
+      "url": "https://consensus.app/papers/reconceptualizing-marketing-an-interview-with-philip-kotler/4c84f61801d453afb66edc9ef3b15f6f/?utm_source=chatgpt"
+    },
+    {
+      "id": "fdd54c806d785b08b9103f557d3e394e",
+      "title": "MARKETING 4.0: MOVING FROM TRADITIONAL TO DIGITAL",
+      "authors": "Philip Kotler, Hermawan Kartajaya",
+      "year": 2019,
+      "journal": "Asian Competitors",
+      "citations": 877,
+      "status": "PROVISIONAL_FETCHED",
+      "role": "digital_marketing_foundation",
+      "url": "https://consensus.app/papers/marketing-40-moving-from-traditional-to-digital-kotler-kartajaya/fdd54c806d785b08b9103f557d3e394e/?utm_source=chatgpt"
+    },
+    {
+      "id": "a015b4128f6253c1b3f66e6e12d5a59d",
+      "title": "Market orientation, customer value, and superior performance",
+      "authors": "S. Slater, John C. Narver",
+      "year": 1994,
+      "journal": "Business Horizons",
+      "citations": 963,
+      "status": "PROVISIONAL_FETCHED",
+      "role": "classic_market_orientation",
+      "url": "https://consensus.app/papers/market-orientation-customer-value-and-superior-slater-narver/a015b4128f6253c1b3f66e6e12d5a59d/?utm_source=chatgpt"
+    },
+    {
+      "id": "fc892d4e581a5e29bd40e080d0ee1991",
+      "title": "Conceptualising a digital orientation: antecedents of supporting SME performance in the digital economy",
+      "authors": "S. Quinton, A. Canhoto, S. Molinillo, R. Pera, Tribikram Budhathoki",
+      "year": 2018,
+      "journal": "Journal of Strategic Marketing",
+      "citations": 276,
+      "status": "PROVISIONAL_FETCHED",
+      "role": "digital_orientation",
+      "url": "https://consensus.app/papers/conceptualising-a-digital-orientation-antecedents-of-quinton-canhoto/fc892d4e581a5e29bd40e080d0ee1991/?utm_source=chatgpt"
+    },
+    {
+      "id": "56ffd0dc051d5c2c9656b79f28101f4f",
+      "title": "Firm Performance among Internationalized SMEs: The Interplay of Market Orientation, Marketing Capability and Digitalization",
+      "authors": "Sanna Joensuu-Salo, Kirsti Sorama, Anmari Viljamaa, Elina Varamäki",
+      "year": 2018,
+      "journal": "Administrative Sciences",
+      "citations": 137,
+      "status": "PROVISIONAL_FETCHED",
+      "role": "capability_mediation",
+      "url": "https://consensus.app/papers/firm-performance-among-internationalized-smes-the-joensuu%E2%80%90salo-sorama/56ffd0dc051d5c2c9656b79f28101f4f/?utm_source=chatgpt"
+    },
+    {
+      "id": "3ffa50bd9f0d5410aac8653e024e900b",
+      "title": "Digital market orientation and organizational economic performance of service SMEs",
+      "authors": "Juan Manuel Andrade Navia, Claudia Parra, Juan Diego Cedeno",
+      "year": 2023,
+      "journal": "Problems and Perspectives in Management",
+      "citations": 9,
+      "status": "PROVISIONAL_FETCHED",
+      "role": "service_sme_evidence",
+      "url": "https://consensus.app/papers/digital-market-orientation-and-organizational-economic-navia-parra/3ffa50bd9f0d5410aac8653e024e900b/?utm_source=chatgpt"
+    },
+    {
+      "id": "a5e510a60d5e550baecb827040eec5f8",
+      "title": "Firm performance and perceptions of market orientation",
+      "authors": "T. Powers, Dawn B. Valentine, K. Kennedy",
+      "year": 2024,
+      "journal": "Journal of Marketing Theory and Practice",
+      "citations": 9,
+      "status": "PROVISIONAL_FETCHED",
+      "role": "measurement_contingency",
+      "url": "https://consensus.app/papers/firm-performance-and-perceptions-of-market-orientation-powers-valentine/a5e510a60d5e550baecb827040eec5f8/?utm_source=chatgpt"
+    },
+    {
+      "id": "8fef5240ab425eb29ff83125e56b0b42",
+      "title": "Integrating SMEs market and technology orientation: an exploration of digital technological opportunism, agility, future focus and performance",
+      "authors": "Pradeep Kautish, Subrat Sarangi, S. Lan, Ankit Mehrotra, Aspasia Simillidou",
+      "year": 2025,
+      "journal": "International Marketing Review",
+      "citations": 10,
+      "status": "PROVISIONAL_FETCHED",
+      "role": "recent_dynamic_capability",
+      "url": "https://consensus.app/papers/integrating-smes-market-and-technology-orientation-an-kautish-sarangi/8fef5240ab425eb29ff83125e56b0b42/?utm_source=chatgpt"
+    }
+  ],
+  "deliverables": {
+    "article": {
+      "path": "article.md",
+      "target_pages": 8,
+      "word_count": 2841,
+      "status": "PROVISIONAL"
+    },
+    "research_project": {
+      "path": "research_project.md",
+      "target_pages": 4,
+      "word_count": 1054,
+      "status": "PROVISIONAL"
+    },
+    "masters_reflection": {
+      "path": "masters_reflection.md",
+      "status": "PROVISIONAL"
+    },
+    "doctoral_preagenda": {
+      "path": "doctoral_preagenda.md",
+      "status": "PROVISIONAL"
+    }
+  }
+}

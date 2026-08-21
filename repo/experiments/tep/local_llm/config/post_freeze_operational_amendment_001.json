@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "amendment_id": "POST_FREEZE_OPERATIONAL_AMENDMENT_001",
+  "amendment_type": "POST_FREEZE_OPERATIONAL_AMENDMENT",
+  "status": "AUTHORIZED_FOR_TECHNICAL_MATERIALIZATION",
+  "date": "2026-08-16",
+  "classification": "MATERIAL_POST_FREEZE_OPERATIONAL_RUNTIME_PARAMETER_CHANGE",
+  "method_freeze_id": "TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH",
+  "base_formal_file": "formal.json",
+  "base_formal_sha256": "c8affff60f9e64af02698ef1b03a0ea4a2fdf07d8ef73d52de1e38bba7bf2a66",
+  "base_configuration_sha256": "87a15a1b6acd2ca8a81e66bcb848fe8dfb3060213bd0eaf497a12b4382b5dbe4",
+  "effective_configuration_sha256": "7facd21abb90c8bb52e9302775c43bcb12f8435c7cea9b451001d6f9203e0ed2",
+  "methodological_logic_changed": false,
+  "target_informed_tuning": false,
+  "inference_runtime_parameter_changed": true,
+  "changed_parameter": "/llm/max_output_tokens",
+  "from": 768,
+  "to": 1024,
+  "reason": "prevention of incomplete JSON serialization after proven output truncation",
+  "llm_inference_performed_during_materialization": false,
+  "formal_retry_performed_during_materialization": false,
+  "root_cause": {
+    "status": "PROVEN",
+    "code": "LLM_OUTPUT_TRUNCATION_AT_MAX_OUTPUT_TOKENS",
+    "finish_reason": "length",
+    "completion_tokens": 768,
+    "truncation_location": "tenth evidence item",
+    "looping_or_degeneration": false
+  },
+  "selection_justification": {
+    "not_selected_by": [
+      "detection_rate",
+      "detection_delay",
+      "H1",
+      "H2",
+      "H3",
+      "IDV(13) performance"
+    ],
+    "formally_complete_responses": 294,
+    "complete_response_maximum_tokens": 729,
+    "complete_responses_reaching_previous_ceiling": 0,
+    "failed_responses_reaching_previous_ceiling": 1,
+    "failed_response_finish_reason": "length",
+    "conclusion": "The previous ceiling was not binding for any preserved COMPLETE response."
+  },
+  "size_evidence": {
+    "p50": 453.5,
+    "p90": 587.7,
+    "p95": 624.1,
+    "p99": 670.14,
+    "maximum": 729,
+    "largest_prompt_tokens": 4568,
+    "context_size": 8192
+  },
+  "change_semantics": "1024 is a generation ceiling, not a required output length",
+  "scope": "LLM runtime only, prospective from TARGET simulationRun 58 attempt_0002",
+  "preservation": {
+    "target_simulation_runs_1_57": "COMPLETE_IMMUTABLE",
+    "target_simulation_run_58_dpca": "COMPLETE_IMMUTABLE",
+    "target_simulation_run_58_llm_attempt_0001": "FAILED_IMMUTABLE"
+  },
+  "resume": {
+    "component": "llm",
+    "simulation_run": 58,
+    "llm_ordinal": 7,
+    "blind_run_id": "BLIND_D5E4EF532B1077E5",
+    "new_monitor_attempt": "attempt_0002",
+    "new_llm_checkpoint_attempt": "0002",
+    "restart_window": 0,
+    "recalculate_dpca": false
+  },
+  "technical_acceptance": {
+    "required_before_resume": true,
+    "scientific_result": false,
+    "input": "fixed synthetic payload only",
+    "target_access": false,
+    "faultfree_testing_access": false,
+    "required_verdict": "PASS"
+  }
+}

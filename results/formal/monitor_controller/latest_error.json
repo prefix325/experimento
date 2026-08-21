@@ -1,0 +1,19 @@
+{
+  "cohort": "normal_holdout",
+  "component": "llm",
+  "error_summary": "Formal operational component failed",
+  "error_type": "RuntimeError",
+  "exit_code": 1,
+  "historical": true,
+  "log_path": "X:\\PSQZA_TEP_LOCAL\\results\\formal\\monitor_controller\\attempts\\normal_holdout\\run_312\\attempt_0001\\run-event-2b6ed569922e4fc38e81eb31eccb6e14-traceback.log",
+  "message": "Formal normal_holdout llm batch exited with 1; causal stderr: + FullyQualifiedErrorId : Formal normal_holdout llm simulationRun batch 34 failed with exit code 125",
+  "operational_only": true,
+  "resolution_event_id": "event-bc040d923b5842cfac914d7a0ff89ffc",
+  "resolution_run_event_id": "run-event-4bed2c0cd5de47cbb2010fb4723b747f",
+  "resolved_at": "2026-08-20T01:08:07.097078+00:00",
+  "run_event_id": "run-event-2b6ed569922e4fc38e81eb31eccb6e14",
+  "simulation_run": 312,
+  "status": "RESOLVED/HISTORICAL",
+  "timestamp": "2026-08-19T19:59:56.206058+00:00",
+  "traceback": "Traceback (most recent call last):\n  File \"X:\\PSQZA_TEP_LOCAL\\repo\\tools\\formal_monitor\\real_mode.py\", line 433, in run_one\n    self._run_component(lot, \"llm\", lot.llm_ordinal)\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"X:\\PSQZA_TEP_LOCAL\\repo\\tools\\formal_monitor\\real_mode.py\", line 364, in _run_component\n    raise RuntimeError(\n    ...<2 lines>...\n    )\nRuntimeError: Formal normal_holdout llm batch exited with 1; causal stderr: + FullyQualifiedErrorId : Formal normal_holdout llm simulationRun batch 34 failed with exit code 125\n"
+}

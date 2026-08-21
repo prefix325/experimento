@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MECAI Orientation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "orientation_id",
+    "research_commit",
+    "objective",
+    "diagnosis",
+    "directive",
+    "rationale",
+    "foundations",
+    "required_learning",
+    "verification",
+    "recommendations",
+    "proposed_actions",
+    "affected_documents",
+    "requires_user_decision",
+    "status"
+  ],
+  "properties": {
+    "orientation_id": {"type": "string", "minLength": 1},
+    "research_commit": {"type": "string", "pattern": "^[a-f0-9]{40,64}$"},
+    "objective": {"type": "string", "minLength": 1},
+    "diagnosis": {"type": "string", "minLength": 1},
+    "directive": {"type": "string", "minLength": 1},
+    "rationale": {"type": "string", "minLength": 1},
+    "foundations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "required_learning": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "verification": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "recommendations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "proposed_actions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["action_id", "sequence", "description", "affected_entity_ids", "evidence_basis"],
+        "properties": {
+          "action_id": {"type": "string", "minLength": 1},
+          "sequence": {"type": "integer", "minimum": 1},
+          "description": {"type": "string", "minLength": 1},
+          "affected_entity_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+          "evidence_basis": {"type": "array", "items": {"type": "string", "minLength": 1}}
+        }
+      }
+    },
+    "affected_documents": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["PREPROJECT", "ARTICLE", "DISSERTATION", "DOCTORAL_AGENDA"]}},
+    "requires_user_decision": {"const": true},
+    "status": {"enum": ["DRAFT", "ISSUED", "SUPERSEDED"]}
+  }
+}

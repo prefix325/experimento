@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PSQZA Document Projection Map",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "research_graph",
+    "generated_file",
+    "content_format",
+    "macros",
+    "documents",
+    "invariants"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "research_graph": {"const": "project/research_graph.json"},
+    "generated_file": {"const": "deliverables/shared/latex/research_state.tex"},
+    "content_format": {"const": "LATEX"},
+    "macros": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["language", "source_entity_ids", "text"],
+        "properties": {
+          "language": {"enum": ["pt-BR", "en"]},
+          "source_entity_ids": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {"type": "string", "minLength": 1}
+          },
+          "text": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "documents": {
+      "type": "object",
+      "required": ["PREPROJECT", "ARTICLE", "DISSERTATION", "DOCTORAL_AGENDA"],
+      "additionalProperties": false,
+      "properties": {
+        "PREPROJECT": {"$ref": "#/$defs/document"},
+        "ARTICLE": {"$ref": "#/$defs/document"},
+        "DISSERTATION": {"$ref": "#/$defs/document"},
+        "DOCTORAL_AGENDA": {"$ref": "#/$defs/document"}
+      }
+    },
+    "invariants": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"enum": [
+        "QUESTION_CONSISTENT",
+        "HYPOTHESIS_CONSISTENT",
+        "METHOD_CONSISTENT",
+        "EVIDENCE_STATUS_CONSISTENT",
+        "LIMITATIONS_PROPAGATED",
+        "DOCTORAL_AGENDA_NOT_THESIS",
+        "NO_UNSUPPORTED_CLAIMS",
+        "NO_FROZEN_PLACEHOLDERS"
+      ]}
+    }
+  },
+  "$defs": {
+    "document": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "language", "required_macros", "section_projection"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "language": {"enum": ["pt-BR", "en"]},
+        "required_macros": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9]*$"}
+        },
+        "section_projection": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["section", "entity_types"],
+            "properties": {
+              "section": {"type": "string", "minLength": 1},
+              "entity_types": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": {"type": "string", "minLength": 1}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

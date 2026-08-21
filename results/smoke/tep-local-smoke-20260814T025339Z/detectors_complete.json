@@ -1,0 +1,10 @@
+{
+  "status": "DEVELOPMENT_ONLY",
+  "experiment_id": "tep-local-smoke-20260814T025339Z",
+  "normal_rows": 1000,
+  "test_rows": 1920,
+  "x_columns": 52,
+  "llm_records": 4,
+  "dpca_records": 1920,
+  "completed_at": "2026-08-14T03:00:58.665357+00:00"
+}

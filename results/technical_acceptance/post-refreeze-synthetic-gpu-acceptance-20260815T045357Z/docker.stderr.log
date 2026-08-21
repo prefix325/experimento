@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/opt/tep/src/tep_local/cli.py", line 124, in <module>
+    main()
+  File "/opt/tep/src/tep_local/cli.py", line 111, in main
+    result = run_technical_acceptance(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tep/src/tep_local/technical_acceptance.py", line 182, in run_technical_acceptance
+    with LlamaServer(
+  File "/opt/tep/src/tep_local/llm_runtime.py", line 66, in __enter__
+    raise RuntimeError("llama-server startup rejected by fail-closed validator")
+RuntimeError: llama-server startup rejected by fail-closed validator

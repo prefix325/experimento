@@ -1,0 +1,28 @@
+{
+  "checks": [
+    {
+      "path": "/data/normal",
+      "expected": "read_only",
+      "blocked": true,
+      "error": "OSError: [Errno 30] Read-only file system: '/data/normal/.psqza_write_probe'"
+    },
+    {
+      "path": "/data/test",
+      "expected": "read_only",
+      "blocked": true,
+      "error": "OSError: [Errno 30] Read-only file system: '/data/test/.psqza_write_probe'"
+    },
+    {
+      "path": "/models",
+      "expected": "read_only",
+      "blocked": true,
+      "error": "OSError: [Errno 30] Read-only file system: '/models/.psqza_write_probe'"
+    },
+    {
+      "path": "/results",
+      "expected": "writable",
+      "writable": true
+    }
+  ],
+  "all_ok": true
+}

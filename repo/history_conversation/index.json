@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.1.0",
+  "updated_at": "2026-08-12T19:59:00-03:00",
+  "latest": "history_conversation/260805154000_atualizacao_bootstrap_llm_local_tep.md",
+  "records": [
+    {
+      "id": "260805153400",
+      "filename": "260805153400_delimitacao_llm_local_tep.md",
+      "path": "history_conversation/260805153400_delimitacao_llm_local_tep.md",
+      "title": "Delimitação da LLM local no TEP",
+      "summary": "Refina o problema para uma avaliação controlada de LLM local sobre a IDV(13), registra a tríade bibliográfica preliminar, define DPCA como referência instrumental e evita enquadrar a contribuição como mera troca de modelo.",
+      "created_at": "2026-08-05T15:34:00-03:00",
+      "personas": ["PSQZA"],
+      "control_components": [],
+      "legacy_components": [],
+      "topics": [
+        "Tennessee Eastman Process",
+        "IDV(13)",
+        "LLM local",
+        "DPCA",
+        "detecção precoce",
+        "explicabilidade",
+        "não externalização de dados"
+      ],
+      "academic_status": "PROVISIONAL",
+      "route_record_ids": [],
+      "created_commit": "6c7a6db7200682c645542ac76c1de7d73bcf6127",
+      "superseded_by": "history_conversation/260805154000_atualizacao_bootstrap_llm_local_tep.md",
+      "privacy": {
+        "contains_sensitive_data": false,
+        "private_reasoning_included": false
+      }
+    },
+    {
+      "id": "260805154000",
+      "filename": "260805154000_atualizacao_bootstrap_llm_local_tep.md",
+      "path": "history_conversation/260805154000_atualizacao_bootstrap_llm_local_tep.md",
+      "title": "Atualização do bootstrap da pesquisa sobre LLM local no TEP",
+      "summary": "Consolida o escopo provisório da iniciação científica, registra a tríade Xing-Khan-Kai, define DPCA como referência instrumental, caracteriza a execução local como condição experimental e documenta a atualização do bootstrap no PR #5.",
+      "created_at": "2026-08-05T15:40:00-03:00",
+      "personas": ["PSQZA", "BANCA"],
+      "control_components": ["VERSA"],
+      "legacy_components": ["pre-VERAS-3 restricted Git executor"],
+      "topics": [
+        "Tennessee Eastman Process",
+        "IDV(13)",
+        "LLM local",
+        "DPCA",
+        "tríade bibliográfica",
+        "bootstrap",
+        "iniciação científica",
+        "não externalização de dados"
+      ],
+      "academic_status": "PROVISIONAL",
+      "route_record_ids": ["trace:pr5-governed-cycle:2026-08-05T15:55:00-03:00"],
+      "created_commit": "87fa4beaddd24dbb67cd567a725fd9fe99ec8931",
+      "superseded_by": null,
+      "privacy": {
+        "contains_sensitive_data": false,
+        "private_reasoning_included": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0-candidate",
+  "status": "CANDIDATE_FOR_RESEARCHER_FREEZE",
+  "purpose": "formal LLM simulationRun selection",
+  "eligible_universe": {"first": 11, "last": 500, "count": 490},
+  "excluded_development_runs": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+  "seed": 42,
+  "sample_size": 50,
+  "sampling": "without replacement, followed by ascending sort",
+  "library": "Python standard library random",
+  "prng": "random.Random using MT19937",
+  "interpreter_version_used": "3.13.5",
+  "procedure": "sorted(random.Random(42).sample(list(range(11, 501)), 50))",
+  "selected_simulation_runs": [14, 23, 24, 26, 27, 55, 58, 60, 63, 68, 82, 90, 92, 112, 121, 122, 123, 125, 130, 136, 151, 153, 183, 185, 194, 205, 225, 227, 240, 269, 290, 298, 312, 313, 319, 338, 343, 357, 368, 370, 377, 388, 390, 399, 401, 423, 425, 444, 456, 467],
+  "selected_list_serialization": "canonical compact JSON array with no whitespace",
+  "selected_list_sha256": "2c4cf612fe72162dcd1b27f1f90dfc8145f9086fc5c0a6ac9239518655978adf",
+  "blind_mapping": {
+    "algorithm": "BLIND_ + uppercase first 16 hex characters of SHA256('psqza-formal-v1:42:<simulationRun>')",
+    "location": "internal selection loader only; never included in the LLM payload",
+    "mapping_sha256": "95a97d88c2f181a95ea38dac77ba728f655c66dd29b312d23e1176fc368f77d1"
+  },
+  "blind_mapping_sha256": "95a97d88c2f181a95ea38dac77ba728f655c66dd29b312d23e1176fc368f77d1",
+  "x_values_accessed": false,
+  "y_values_accessed": false,
+  "llm_results_accessed": false,
+  "fault_behavior_used": false
+}

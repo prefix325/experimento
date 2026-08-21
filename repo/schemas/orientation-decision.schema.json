@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Researcher Decision on MECAI Orientation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decision_id",
+    "turn_id",
+    "orientation_id",
+    "research_commit",
+    "presented_by",
+    "decision",
+    "approved_action_ids",
+    "rejected_action_ids",
+    "requested_amendments",
+    "rationale",
+    "status",
+    "decided_at"
+  ],
+  "properties": {
+    "decision_id": {"type": "string", "minLength": 1},
+    "turn_id": {"type": "string", "minLength": 1},
+    "orientation_id": {"type": "string", "minLength": 1},
+    "research_commit": {"type": "string", "pattern": "^[a-f0-9]{40,64}$"},
+    "presented_by": {"const": "PSQZA"},
+    "decision": {"enum": ["APPROVED", "PARTIALLY_APPROVED", "REJECTED", "AMENDMENT_REQUIRED"]},
+    "approved_action_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "rejected_action_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "requested_amendments": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "rationale": {"type": "string", "minLength": 1},
+    "status": {"const": "RECORDED"},
+    "decided_at": {"type": "string", "format": "date-time"}
+  },
+  "allOf": [
+    {
+      "if": {"required": ["decision"], "properties": {"decision": {"const": "APPROVED"}}},
+      "then": {"properties": {"approved_action_ids": {"minItems": 1}, "rejected_action_ids": {"maxItems": 0}, "requested_amendments": {"maxItems": 0}}}
+    },
+    {
+      "if": {"required": ["decision"], "properties": {"decision": {"const": "PARTIALLY_APPROVED"}}},
+      "then": {
+        "properties": {"approved_action_ids": {"minItems": 1}},
+        "anyOf": [
+          {"properties": {"rejected_action_ids": {"minItems": 1}}},
+          {"properties": {"requested_amendments": {"minItems": 1}}}
+        ]
+      }
+    },
+    {
+      "if": {"required": ["decision"], "properties": {"decision": {"const": "REJECTED"}}},
+      "then": {"properties": {"approved_action_ids": {"maxItems": 0}, "rejected_action_ids": {"minItems": 1}}}
+    },
+    {
+      "if": {"required": ["decision"], "properties": {"decision": {"const": "AMENDMENT_REQUIRED"}}},
+      "then": {"properties": {"approved_action_ids": {"maxItems": 0}, "requested_amendments": {"minItems": 1}}}
+    }
+  ]
+}

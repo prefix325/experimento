@@ -1,0 +1,56 @@
+{
+  "status": "VALIDATED_AND_MATERIALIZED_PRE_FORMAL",
+  "source": {
+    "provider": "Kaggle public mirror of Rieth et al. TEP dataset",
+    "dataset_ref": "averkij/tennessee-eastman-process-simulation-dataset",
+    "dataset_url": "https://www.kaggle.com/datasets/averkij/tennessee-eastman-process-simulation-dataset",
+    "retrieval_tool": "official Kaggle CLI",
+    "requested_file_only": "TEP_FaultFree_Testing.RData",
+    "download_archive_size_bytes": 46264799,
+    "download_archive_sha256": "2a9c612560f1e4bb3ee295eaefb378a88a56ba0db71ae04c9c14ef71ce2a3001",
+    "file_size_bytes": 47327663,
+    "expected_sha256": "4f45afafa469793eeb7203fb9ed10ed0b1724c73c9c95537f15a0889ade0ebd4",
+    "observed_sha256": "4f45afafa469793eeb7203fb9ed10ed0b1724c73c9c95537f15a0889ade0ebd4",
+    "hash_matches": true
+  },
+  "r_audit": {
+    "reader_image": "r-base@sha256:fa1972f31def171b83e0911e947ab8b57db143f0fc8a67af4c0d5ac329041646",
+    "network_mode": "none",
+    "source_mount": "read_only",
+    "loaded_objects": ["fault_free_testing"],
+    "object_type": "data.frame",
+    "rows": 480000,
+    "columns": 55,
+    "metadata_columns": ["faultNumber", "simulationRun", "sample"],
+    "x_columns": "xmeas_1..xmeas_41, xmv_1..xmv_11",
+    "x_count": 52,
+    "fault_number_values": [0],
+    "simulation_runs": 500,
+    "samples_per_run": 960,
+    "sample_range": [1, 960],
+    "missing_x_values": 0
+  },
+  "materialization": {
+    "script": "experiments/tep/scripts/materialize_rieth_faultfree_testing.R",
+    "bitwise_reproducibility_check": "10 of 10 output parts matched SHA-256 on an independent second materialization",
+    "bitwise_reproducible": true,
+    "physical_location": "data/normal_holdout/blind",
+    "physically_separate_from_fault_data": true,
+    "detector_columns": ["blind_run_id", "sample", "all_52_x_columns"],
+    "omitted_columns": ["faultNumber", "simulationRun", "y"],
+    "files": [
+      {"name": "normal_holdout_blind_runs_001_050.csv.gz", "rows": 48000, "sha256": "b579aa3e43d6e38cc60dd776021861d14e87b5d85dfe4fde5511e954e2080cde"},
+      {"name": "normal_holdout_blind_runs_051_100.csv.gz", "rows": 48000, "sha256": "c741e418ade3cfd1146e3fa51fcf0ddfecdb47cd98a33527701211a99fc55c29"},
+      {"name": "normal_holdout_blind_runs_101_150.csv.gz", "rows": 48000, "sha256": "65a8caf1c12f91c211c7401ff0025c88677a049df945510be6586da017ff0d20"},
+      {"name": "normal_holdout_blind_runs_151_200.csv.gz", "rows": 48000, "sha256": "9d2f9c523a5e86fb4a5b994ea1fa34ad5921ec9eeec562a5bc9236a5ffcbffb6"},
+      {"name": "normal_holdout_blind_runs_201_250.csv.gz", "rows": 48000, "sha256": "7f9fddcc5e29ef11e07553016b406ce15cc09eda191366262ddffce7e97c01e5"},
+      {"name": "normal_holdout_blind_runs_251_300.csv.gz", "rows": 48000, "sha256": "724f8978325daa5a32eac332f2d69cf571650ecf23461f3b1672119f5416d31d"},
+      {"name": "normal_holdout_blind_runs_301_350.csv.gz", "rows": 48000, "sha256": "634cd03ac31fae263eeeae5c977ac8b8bfc08be2abf49cd5ee97b6bcaa9920e1"},
+      {"name": "normal_holdout_blind_runs_351_400.csv.gz", "rows": 48000, "sha256": "7a9a1010a17619b56eb67e936d5ccc623affc723182bec895cd8083326fae52a"},
+      {"name": "normal_holdout_blind_runs_401_450.csv.gz", "rows": 48000, "sha256": "d72265a9d0bb05bb28ab97f38fb5b1624e25b0bbe5ff0d86bc4c327ed94aad52"},
+      {"name": "normal_holdout_blind_runs_451_500.csv.gz", "rows": 48000, "sha256": "75dc3dbd8e8517560e0accc2e23aeeca0bc6f8038133874b69eece4d1025bfb7"}
+    ]
+  },
+  "llm_inference_executed": false,
+  "target_fault_x_accessed": false
+}

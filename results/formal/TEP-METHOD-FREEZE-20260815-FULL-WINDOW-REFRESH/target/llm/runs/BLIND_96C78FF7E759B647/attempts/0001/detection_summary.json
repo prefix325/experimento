@@ -1,0 +1,26 @@
+{
+  "detection_state": "CONFIRMED_DETECTION",
+  "window_id": 40,
+  "first_indication_window": 36,
+  "confirmation_window": 40,
+  "confirmation_candidate_window": 36,
+  "verification_advance": 0,
+  "verification_advances_required": 4,
+  "pending_candidate_windows": [],
+  "candidate_events": [
+    {
+      "event": "VERIFICATION_INCOMPLETE_END_OF_TRAJECTORY",
+      "candidate_window": 38,
+      "verification_window": 42
+    },
+    {
+      "event": "VERIFICATION_INCOMPLETE_END_OF_TRAJECTORY",
+      "candidate_window": 39,
+      "verification_window": 43
+    }
+  ],
+  "event": "CONFIRMED_DETECTION",
+  "first_indication_status": "FIRST_INDICATION",
+  "confirmed_detection_status": "CONFIRMED_DETECTION",
+  "should_stop": true
+}

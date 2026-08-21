@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "research-flow-bootstrap-20260812",
+  "status": "ACTIVE",
+  "flow_mode": "RESEARCH_FLOW",
+  "scientific_status": "PROVISIONAL",
+  "active_branch": {
+    "branch_id": "branch:local-llm-idv13",
+    "label": "Local LLM, Tennessee Eastman Process and IDV(13)",
+    "current_question": "Uma LLM de propósito geral, sem treinamento específico para falhas e contextualizada apenas pelo conhecimento do processo e de sua operação normal, é capaz de detectar em regime zero-shot o surgimento de uma condição anormal em um sistema industrial multivariado?",
+    "source_entity_ids": [
+      "problem.local_llm_gradual_fault",
+      "question.local_llm_idv13",
+      "experiment.progressive_windows"
+    ]
+  },
+  "open_threads": [
+    "Convert the provisional gap scoping into a reproducible systematic search across at least two academic providers and audit the closest papers in full text.",
+    "Review whether IDV(13) remains the final focal fault after the systematic gap-and-contribution matrix.",
+    "Operationalize H1-H3 with measurable decision rules, thresholds and statistical criteria after the gap-and-contribution matrix.",
+    "Freeze the exact TEP dataset lineage, sampling interval and run protocol.",
+    "Select the local LLM, quantization, hardware and offline inference stack.",
+    "Freeze the structured temporal representation and the DPCA lag configuration.",
+    "Define alarm persistence, abstention, metrics, thresholds and success criteria.",
+    "Resume TARGET simulationRun 58 only under a separate explicit authorization; reuse DPCA COMPLETE and create LLM attempt_0002 at k=0."
+  ],
+  "background_routes": [
+    {
+      "route_id": "route:persistence:zero-shot-multivariate:20260813T000600-0300",
+      "kind": "PERSISTENCE",
+      "status": "COMPLETED",
+      "return_branch_id": "branch:local-llm-idv13"
+    },
+    {
+      "route_id": "route:persistence:h1-h3-consolidation:20260813T002500-0300",
+      "kind": "PERSISTENCE",
+      "status": "COMPLETED",
+      "return_branch_id": "branch:local-llm-idv13"
+    },
+    {
+      "route_id": "route:literature:gap-scoping:20260813T004400-0300",
+      "kind": "LITERATURE",
+      "status": "COMPLETED",
+      "return_branch_id": "branch:local-llm-idv13"
+    }
+  ],
+  "resume_policy": {
+    "after_background_route": "RETURN_TO_CURRENT_BRANCH",
+    "topic_change_requires_explicit_researcher_change": true,
+    "persistence_is_background_effect": true
+  },
+  "ledger_path": "project/research_ledger.jsonl",
+  "live_writing_dir": "writing/compiled",
+  "updated_at": "2026-08-16T17:14:30-03:00"
+}

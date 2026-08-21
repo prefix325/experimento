@@ -1,0 +1,11 @@
+warn: LLAMA_ARG_HOST environment variable is set, but will be overwritten by command line argument --host
+0.00.691.910 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.01.002.005 I srv          init: The UI is disabled
+0.01.002.035 I srv          init: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+0.01.002.301 W srv  llama_server: -----------------
+0.01.002.302 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.01.002.302 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.01.002.303 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.01.002.303 W srv  llama_server: -----------------
+0.01.003.834 I srv    load_model: loading model '/models/qwen2.5-7b-instruct-q4_k_m.gguf'
+0.06.385.193 W load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden

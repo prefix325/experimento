@@ -1,0 +1,44 @@
+{
+  "status": "DEVELOPMENT_ONLY",
+  "experiment_id": "tep-local-smoke-20260814T014818Z",
+  "normal_rows": 1000,
+  "test_rows": 1920,
+  "x_columns": 52,
+  "llm_records": 4,
+  "dpca_records": 1920,
+  "completed_at": "2026-08-14T01:55:52.845064+00:00"
+}
+{
+  "status": "DEVELOPMENT_ONLY",
+  "scientific_inference_permitted": false,
+  "llm": {
+    "metric_semantics": "PROVISIONAL_WINDOW_END_LABEL_DEVELOPMENT_ONLY",
+    "windows": 4,
+    "tp": 0,
+    "fp": 0,
+    "tn": 4,
+    "fn": 0,
+    "precision_decided_windows": null,
+    "recall_decided_windows": null,
+    "f1_decided_windows": null,
+    "abstention_rate": 0.0,
+    "detection_delay_minutes_mean": null,
+    "detection_delay_minutes_by_detected_run": []
+  },
+  "dpca": {
+    "metric_semantics": "PROVISIONAL_SAMPLE_LEVEL_DEVELOPMENT_ONLY",
+    "samples": 1920,
+    "detection_rate": 0.9488139825218477,
+    "false_alarm_rate": 0.015723270440251572,
+    "tp": 1520,
+    "fp": 5,
+    "tn": 313,
+    "fn": 82,
+    "detection_delay_minutes_mean": 117.0,
+    "detection_delay_minutes_by_detected_run": [
+      126,
+      108
+    ]
+  }
+}
+Completed smoke run: X:\PSQZA_TEP_LOCAL\results\smoke\tep-local-smoke-20260814T014818Z

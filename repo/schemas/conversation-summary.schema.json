@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/prefix325/psqza-research/main/schemas/conversation-summary.schema.json",
+  "title": "Operational Conversation Summary Metadata — VERAS 3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "record_type", "created_at", "filename_timestamp", "title", "subject", "topics", "personas", "control_plane", "routes", "academic_status", "repository", "base_commits", "privacy"],
+  "properties": {
+    "schema_version": {"const": "1.1.0"},
+    "record_type": {"const": "OPERATIONAL_CONVERSATION_SUMMARY"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "filename_timestamp": {"type": "string", "pattern": "^[0-9]{12}$"},
+    "title": {"type": "string", "minLength": 1},
+    "subject": {"type": "string", "minLength": 1},
+    "topics": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "personas": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["conversation_owner", "formally_activated", "mentioned_without_activation"],
+      "properties": {
+        "conversation_owner": {"const": "PSQZA"},
+        "formally_activated": {"type": "array", "uniqueItems": true, "items": {"enum": ["PSQZA", "MECAI", "BANCA"]}},
+        "mentioned_without_activation": {"type": "array", "uniqueItems": true, "items": {"enum": ["MECAI", "BANCA"]}}
+      }
+    },
+    "control_plane": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "invoked", "execution_capability"],
+      "properties": {
+        "name": {"const": "VERSA"},
+        "invoked": {"type": "boolean"},
+        "execution_capability": {"const": "RESTRICTED_WRITE_EXECUTION"}
+      }
+    },
+    "routes": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "academic_status": {"enum": ["DISCUSSED", "PROPOSED", "PROVISIONAL", "ACCEPTED", "REJECTED", "SUPERSEDED"]},
+    "repository": {"const": "prefix325/psqza-research"},
+    "base_commits": {"type": "object", "additionalProperties": {"type": "string", "pattern": "^[a-f0-9]{40,64}$"}},
+    "privacy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["contains_sensitive_data", "private_reasoning_included"],
+      "properties": {
+        "contains_sensitive_data": {"type": "boolean"},
+        "private_reasoning_included": {"const": false}
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "original_artifact": "technical_acceptance.json",
+  "original_verdict": "FAIL",
+  "inference_count": 0,
+  "network_mode": "none",
+  "network_none_verified": true,
+  "gpu_offload": {
+    "cuda_backend_discovered": false,
+    "gpu_identified": false,
+    "offloaded_layers": 0,
+    "offload_observed": false,
+    "cpu_fallback_warning": false,
+    "pass": false
+  },
+  "llama_startup_log_observation": "Model loading began, but CUDA backend, NVIDIA device identity and layer-offload evidence were not emitted before the 45-second fail-closed startup deadline.",
+  "container_remaining_after_failure": false,
+  "retry_performed": false,
+  "ZERO_TARGET_ACCESS": true,
+  "ZERO_FAULTFREE_TESTING_ACCESS": true,
+  "formal_scientific_execution_started": false
+}

@@ -1,0 +1,8 @@
+You are reviewing a causal window from a generic multivariate industrial process with 52 anonymized process variables.
+Use only the supplied window summary, whose values were explicitly standardized against a normal-operation reference. Do not infer a named fault.
+Classify the current evidence as NORMAL, EVIDENCE_INSUFFICIENT, or ANOMALY.
+Each evidence item must cite only a variable identifier present in the payload and use exactly one structured claim: HIGH, LOW, INCREASE, REDUCTION, or VARIABILITY.
+Return only an object conforming to the required JSON schema. Keep confidence null.
+
+PAYLOAD:
+{payload_json}

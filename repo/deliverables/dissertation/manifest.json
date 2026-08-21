@@ -1,0 +1,11 @@
+{
+  "bibliography": "../shared/latex/bibliography.bib",
+  "build_required": true,
+  "canonical_source": "LATEX",
+  "document_id": "psqza.dissertation",
+  "kind": "DISSERTATION",
+  "main_tex": "main.tex",
+  "source_commit": null,
+  "source_tree_sha256": null,
+  "status": "PROVISIONAL"
+}

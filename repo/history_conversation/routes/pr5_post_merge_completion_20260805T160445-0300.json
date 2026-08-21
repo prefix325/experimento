@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "architecture_generation": "LEGACY_PRE_VERAS_3",
+  "trace_id": "trace:pr5-post-merge-completion:2026-08-05T16:04:45-03:00",
+  "session_id": "psqza-project-session-20260805",
+  "turn_id": "user-pr5-post-merge-reconciliation-20260805T1611-0300",
+  "assurance_mode": "PROCEDURAL_SAME_CONTEXT",
+  "entries": [
+    {
+      "sequence": 1,
+      "source": "PSQZA",
+      "target": "VERSA",
+      "objective": "Solicitar a reconciliação pós-merge do PR #5 para registrar no estado canônico os gates já comprovadamente concluídos, sem promover conteúdo científico.",
+      "projected_artifacts": [
+        "history_conversation/routes/pr5_post_merge_completion_20260805T160445-0300.json",
+        "project/checkpoint.json"
+      ],
+      "record_id": "reconciliation_request:psqza:pr5:20260805T161100-0300",
+      "outcome": "REQUESTED"
+    },
+    {
+      "sequence": 2,
+      "source": "VERSA",
+      "target": "PSQZA",
+      "objective": "Classificar a reconciliação como ORDINARY, pois ela apenas registra evidências imutáveis de um ciclo já concluído e não altera nem promove conteúdo científico PROVISIONAL.",
+      "projected_artifacts": [
+        "classification=ORDINARY",
+        "scientific_promotion=false",
+        "allowed_paths=history_conversation/routes/pr5_post_merge_completion_20260805T160445-0300.json,project/checkpoint.json"
+      ],
+      "record_id": "classification:versa:pr5-post-merge:20260805T161100-0300",
+      "outcome": "ISSUED"
+    },
+    {
+      "sequence": 3,
+      "source": "VERSA",
+      "target": "BANCA",
+      "objective": "Solicitar admissão de escrita exclusivamente para criar o registro complementar pós-merge e reconciliar o checkpoint, preservando os resumos operacionais e o traço governado anterior.",
+      "projected_artifacts": [
+        "history_conversation/routes/pr5_post_merge_completion_20260805T160445-0300.json",
+        "project/checkpoint.json"
+      ],
+      "record_id": "write_admission_request:banca:pr5-post-merge:20260805T161100-0300",
+      "outcome": "REQUESTED"
+    },
+    {
+      "sequence": 4,
+      "source": "BANCA",
+      "target": "VERSA",
+      "objective": "Admitir a escrita nos dois caminhos exatos, limitada à reconciliação documental de evidências já comprovadas e sem alteração retroativa de registros anteriores.",
+      "projected_artifacts": [
+        "history_conversation/routes/pr5_post_merge_completion_20260805T160445-0300.json",
+        "project/checkpoint.json",
+        "preserve=history_conversation/260805153400_delimitacao_llm_local_tep.md",
+        "preserve=history_conversation/260805154000_atualizacao_bootstrap_llm_local_tep.md",
+        "preserve=history_conversation/routes/pr5_governed_cycle_20260805T155500-0300.json"
+      ],
+      "record_id": "write_admission:banca:pr5-post-merge:20260805T161100-0300",
+      "outcome": "PASS"
+    },
+    {
+      "sequence": 5,
+      "source": "VERSA",
+      "target": "TERRA_VERSA",
+      "objective": "Criar branch a partir da main no merge commit comprovado, gravar o registro complementar e reconciliar somente project/checkpoint.json.",
+      "projected_artifacts": [
+        "branch=reconcile/pr5-post-merge-20260805",
+        "base_commit=4e91331775d22c55f6714b71b84e62ee2715a9f0",
+        "history_conversation/routes/pr5_post_merge_completion_20260805T160445-0300.json",
+        "project/checkpoint.json"
+      ],
+      "record_id": "write_execution_request:terra_versa:pr5-post-merge:20260805T161100-0300",
+      "outcome": "REQUESTED"
+    },
+    {
+      "sequence": 6,
+      "source": "TERRA_VERSA",
+      "target": "VERSA",
+      "objective": "Registrar formalmente a conclusão do ciclo governado do PR #5 com base nas evidências imutáveis fornecidas e confirmadas na main.",
+      "projected_artifacts": [
+        "pr=#5",
+        "validated_head=5729e06db0cdd2a1531450af818e6ce262ddef3d",
+        "banca_final_review=4867830245",
+        "versa_release_review=4867833865",
+        "merge_commit=4e91331775d22c55f6714b71b84e62ee2715a9f0",
+        "main_presence=CONFIRMED",
+        "github_actions_run=31037462742",
+        "job_validate=success",
+        "job_latex=success",
+        "final_state=DONE"
+      ],
+      "record_id": "completion_record:terra_versa:pr5:4e91331775d22c55f6714b71b84e62ee2715a9f0",
+      "outcome": "PASS"
+    }
+  ],
+  "user_visible_summary": "O ciclo do PR #5 está reconciliado como DONE: head 5729e06db0cdd2a1531450af818e6ce262ddef3d validado, parecer final BANCA review 4867830245, liberação VERSA review 4867833865, CI run 31037462742 com validate e latex success, merge commit 4e91331775d22c55f6714b71b84e62ee2715a9f0 e presença confirmada na main. A alteração é ORDINARY e não promove conteúdo científico. Este traço é histórico e pertence à arquitetura anterior ao VERAS 3.",
+  "private_reasoning_included": false
+}

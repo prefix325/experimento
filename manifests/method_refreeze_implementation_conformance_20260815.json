@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "manifest_id": "TEP-REFREEZE-CONFORMANCE-20260815-FINAL",
+  "status": "IMPLEMENTATION_PASS_TECHNICAL_ACCEPTANCE_FAIL",
+  "verdict": "PASS",
+  "method_freeze_id": "TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH",
+  "source_git_commit": "c5ec02ecfff54845262238cd02558ea98f21b14d",
+  "source_git_worktree_dirty": true,
+  "tracked_diff_git_blob_oid": "47aefc6d346e63e8c890bba11eab1f1592f09e16",
+  "pre_acceptance_manifest": "method_refreeze_implementation_conformance_20260815_pre_acceptance.json",
+  "formal_sha256": "c8affff60f9e64af02698ef1b03a0ea4a2fdf07d8ef73d52de1e38bba7bf2a66",
+  "local_execution_gate_sha256": "10db8effe0adefdfa342ad344178e4b9604f49bd8c71d58e9cfea65bc909b24c",
+  "launcher_sha256": "4dd0c6aba04deb7370be91a9cc873f7e3f594f7b9cefb2fae657ef254d201fb0",
+  "formal_files": {
+    "representation_contract.json": "a9a7518fe568861496a5defcf9a9b14222d8709ff95bf0bb7aa76069e0f0955b",
+    "evaluation_contract.json": "f7ca83deddcee2a02f7b4cd0a4c1ec362403a22f91441551d091db4d3990c5f4",
+    "post_freeze_methodological_amendment_002.json": "e159018aa6916b7b1eddbba56edbe005d2b91606a739b3042090c581899f71b1"
+  },
+  "frozen_method": {
+    "window_samples": 20,
+    "stride_samples": 5,
+    "derived_refresh_strides_formula": "ceil(window_samples / stride_samples)",
+    "derived_refresh_strides": 4,
+    "model_sha256": "1875fb29e8c91c86615c00e92d8b4114e56bc24359adb5a8db8b36452fae4a49",
+    "representation_contract_sha256": "a9a7518fe568861496a5defcf9a9b14222d8709ff95bf0bb7aa76069e0f0955b",
+    "evaluation_contract_sha256": "f7ca83deddcee2a02f7b4cd0a4c1ec362403a22f91441551d091db4d3990c5f4",
+    "dpca_reference_sha256": "6f5d534559f7802e788c643c04654c8a6ec4b427a48c291f987aebb274bf558e",
+    "dpca_model_sha256": "889351e2e87b47456a55e97769dcb34057457c23806b0aadb3b9ac8a6f194f40",
+    "confirmation_policy_id": "FIRST_INDICATION_CONCURRENT_FULL_SAMPLE_REFRESH_V1",
+    "early_stop_policy_id": "TARGET_ONLY_AFTER_DURABLE_CONFIRMED_DETECTION_V1",
+    "lot_completion_policy_id": "ALL_REQUIRED_COMPONENTS_DURABLE_COMPLETE_V1"
+  },
+  "tests": {
+    "command": "python -m pytest -q",
+    "result": "94 passed in 3.11s",
+    "verdict": "PASS",
+    "powershell_static_parse": "PASS",
+    "full_mock_50_runs": "PASS",
+    "localhost_monitor_launch_and_blocked_api": "PASS"
+  },
+  "durable_monitor_controller_tests": "PASS",
+  "ZERO_NEW_LLM_INFERENCE": true,
+  "ZERO_NEW_LLM_INFERENCE_BEFORE_ACCEPTANCE": true,
+  "ZERO_TARGET_ACCESS": true,
+  "ZERO_FAULTFREE_TESTING_ACCESS": true,
+  "formal_scientific_execution_started": false,
+  "technical_acceptance": {
+    "verdict": "FAIL",
+    "inference_count": 0,
+    "network_none_verified": true,
+    "gpu_offload_observed": false,
+    "artifact": "results/technical_acceptance/post-refreeze-synthetic-gpu-acceptance-20260815T045357Z/technical_acceptance.json",
+    "artifact_sha256": "1d5baf4afb31e94760da58c12ea47834fc83935fbe4d4d095d4aacc173ab984b",
+    "error": "llama-server startup rejected by fail-closed validator"
+  },
+  "real_start_ready": false
+}

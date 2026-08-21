@@ -1,0 +1,432 @@
+﻿{
+    "schema_version":  "3.0.0-refreeze-preparation",
+    "manifest_id":  "TEP-POST-FREEZE-OPERATIONAL-AMENDMENT-001-PREPARATION-20260816T201430Z",
+    "status":  "FORMAL_REFREEZE_PREPARATION_CURRENT",
+    "created_at":  "2026-08-16T20:14:30Z",
+    "method_freeze_id":  "TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH",
+    "formal_sha256":  "c8affff60f9e64af02698ef1b03a0ea4a2fdf07d8ef73d52de1e38bba7bf2a66",
+    "supersedes":  {
+                       "historical_manifest":  "manifests/history/preparation-20260815T192810Z-3ec6f2669089.json",
+                       "old_preparation_sha256":  "3ec6f266908906fd8140172906f9ab9d826a8a6fb16e9e5bb9a16c9c2c48398d",
+                       "old_formal_json_expected_sha256":  "c8affff60f9e64af02698ef1b03a0ea4a2fdf07d8ef73d52de1e38bba7bf2a66",
+                       "new_method_freeze_id":  "TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH",
+                       "reason":  "POST_FREEZE_OPERATIONAL_AMENDMENT_TECHNICAL_ACCEPTANCE_UPDATED"
+                   },
+    "provenance":  {
+                       "official_entrypoint":  "scripts/prepare_online.ps1 -ManifestOnlyRefreeze",
+                       "generator":  "scripts/regenerate_refreeze_preparation_manifest.ps1",
+                       "mode":  "MANIFEST_ONLY_BINARY_HASHING_NO_SCIENTIFIC_EXECUTION",
+                       "git_commit":  "0f5d8ceea095e0e5b3e8f4fe3bc9c19e224bb445",
+                       "git_tree":  "834d13e15b153ad0bf5c024e71ceb0856bfa3306",
+                       "git_branch":  "operational/post-freeze-output-cap-1024",
+                       "git_dirty":  true
+                   },
+    "git_commit":  "0f5d8ceea095e0e5b3e8f4fe3bc9c19e224bb445",
+    "git_tree":  "834d13e15b153ad0bf5c024e71ceb0856bfa3306",
+    "git_branch":  "operational/post-freeze-output-cap-1024",
+    "git_dirty":  true,
+    "docker_version":  "29.7.2",
+    "docker_image_tag":  "psqza-tep-local:c5ec02e-formal",
+    "docker_image_id":  "sha256:4f3fb9457770f769573f76c997142ffd1b4ecf9508842c82c50ef1fecbd324ed",
+    "docker_image_digest":  "psqza-tep-local@sha256:4f3fb9457770f769573f76c997142ffd1b4ecf9508842c82c50ef1fecbd324ed",
+    "llama_cpp_base_digest":  "sha256:6b0bf4974521b2c16a498c7dd0715f4eb077725f1483e0ee0f617679005b1e1f",
+    "llama_cpp_version":  "version: 0.1.0-dev (build 10398, commit 8e7f22b67)\nbuilt with GNU 14.2.0 for Linux x86_64",
+    "runtime_identity":  {
+                             "source":  "previous preparation bound to identical immutable image; revalidated by technical acceptance",
+                             "technical_acceptance_artifact":  "results/technical_acceptance/post-freeze-operational-amendment-001-acceptance-20260816T201154Z/technical_acceptance.json",
+                             "technical_acceptance_sha256":  "d4b95d7943531017f5e7e95b2af22d2eb01654ed097850c0a7b486d592754f17",
+                             "network_mode":  "none",
+                             "gpu_offload_pass":  true
+                         },
+    "model_name":  "Qwen/Qwen2.5-7B-Instruct-GGUF",
+    "model_file":  "qwen2.5-7b-instruct-q4_k_m.gguf",
+    "model_quantization":  "Q4_K_M",
+    "model_size_bytes":  4683073536,
+    "model_sha256":  "1875fb29e8c91c86615c00e92d8b4114e56bc24359adb5a8db8b36452fae4a49",
+    "model_license":  "Apache-2.0",
+    "model_origin":  "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct-GGUF",
+    "dataset_manifest_sha256":  "a2ea5ff89a3380ad20c50f625100277f609f1309c25c46401a03b291c012dba8",
+    "dataset_files":  [
+                          {
+                              "role":  "normal_blind",
+                              "relative_path":  "normal/blind/normal_blind_runs_001_050.csv.gz",
+                              "sha256":  "febd67ea7009678d6182b0a435d32b5052ce12070160d21ef758c5f23710494f",
+                              "bytes":  3090343,
+                              "rows":  25000
+                          },
+                          {
+                              "role":  "normal_blind",
+                              "relative_path":  "normal/blind/normal_blind_runs_051_100.csv.gz",
+                              "sha256":  "96d6796de76b8502c364256a15ea7db8ee544a9c0473473722fd89fc5e89f4c1",
+                              "bytes":  3089977,
+                              "rows":  25000
+                          },
+                          {
+                              "role":  "normal_blind",
+                              "relative_path":  "normal/blind/normal_blind_runs_101_150.csv.gz",
+                              "sha256":  "f0fa5aabd1ac3703a259e2c5efb41176f2a3d65a953de94752ec0ac6ba8c44b5",
+                              "bytes":  3088401,
+                              "rows":  25000
+                          },
+                          {
+                              "role":  "normal_blind",
+                              "relative_path":  "normal/blind/normal_blind_runs_151_200.csv.gz",
+                              "sha256":  "3c596e2e3c2a556cf58302a8e88317d03bc4f49f36e4b4c8fc20011ffde44179",
+                              "bytes":  3089810,
+                              "rows":  25000
+                          },
+                          {
+                              "role":  "normal_blind",
+                              "relative_path":  "normal/blind/normal_blind_runs_201_250.csv.gz",
+                              "sha256":  "c9c144211b3a1d5981dcacc7fa83abea515e7776f764452278bf18928ebc8216",
+                              "bytes":  3090149,
+                              "rows":  25000
+                          },
+                          {
+                              "role":  "normal_blind",
+                              "relative_path":  "normal/blind/normal_blind_runs_251_300.csv.gz",
+                              "sha256":  "75938c45920e2de59341a36f0fa9bd5fa8018282f12d0b43ffe54481a1d87740",
+                              "bytes":  3089029,
+                              "rows":  25000
+                          },
+                          {
+                              "role":  "normal_blind",
+                              "relative_path":  "normal/blind/normal_blind_runs_301_350.csv.gz",
+                              "sha256":  "b2cdc627d840669be487f032886ca8650fa83a4603e626d64c08781abd9afbb3",
+                              "bytes":  3086850,
+                              "rows":  25000
+                          },
+                          {
+                              "role":  "normal_blind",
+                              "relative_path":  "normal/blind/normal_blind_runs_351_400.csv.gz",
+                              "sha256":  "cfd51c48327cbfa24e910dbf193b8a76d6a373cacc8f1b8b5ee3572b9d9bfc7d",
+                              "bytes":  3087281,
+                              "rows":  25000
+                          },
+                          {
+                              "role":  "normal_blind",
+                              "relative_path":  "normal/blind/normal_blind_runs_401_450.csv.gz",
+                              "sha256":  "c52be86f3139f7947c01ad85bda7885e991b5b022510da862a9643bd94bb80e0",
+                              "bytes":  3086351,
+                              "rows":  25000
+                          },
+                          {
+                              "role":  "normal_blind",
+                              "relative_path":  "normal/blind/normal_blind_runs_451_500.csv.gz",
+                              "sha256":  "ead149e031c172cd2f87806c2c96067d40d0a61200506e3806782a3555a9202c",
+                              "bytes":  3089332,
+                              "rows":  25000
+                          },
+                          {
+                              "role":  "test_blind",
+                              "relative_path":  "test/blind/evaluation_blind_runs_001_050.csv.gz",
+                              "sha256":  "8e6f4ddbb033df3d2a53c32d939c05b03c8ae2e0c5988a6be73b7b666119bdf7",
+                              "bytes":  6093710,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "ground_truth",
+                              "relative_path":  "test/ground_truth/ground_truth_runs_001_050.csv.gz",
+                              "sha256":  "963b6608cef88de3149cd2218829e00b83cfa9688981b14d00e6679ee97d731a",
+                              "bytes":  103289,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "test_blind",
+                              "relative_path":  "test/blind/evaluation_blind_runs_051_100.csv.gz",
+                              "sha256":  "4fee1c0f3cba7ccb70d7de65433dc29a86c2eff26e0d0e4da746d6159dd48860",
+                              "bytes":  6022915,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "ground_truth",
+                              "relative_path":  "test/ground_truth/ground_truth_runs_051_100.csv.gz",
+                              "sha256":  "49360199ed2d85b94abec62da05bd3137be80a363332416379522a33dabc9511",
+                              "bytes":  104877,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "test_blind",
+                              "relative_path":  "test/blind/evaluation_blind_runs_101_150.csv.gz",
+                              "sha256":  "2bfb5b0da5ea2c4873358f07af1e44a20ba95be03dbf411840f8d2134dca7805",
+                              "bytes":  6080820,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "ground_truth",
+                              "relative_path":  "test/ground_truth/ground_truth_runs_101_150.csv.gz",
+                              "sha256":  "7c2a92ed9974b11357c8f824a75f23e09b2e4ee85d3aa5b44f707cb80ed6eb74",
+                              "bytes":  107051,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "test_blind",
+                              "relative_path":  "test/blind/evaluation_blind_runs_151_200.csv.gz",
+                              "sha256":  "589040f796e9f6bb869b1d259330f414ea8b7df2fe1e2830d14577e4d917c62d",
+                              "bytes":  6079717,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "ground_truth",
+                              "relative_path":  "test/ground_truth/ground_truth_runs_151_200.csv.gz",
+                              "sha256":  "0af411f15cd9aeaf56bf6ab40626b3d46ad4aeb790868aa852603501dc448116",
+                              "bytes":  107061,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "test_blind",
+                              "relative_path":  "test/blind/evaluation_blind_runs_201_250.csv.gz",
+                              "sha256":  "c3e70942316e9333a3f3cd98e738501a7a7c3cce7558c4a127fc99a6eb0e1c98",
+                              "bytes":  6049585,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "ground_truth",
+                              "relative_path":  "test/ground_truth/ground_truth_runs_201_250.csv.gz",
+                              "sha256":  "b5d965bbcaa83f4e14423f567ec00775900b221634d54964965dc537280bc5bc",
+                              "bytes":  107067,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "test_blind",
+                              "relative_path":  "test/blind/evaluation_blind_runs_251_300.csv.gz",
+                              "sha256":  "31d3f5a83e6326a6d3b8b9bdf70c11620ec75a58c72560b0cd55bddef9f0c4cf",
+                              "bytes":  5967333,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "ground_truth",
+                              "relative_path":  "test/ground_truth/ground_truth_runs_251_300.csv.gz",
+                              "sha256":  "af42f4487af255f4aa3ba9c1e8011b1a23ab03b14eeafea31bee7a8c90b4799d",
+                              "bytes":  107070,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "test_blind",
+                              "relative_path":  "test/blind/evaluation_blind_runs_301_350.csv.gz",
+                              "sha256":  "ba18c685a7e9cebd41d5954cf728732228c7fdaa3a78090750f4f5498732c1cd",
+                              "bytes":  6025509,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "ground_truth",
+                              "relative_path":  "test/ground_truth/ground_truth_runs_301_350.csv.gz",
+                              "sha256":  "2f4787f59c3c86a8746e2e104e8c9e3cd1b9e4da908205325217ef724bbac19c",
+                              "bytes":  107067,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "test_blind",
+                              "relative_path":  "test/blind/evaluation_blind_runs_351_400.csv.gz",
+                              "sha256":  "153fc83cf6d4c6dffb2c79e1c73fb4ee30bc48b119d1b26251c7bdcd44746df0",
+                              "bytes":  6071314,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "ground_truth",
+                              "relative_path":  "test/ground_truth/ground_truth_runs_351_400.csv.gz",
+                              "sha256":  "e7553c9b7d4f00353c7e990344c2d14222b65535c303fce608c2714b06746265",
+                              "bytes":  107071,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "test_blind",
+                              "relative_path":  "test/blind/evaluation_blind_runs_401_450.csv.gz",
+                              "sha256":  "f550b4a429c1baea0df82bd26a3b4ae77b47396eb714735dfca373fab35ed708",
+                              "bytes":  6025388,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "ground_truth",
+                              "relative_path":  "test/ground_truth/ground_truth_runs_401_450.csv.gz",
+                              "sha256":  "f0672b6698dac25736efb4a6029a652d27250f07c28a46937e9ca8d19d87d9ce",
+                              "bytes":  107067,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "test_blind",
+                              "relative_path":  "test/blind/evaluation_blind_runs_451_500.csv.gz",
+                              "sha256":  "9af9328881754a5a3ccd80dfbe76c24e89ccbf91b6548d6347c252063622d2df",
+                              "bytes":  5964107,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "ground_truth",
+                              "relative_path":  "test/ground_truth/ground_truth_runs_451_500.csv.gz",
+                              "sha256":  "482c94d8881a4a593594c3ea57d9c7e10a06e497714861b58e4b70a2c3182d5c",
+                              "bytes":  107070,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "normal_holdout_blind",
+                              "relative_path":  "normal_holdout/blind/normal_holdout_blind_runs_001_050.csv.gz",
+                              "sha256":  "b579aa3e43d6e38cc60dd776021861d14e87b5d85dfe4fde5511e954e2080cde",
+                              "bytes":  5911820,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "normal_holdout_blind",
+                              "relative_path":  "normal_holdout/blind/normal_holdout_blind_runs_051_100.csv.gz",
+                              "sha256":  "c741e418ade3cfd1146e3fa51fcf0ddfecdb47cd98a33527701211a99fc55c29",
+                              "bytes":  5913213,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "normal_holdout_blind",
+                              "relative_path":  "normal_holdout/blind/normal_holdout_blind_runs_101_150.csv.gz",
+                              "sha256":  "65a8caf1c12f91c211c7401ff0025c88677a049df945510be6586da017ff0d20",
+                              "bytes":  5910270,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "normal_holdout_blind",
+                              "relative_path":  "normal_holdout/blind/normal_holdout_blind_runs_151_200.csv.gz",
+                              "sha256":  "9d2f9c523a5e86fb4a5b994ea1fa34ad5921ec9eeec562a5bc9236a5ffcbffb6",
+                              "bytes":  5916393,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "normal_holdout_blind",
+                              "relative_path":  "normal_holdout/blind/normal_holdout_blind_runs_201_250.csv.gz",
+                              "sha256":  "7f9fddcc5e29ef11e07553016b406ce15cc09eda191366262ddffce7e97c01e5",
+                              "bytes":  5911998,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "normal_holdout_blind",
+                              "relative_path":  "normal_holdout/blind/normal_holdout_blind_runs_251_300.csv.gz",
+                              "sha256":  "724f8978325daa5a32eac332f2d69cf571650ecf23461f3b1672119f5416d31d",
+                              "bytes":  5910572,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "normal_holdout_blind",
+                              "relative_path":  "normal_holdout/blind/normal_holdout_blind_runs_301_350.csv.gz",
+                              "sha256":  "634cd03ac31fae263eeeae5c977ac8b8bfc08be2abf49cd5ee97b6bcaa9920e1",
+                              "bytes":  5913539,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "normal_holdout_blind",
+                              "relative_path":  "normal_holdout/blind/normal_holdout_blind_runs_351_400.csv.gz",
+                              "sha256":  "7a9a1010a17619b56eb67e936d5ccc623affc723182bec895cd8083326fae52a",
+                              "bytes":  5912110,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "normal_holdout_blind",
+                              "relative_path":  "normal_holdout/blind/normal_holdout_blind_runs_401_450.csv.gz",
+                              "sha256":  "d72265a9d0bb05bb28ab97f38fb5b1624e25b0bbe5ff0d86bc4c327ed94aad52",
+                              "bytes":  5914390,
+                              "rows":  48000
+                          },
+                          {
+                              "role":  "normal_holdout_blind",
+                              "relative_path":  "normal_holdout/blind/normal_holdout_blind_runs_451_500.csv.gz",
+                              "sha256":  "75dc3dbd8e8517560e0accc2e23aeeca0bc6f8038133874b69eece4d1025bfb7",
+                              "bytes":  5908187,
+                              "rows":  48000
+                          }
+                      ],
+    "dataset_integrity":  {
+                              "mode":  "BINARY_SHA256_ONLY",
+                              "files_hashed":  40,
+                              "dataset_files_parsed":  0,
+                              "scientific_values_examined":  false
+                          },
+    "configuration_sha256":  {
+                                 "smoke.json":  "9172ab2c362622686adab568d32ff1c661f6f04f4b11ef9924e240a0b79946d3",
+                                 "pilot.json":  "1596a7ec6e2d701d6799fe1761100288be7d0060d9cf5ae2255f4c4977b8f6eb",
+                                 "formal.json":  "c8affff60f9e64af02698ef1b03a0ea4a2fdf07d8ef73d52de1e38bba7bf2a66",
+                                 "post_freeze_operational_amendment_001.json":  "9a9972be344ee58cd4d4c9d88a5d63d74a16e18cf4c46783037241355b71e4c6",
+                                 "effective_configuration":  "7facd21abb90c8bb52e9302775c43bcb12f8435c7cea9b451001d6f9203e0ed2",
+                                 "output_schema.json":  "d796158037b8f421ba278b1aea8bde3d5e03fdd03d174b554d8fd6f59381677d"
+                             },
+    "prompt_template_sha256":  "72c2305b2b2637ecd920e88ba16947bbbfba12d2ab18a3cc3c36110eef3c0da6",
+    "frozen_artifacts":  {
+                             "files":  {
+                                           "prompt_template":  "prompt_template.txt",
+                                           "output_schema":  "output_schema.json",
+                                           "representation_contract":  "representation_contract.json",
+                                           "evaluation_contract":  "evaluation_contract.json",
+                                           "formal_run_selection":  "formal_run_selection.json",
+                                           "formal_normal_holdout_selection":  "formal_normal_holdout_selection.json",
+                                           "dpca_reference":  "dpca_reference.json",
+                                           "dpca_artifact":  "dpca_reference_model.npz",
+                                           "h3_evidence_reference":  "h3_evidence_reference.json"
+                                       },
+                             "sha256":  {
+                                            "prompt_template":  "72c2305b2b2637ecd920e88ba16947bbbfba12d2ab18a3cc3c36110eef3c0da6",
+                                            "output_schema":  "d796158037b8f421ba278b1aea8bde3d5e03fdd03d174b554d8fd6f59381677d",
+                                            "representation_contract":  "a9a7518fe568861496a5defcf9a9b14222d8709ff95bf0bb7aa76069e0f0955b",
+                                            "evaluation_contract":  "f7ca83deddcee2a02f7b4cd0a4c1ec362403a22f91441551d091db4d3990c5f4",
+                                            "formal_run_selection":  "9263bc65a911fe1957bab57c9904a50f56a814434bec1b6022b4330e13ccf004",
+                                            "formal_normal_holdout_selection":  "317de7e995af67828e25235dfd46b4260f2fac08628dd7f55993cba756668098",
+                                            "dpca_reference":  "6f5d534559f7802e788c643c04654c8a6ec4b427a48c291f987aebb274bf558e",
+                                            "dpca_artifact":  "889351e2e87b47456a55e97769dcb34057457c23806b0aadb3b9ac8a6f194f40",
+                                            "h3_evidence_reference":  "3dffd455d721e77ebfe2f2a85ef19e8ba4f6bd56cc94dd190e09d700592109e6"
+                                        }
+                         },
+    "governance":  {
+                       "technical_acceptance":  {
+                                                    "artifact":  "results/technical_acceptance/post-freeze-operational-amendment-001-acceptance-20260816T201154Z/technical_acceptance.json",
+                                                    "sha256":  "d4b95d7943531017f5e7e95b2af22d2eb01654ed097850c0a7b486d592754f17",
+                                                    "verdict":  "PASS",
+                                                    "method_freeze_id":  "TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH"
+                                                },
+                       "implementation_conformance":  {
+                                                          "artifact":  "manifests/method_refreeze_implementation_conformance_20260815.json",
+                                                          "sha256":  "38b91a3a8c9451468813e353dd62b5ef418d51c5eca1545ebe0b5a29362766ab",
+                                                          "manifest_id":  "TEP-REFREEZE-CONFORMANCE-20260815-FINAL",
+                                                          "verdict":  "PASS",
+                                                          "method_freeze_id":  "TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH",
+                                                          "formal_sha256":  "c8affff60f9e64af02698ef1b03a0ea4a2fdf07d8ef73d52de1e38bba7bf2a66"
+                                                      },
+                       "local_execution_gate":  {
+                                                    "artifact":  "repo/experiments/tep/local_llm/config/local_execution_gate.json",
+                                                    "sha256":  "3a8b289e10c75b549a735d76bb25bb7c025893128f3ad5398de5fdb5d3eea55f",
+                                                    "status":  "REAL START READY",
+                                                    "method_freeze_id":  "TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH",
+                                                    "formal_sha256":  "c8affff60f9e64af02698ef1b03a0ea4a2fdf07d8ef73d52de1e38bba7bf2a66"
+                                                }
+                   },
+    "hardware":  {
+                     "windows":  "Microsoft Windows 10 Home Single Language",
+                     "windows_version":  "10.0.19045",
+                     "windows_build":  "19045",
+                     "cpu":  "Intel(R) Xeon(R) CPU E5-2670 v3 @ 2.30GHz",
+                     "physical_cores":  12,
+                     "logical_threads":  24,
+                     "ram_gb":  63.84,
+                     "gpu":  "NVIDIA GeForce RTX 4060",
+                     "nvidia_driver":  "610.74",
+                     "vram_mib":  8188,
+                     "cuda_visible_in_container":  "13.3",
+                     "wsl":  "Versão do WSL: 2.7.11.0\r\nVersão do kernel: 6.18.33.2-2\r\nVersão do WSLg: 1.0.73.2\r\nVersão do MSRDC: 1.2.7214\r\nVersão do Direct3D: 1.611.1-81528511\r\nVersão do DXCore: 10.0.26100.1-240331-1435.ge-release\r\nVersão do Windows: 10.0.19045.6466",
+                     "docker_desktop":  "4.86.0",
+                     "x_free_gb":  389.73
+                 },
+    "network_mode":  "none",
+    "consistency":  {
+                        "formal_hash_match":  true,
+                        "method_freeze_match":  true,
+                        "technical_acceptance_match":  true,
+                        "implementation_conformance_match":  true,
+                        "local_execution_gate_match":  true,
+                        "model_match":  true,
+                        "prompt_match":  true,
+                        "contracts_match":  true,
+                        "run_selections_match":  true,
+                        "dpca_reference_match":  true,
+                        "docker_image_match":  true,
+                        "binary_dataset_integrity_match":  true
+                    },
+    "execution_attestation":  {
+                                  "process_started":  false,
+                                  "docker_run_executed":  false,
+                                  "formal_lots_started":  0,
+                                  "dpca_engine_started":  false,
+                                  "llm_inference_count":  0,
+                                  "dataset_files_parsed":  0
+                              }
+}

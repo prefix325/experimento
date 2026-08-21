@@ -1,0 +1,33 @@
+name: Validate PSQZA
+on:
+  pull_request:
+  push:
+    branches: [main]
+concurrency:
+  group: validate-psqza-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install jsonschema
+      - run: python tools/validate_repository.py
+      - run: python tools/validate_research_flow.py
+      - run: python tools/validate_veras3_alignment.py
+      - run: python tools/validate_academic_registry.py
+      - run: python tools/validate_manuscript_integrity.py --output build/manuscript-integrity
+      - uses: actions/upload-artifact@v4
+        with:
+          name: manuscript-integrity
+          path: build/manuscript-integrity
+  latex:
+    runs-on: ubuntu-latest
+    container: texlive/texlive:latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: apt-get update && apt-get install -y python3-jsonschema
+      - run: make build

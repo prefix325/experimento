@@ -1,0 +1,43 @@
+{
+  "schema_version": "2.0.0",
+  "amendment_id": "POST_FREEZE_TECHNICAL_AMENDMENT_002",
+  "status": "IMPLEMENTED_TECHNICAL_ACCEPTANCE_FAILED_REAL_START_BLOCKED",
+  "date": "2026-08-15",
+  "method_freeze_id": "TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH",
+  "methodological_amendment": "post_freeze_methodological_amendment_002.json",
+  "scientific_parameters_changed": false,
+  "monitor": {
+    "launcher": "START_PSQZA_FORMAL_MONITOR.bat",
+    "url": "http://127.0.0.1:8765",
+    "autostart_inference": false,
+    "formal_lots": 1000,
+    "target_dpca_runs": 500,
+    "normal_holdout_dpca_runs": 500,
+    "target_llm_runs": 50,
+    "normal_holdout_llm_runs": 50,
+    "default_runs_this_session": 5,
+    "disk_complete_is_authoritative": true
+  },
+  "technical_acceptance": {
+    "run": "post-refreeze-synthetic-gpu-acceptance-20260815T045357Z",
+    "verdict": "FAIL",
+    "inference_count": 0,
+    "network_none_verified": true,
+    "gpu_offload_observed": false,
+    "cpu_fallback_observed": false,
+    "retry_performed": false,
+    "error": "llama-server startup rejected by fail-closed validator"
+  },
+  "local_gate": {
+    "implementation_conformance": "PASS",
+    "durable_monitor_controller_tests": "PASS",
+    "technical_acceptance": "FAIL",
+    "gpu_offload_acceptance": "FAIL",
+    "offline_network_none_acceptance": "PASS",
+    "scientific_execution_authorized": false,
+    "real_start_ready": false
+  },
+  "ZERO_TARGET_ACCESS": true,
+  "ZERO_FAULTFREE_TESTING_ACCESS": true,
+  "formal_scientific_execution_started": false
+}

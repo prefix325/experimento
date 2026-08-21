@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "architecture_generation": "LEGACY_PRE_VERAS_3",
+  "trace_id": "trace:pr5-governed-cycle:2026-08-05T15:55:00-03:00",
+  "session_id": "psqza-project-session-20260805",
+  "turn_id": "user-pr5-governed-cycle-20260805T1555-0300",
+  "assurance_mode": "PROCEDURAL_SAME_CONTEXT",
+  "entries": [
+    {
+      "sequence": 1,
+      "source": "PSQZA",
+      "target": "VERSA",
+      "objective": "Classificar a alteração do PR #5, seus efeitos Git e os hard gates aplicáveis antes de qualquer promoção para main.",
+      "projected_artifacts": [
+        "PR #5",
+        "project/current_state.md",
+        "project/checkpoint.json",
+        "project/research_graph.json",
+        "history_conversation/index.json",
+        "history_conversation/*.md"
+      ],
+      "record_id": "classification:versa:pr5:20260805T155500-0300",
+      "outcome": "ISSUED"
+    },
+    {
+      "sequence": 2,
+      "source": "VERSA",
+      "target": "BANCA",
+      "objective": "Admitir ou rejeitar a escrita corretiva restrita ao erro de CI state:no_doctoral_agenda e aos registros governados do ciclo, sem promover conteúdo científico PROVISIONAL.",
+      "projected_artifacts": [
+        "project/current_state.md",
+        "history_conversation/routes/pr5_governed_cycle_20260805T155500-0300.json"
+      ],
+      "record_id": "write_admission:banca:pr5:20260805T155500-0300",
+      "outcome": "PASS"
+    },
+    {
+      "sequence": 3,
+      "source": "VERSA",
+      "target": "TERRA_VERSA",
+      "objective": "Corrigir exclusivamente o erro de CI state:no_doctoral_agenda, preservando o conteúdo vigente e incluindo referência explícita à agenda de doutorado em project/current_state.md.",
+      "projected_artifacts": [
+        "project/current_state.md"
+      ],
+      "record_id": "write_execution:terra_versa:pr5:20260805T155500-0300",
+      "outcome": "PASS"
+    },
+    {
+      "sequence": 4,
+      "source": "TERRA_VERSA",
+      "target": "VERSA",
+      "objective": "Submeter a correção e a evidência de validação do repositório e das quatro compilações LaTeX no GitHub Actions run 31037127236.",
+      "projected_artifacts": [
+        "commit b486b0b425504e26212e06edd36d8234454eb926",
+        "GitHub Actions run 31037127236",
+        "job validate",
+        "job latex"
+      ],
+      "record_id": "execution_report:terra_versa:pr5:b486b0b425504e26212e06edd36d8234454eb926",
+      "outcome": "PASS"
+    },
+    {
+      "sequence": 5,
+      "source": "VERSA",
+      "target": "BANCA",
+      "objective": "Validar o head final exato do PR #5 após a persistência deste traço e a aprovação integral do CI, verificando preservação do status PROVISIONAL e todos os hard gates.",
+      "projected_artifacts": [
+        "PR #5",
+        "head final após este registro",
+        "GitHub Actions validate",
+        "GitHub Actions latex"
+      ],
+      "record_id": "final_validation_request:banca:pr5:20260805T155500-0300",
+      "outcome": "REQUESTED"
+    }
+  ],
+  "user_visible_summary": "VERSA classificou o PR #5; BANCA admitiu a escrita corretiva; TERRA_VERSA corrigiu a referência obrigatória à agenda de doutorado; o primeiro ciclo de validação passou integralmente; a validação final da BANCA foi solicitada para o head exato após o último CI. Este traço é histórico e pertence à arquitetura anterior ao VERAS 3.",
+  "private_reasoning_included": false
+}

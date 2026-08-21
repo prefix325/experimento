@@ -1,0 +1,16 @@
+{
+  "attempt_id": "attempt_0001",
+  "cohort": "target",
+  "completion_reason": "COMPONENTS_COMPLETE",
+  "dpca_status": "COMPLETE",
+  "duration_seconds": 0.0,
+  "ended_at": "2026-08-17T02:37:22.732382+00:00",
+  "llm_status": "COMPLETE",
+  "lot_status": "COMPLETE",
+  "mock": false,
+  "process_started": true,
+  "run_event_id": "run-event-11546eea87cc4be5bfdf648aedee2648",
+  "simulation_run": 125,
+  "started_at": "2026-08-17T02:22:12.241871+00:00",
+  "status": "COMPLETE"
+}

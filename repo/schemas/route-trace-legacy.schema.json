@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/prefix325/psqza-research/main/schemas/route-trace-legacy.schema.json",
+  "title": "Observable Academic Route Trace — Legacy pre-VERAS 3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "architecture_generation",
+    "trace_id",
+    "session_id",
+    "turn_id",
+    "assurance_mode",
+    "entries",
+    "user_visible_summary",
+    "private_reasoning_included"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "architecture_generation": {"const": "LEGACY_PRE_VERAS_3"},
+    "trace_id": {"type": "string", "minLength": 1},
+    "session_id": {"type": "string", "minLength": 1},
+    "turn_id": {"type": "string", "minLength": 1},
+    "assurance_mode": {"const": "PROCEDURAL_SAME_CONTEXT"},
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["sequence", "source", "target", "objective", "projected_artifacts", "record_id", "outcome"],
+        "properties": {
+          "sequence": {"type": "integer", "minimum": 1},
+          "source": {"enum": ["PSQZA", "VERSA", "MECAI", "BANCA", "TERRA_VERSA"]},
+          "target": {"enum": ["PSQZA", "VERSA", "MECAI", "BANCA", "TERRA_VERSA"]},
+          "objective": {"type": "string", "minLength": 1},
+          "projected_artifacts": {"type": "array", "items": {"type": "string"}},
+          "record_id": {"type": ["string", "null"]},
+          "outcome": {"enum": ["REQUESTED", "ISSUED", "SUBMITTED", "PASS", "PASS_WITH_WARNINGS", "FAIL", "BLOCKED", "INCONCLUSIVE"]}
+        }
+      }
+    },
+    "user_visible_summary": {"type": "string", "minLength": 1},
+    "private_reasoning_included": {"const": false}
+  }
+}

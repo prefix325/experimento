@@ -1,0 +1,11 @@
+{
+  "source_commit": "85f113f77db0f18b55e730723912a32284a3fe11",
+  "status": "PASS",
+  "documents": {
+    "preproject": {"source_tree_sha256":"36c4b2cdb1d0fc61ee4f5df9aeba55d19d9c348067fb0b54415de6a5579e5d38","log_sha256":"b0362f5be64d1129436f6fa904fb5b404555a1e5e823f670e6fd17fd33514127","pdf_sha256":"280d7ec98936fa0d412c4b64983def27e3e8704567cc4cc4043facc5dcf1021f","status":"PASS"},
+    "article": {"source_tree_sha256":"a584ed23bd7074025820af2527338ed36c47d6398dec107ffff76b5cd2a276cd","log_sha256":"8094ec41ae04259cd89e0fcdd1e4f40300cc38ec78f954ee1989a41047969203","pdf_sha256":"f9beffbd693eab53762957358be9bbb44bf8a6e44be6094f06add843173d8152","status":"PASS"},
+    "dissertation": {"source_tree_sha256":"b1993fe51a67538c75cf868ec38d8ccdfbfa2a691ef8459e8cc2415a641849ae","log_sha256":"a6e13c85d627a1ec02808b6e649b53337d167561242f24064ae9a667dd11098e","pdf_sha256":"6684ec8eac96e329308fb57c8e5d45ee3c8dbf47e80daaff7edf4224ad890367","status":"PASS"},
+    "doctoral-agenda": {"source_tree_sha256":"b733f7403097355eecbef4443e5a4ba563a8df72b133daa39f568d407799d2db","log_sha256":"09d327e95c0e1d9cd5b33e32a71c1c0b652fa80979ec9085efb6493223bd1066","pdf_sha256":"e8dd53c40f3a198d5895ad77f0c0e1309d311c146283310001fb4ba032731e11","status":"PASS"}
+  },
+  "build_log_sha256": "14d7d5b4b891b99a35257bad1d0ef9b2a945ef38582cc7265fa0e11ebfd701d9"
+}

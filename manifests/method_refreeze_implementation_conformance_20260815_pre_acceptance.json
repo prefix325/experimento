@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "manifest_id": "TEP-REFREEZE-CONFORMANCE-20260815-PRE-ACCEPTANCE",
+  "status": "IMPLEMENTATION_CONFORMANCE_PASS_TECHNICAL_ACCEPTANCE_PENDING",
+  "verdict": "PASS",
+  "method_freeze_id": "TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH",
+  "source_git_commit": "c5ec02ecfff54845262238cd02558ea98f21b14d",
+  "source_git_worktree_dirty": true,
+  "tracked_diff_git_blob_oid": "47aefc6d346e63e8c890bba11eab1f1592f09e16",
+  "formal_sha256": "c8affff60f9e64af02698ef1b03a0ea4a2fdf07d8ef73d52de1e38bba7bf2a66",
+  "formal_files": {
+    "representation_contract.json": "a9a7518fe568861496a5defcf9a9b14222d8709ff95bf0bb7aa76069e0f0955b",
+    "evaluation_contract.json": "f7ca83deddcee2a02f7b4cd0a4c1ec362403a22f91441551d091db4d3990c5f4",
+    "post_freeze_methodological_amendment_002.json": "e159018aa6916b7b1eddbba56edbe005d2b91606a739b3042090c581899f71b1"
+  },
+  "frozen_method": {
+    "window_samples": 20,
+    "stride_samples": 5,
+    "derived_refresh_strides_formula": "ceil(window_samples / stride_samples)",
+    "derived_refresh_strides": 4,
+    "model_sha256": "1875fb29e8c91c86615c00e92d8b4114e56bc24359adb5a8db8b36452fae4a49",
+    "representation_contract_sha256": "a9a7518fe568861496a5defcf9a9b14222d8709ff95bf0bb7aa76069e0f0955b",
+    "evaluation_contract_sha256": "f7ca83deddcee2a02f7b4cd0a4c1ec362403a22f91441551d091db4d3990c5f4",
+    "dpca_reference_sha256": "6f5d534559f7802e788c643c04654c8a6ec4b427a48c291f987aebb274bf558e",
+    "dpca_model_sha256": "889351e2e87b47456a55e97769dcb34057457c23806b0aadb3b9ac8a6f194f40",
+    "confirmation_policy_id": "FIRST_INDICATION_CONCURRENT_FULL_SAMPLE_REFRESH_V1",
+    "early_stop_policy_id": "TARGET_ONLY_AFTER_DURABLE_CONFIRMED_DETECTION_V1",
+    "lot_completion_policy_id": "ALL_REQUIRED_COMPONENTS_DURABLE_COMPLETE_V1"
+  },
+  "tests": {
+    "command": "python -m pytest -q",
+    "result": "94 passed in 2.91s",
+    "verdict": "PASS",
+    "synthetic_confirmation_tests": "PASS",
+    "durable_monitor_controller_tests": "PASS",
+    "powershell_static_parse": "PASS",
+    "real_llm_inference": false,
+    "dataset_access": false
+  },
+  "durable_monitor_controller_tests": "PASS",
+  "ZERO_NEW_LLM_INFERENCE": true,
+  "ZERO_TARGET_ACCESS": true,
+  "ZERO_FAULTFREE_TESTING_ACCESS": true,
+  "formal_scientific_execution_started": false,
+  "technical_acceptance": "PENDING"
+}

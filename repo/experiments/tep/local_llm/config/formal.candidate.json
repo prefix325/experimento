@@ -1,0 +1,193 @@
+{
+  "status": "CANDIDATE_FOR_RESEARCHER_FREEZE",
+  "methodology_frozen": false,
+  "scientific_execution_permitted": false,
+  "experiment_id_prefix": "tep-local-formal",
+  "formal_scope": {
+    "llm_target_run_limit": 50,
+    "llm_normal_holdout_run_limit": 50,
+    "dpca_target_run_limit": 500,
+    "dpca_normal_holdout_run_limit": 500,
+    "normal_reference_training": {
+      "dataset": "FaultFree Training",
+      "role": "fit/normalization/threshold reference only; not an evaluation cohort"
+    },
+    "llm_target": {
+      "dataset": "IDV(13)",
+      "selection": "formal_run_selection.json",
+      "eligible_runs": "11..500",
+      "excluded_runs": "1..10"
+    },
+    "llm_normal_holdout": {
+      "dataset": "FaultFree Testing",
+      "selection": "formal_normal_holdout_selection.json",
+      "eligible_runs": "1..500"
+    },
+    "dpca_target": {"dataset": "IDV(13)", "runs": "all 1..500"},
+    "dpca_normal_holdout": {"dataset": "FaultFree Testing", "runs": "all 1..500"}
+  },
+  "window_samples": 20,
+  "stride_samples": 5,
+  "sample_interval_minutes": 3,
+  "window_nominal_minutes": 60,
+  "evaluation_interval_minutes": 15,
+  "max_windows_per_run": null,
+  "representation": "NORMAL_REFERENCE_STANDARDIZED_SYMMETRIC_SUMMARY_V1",
+  "representation_contract": "representation_contract.json",
+  "evaluation_contract": "evaluation_contract.json",
+  "fault_onset_sample": 161,
+  "dpca": {
+    "target_formal_runs": 500,
+    "normal_holdout_formal_runs": 500,
+    "execution_mode": "load frozen normal-only reference; fitting prohibited during formal execution",
+    "reference_dataset": "FaultFree Training only",
+    "reference_file": "dpca_reference.json",
+    "artifact_file": "dpca_reference_model.npz",
+    "lags": 5,
+    "lag_selection": "within-run pooled normal ACF; first median-absolute-ACF e-fold crossing over lags 1..20",
+    "n_components": 150,
+    "variance_target": 0.95,
+    "cumulative_variance_observed": 0.9507794059037505,
+    "threshold_quantile": 0.99,
+    "t2_limit": 196.83346394039964,
+    "spe_q_limit": 27.09260011679274,
+    "alarm_persistence": 3
+  },
+  "llm": {
+    "model_name": "Qwen/Qwen2.5-7B-Instruct-GGUF",
+    "model_file": "qwen2.5-7b-instruct-q4_k_m.gguf",
+    "model_sha256": "1875fb29e8c91c86615c00e92d8b4114e56bc24359adb5a8db8b36452fae4a49",
+    "quantization": "Q4_K_M",
+    "runtime": "llama.cpp llama-server",
+    "context_size": 8192,
+    "n_gpu_layers": 0,
+    "n_gpu_layers_status": "OPERATIONAL_FROZEN_CANDIDATE",
+    "n_gpu_layers_scientific_parameter": false,
+    "temperature": 0.0,
+    "decoding": "deterministic greedy",
+    "seed": 42,
+    "max_output_tokens": 768,
+    "states": ["NORMAL", "EVIDENCE_INSUFFICIENT", "ANOMALY"],
+    "port": 8080,
+    "request_timeout_seconds": 300
+  },
+  "alarm_confirmation": {
+    "llm_persistence": 3,
+    "llm": "3 consecutive ANOMALY windows; NORMAL or EVIDENCE_INSUFFICIENT resets persistence",
+    "dpca": "3 consecutive samples with T2 or SPE/Q empirical-limit exceedance"
+  },
+  "technical_duration_estimate": {
+    "basis": "existing completed technical logs only; no new inference and no response content or scientific outcome used",
+    "windows_per_960_sample_run": 189,
+    "execution_model": "current pipeline issues requests sequentially",
+    "matching_candidate_log_scenario": {
+      "n_gpu_layers": 0,
+      "completed_calls": 10,
+      "mean_seconds_per_window": 84.883,
+      "median_seconds_per_window": 85.904,
+      "observed_p95_seconds_per_window": 130.434,
+      "mean_prompt_tokens_per_second": 344.35,
+      "mean_generation_tokens_per_second": 4.11,
+      "estimates": {
+        "50_runs": {"hours": 222.82, "days": 9.28},
+        "100_runs": {"hours": 445.63, "days": 18.57},
+        "200_runs": {"hours": 891.27, "days": 37.14},
+        "500_runs": {"hours": 2228.17, "days": 92.84}
+      }
+    },
+    "noncomparable_operational_log_scenario": {
+      "n_gpu_layers": 4,
+      "note": "eight completed smoke calls used max_output_tokens=384 and uncontrolled host load; retained only as an operational range, not for scientific selection",
+      "mean_seconds_per_window": 94.645,
+      "estimates": {
+        "50_runs": {"hours": 248.44, "days": 10.35},
+        "100_runs": {"hours": 496.89, "days": 20.70},
+        "200_runs": {"hours": 993.78, "days": 41.41},
+        "500_runs": {"hours": 2484.44, "days": 103.52}
+      }
+    },
+    "limitations": [
+      "linear extrapolation from few one-window technical calls",
+      "output length varies and dominates generation time",
+      "startup, DPCA, storage and retry overhead are excluded",
+      "the 50-run LLM selection was prescribed independently of these estimates"
+    ]
+  },
+  "run_selections": {
+    "llm_target": {
+      "file": "formal_run_selection.json",
+      "sha256": "9263bc65a911fe1957bab57c9904a50f56a814434bec1b6022b4330e13ccf004",
+      "seed": 42,
+      "eligible_simulation_runs": "11..500",
+      "selected_runs": 50,
+      "development_runs_excluded": "1..10",
+      "selected_list_sha256": "2c4cf612fe72162dcd1b27f1f90dfc8145f9086fc5c0a6ac9239518655978adf"
+    },
+    "llm_normal_holdout": {
+      "file": "formal_normal_holdout_selection.json",
+      "sha256": "317de7e995af67828e25235dfd46b4260f2fac08628dd7f55993cba756668098",
+      "seed": 43,
+      "eligible_simulation_runs": "1..500",
+      "selected_runs": 50,
+      "selected_list_sha256": "fa86d617142fd5d853f92370c4aa9f10603f74b0e2f440df59c03c15248f84e6"
+    },
+    "selection_basis": "PRNG only; no X, y, response, fault behavior, or performance"
+  },
+  "checkpoint_resume": {
+    "enabled": true,
+    "unit": "blind_run_id",
+    "dpca_target_runs": 500,
+    "dpca_normal_holdout_runs": 500,
+    "llm_target_runs": 50,
+    "llm_normal_holdout_runs": 50,
+    "separate_detector_roots": true,
+    "complete_marker_written_last": true,
+    "partial_run_restarts_in_new_attempt": true,
+    "completed_run_immutable": true,
+    "frozen_hash_mismatch_aborts": true
+  },
+  "artifacts": {
+    "prompt_template": {
+      "file": "prompt_template.txt",
+      "sha256": "72c2305b2b2637ecd920e88ba16947bbbfba12d2ab18a3cc3c36110eef3c0da6"
+    },
+    "output_schema": {
+      "file": "output_schema.json",
+      "sha256": "d796158037b8f421ba278b1aea8bde3d5e03fdd03d174b554d8fd6f59381677d"
+    },
+    "representation_contract": {
+      "file": "representation_contract.json",
+      "sha256": "92359761b687faeb9fe08767e40de580b466a09fe202b2b1bfc89f9ba6e8985e"
+    },
+    "evaluation_contract": {
+      "file": "evaluation_contract.json",
+      "sha256": "a16dff82f4f0082779d9d22a55f86127f8b6c27f07aa3634fea86b69dfe4d928"
+    },
+    "formal_run_selection": {
+      "file": "formal_run_selection.json",
+      "sha256": "9263bc65a911fe1957bab57c9904a50f56a814434bec1b6022b4330e13ccf004"
+    },
+    "formal_normal_holdout_selection": {
+      "file": "formal_normal_holdout_selection.json",
+      "sha256": "317de7e995af67828e25235dfd46b4260f2fac08628dd7f55993cba756668098"
+    },
+    "dpca_reference": {
+      "file": "dpca_reference.json",
+      "sha256": "6f5d534559f7802e788c643c04654c8a6ec4b427a48c291f987aebb274bf558e"
+    },
+    "dpca_artifact": {
+      "file": "dpca_reference_model.npz",
+      "sha256": "889351e2e87b47456a55e97769dcb34057457c23806b0aadb3b9ac8a6f194f40"
+    },
+    "h3_evidence_reference": {
+      "file": "h3_evidence_reference.json",
+      "sha256": "3dffd455d721e77ebfe2f2a85ef19e8ba4f6bd56cc94dd190e09d700592109e6"
+    }
+  },
+  "prohibitions": {
+    "new_llm_inference_before_researcher_freeze": true,
+    "run_formal_offline_before_researcher_freeze": true,
+    "target_fault_x_access_for_method_selection": true,
+    "smoke_or_pilot_outcomes_for_parameter_selection": true
+  }
+}

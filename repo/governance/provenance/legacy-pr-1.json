@@ -1,0 +1,18 @@
+{
+  "files": [
+    "advisor_notes/README.md",
+    "experiments/README.md",
+    "governance/version-control.md",
+    "project/current_state.md",
+    "project/hypotheses.md",
+    "project/research_question.md",
+    "writing/README.md"
+  ],
+  "import_status": "PROVISIONAL",
+  "note": "Imported by VERSA migration with original provenance; governance text was superseded where it conflicted with D1-D5.",
+  "scientific_acceptance": false,
+  "source_branch": "setup/research-governance",
+  "source_commit": "e5780dfe7b856e8af7bb26d56122c2d8d87dba1c",
+  "source_pull_request": 1,
+  "source_repository": "prefix325/psqza-research"
+}

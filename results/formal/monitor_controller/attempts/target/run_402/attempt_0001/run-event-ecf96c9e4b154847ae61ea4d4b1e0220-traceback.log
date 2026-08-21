@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "X:\PSQZA_TEP_LOCAL\repo\tools\formal_monitor\real_mode.py", line 376, in run_one
+    self._run_component(lot, "dpca", lot.dpca_ordinal)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "X:\PSQZA_TEP_LOCAL\repo\tools\formal_monitor\real_mode.py", line 303, in _run_component
+    exit_code = self.controller.wait()
+  File "X:\PSQZA_TEP_LOCAL\repo\tools\formal_monitor\process_control.py", line 209, in wait
+    self._close_logs()
+    ~~~~~~~~~~~~~~~~^^
+  File "X:\PSQZA_TEP_LOCAL\repo\tools\formal_monitor\process_control.py", line 142, in _close_logs
+    handle.flush()
+    ~~~~~~~~~~~~^^
+ValueError: I/O operation on closed file.

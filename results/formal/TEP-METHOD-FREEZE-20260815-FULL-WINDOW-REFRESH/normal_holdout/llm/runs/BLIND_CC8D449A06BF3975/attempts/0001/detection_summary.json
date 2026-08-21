@@ -1,0 +1,21 @@
+{
+  "detection_state": "VERIFICATION_INCOMPLETE_END_OF_TRAJECTORY",
+  "window_id": 188,
+  "first_indication_window": 2,
+  "confirmation_window": null,
+  "confirmation_candidate_window": null,
+  "verification_advance": 0,
+  "verification_advances_required": 4,
+  "pending_candidate_windows": [],
+  "candidate_events": [
+    {
+      "event": "VERIFICATION_INCOMPLETE_END_OF_TRAJECTORY",
+      "candidate_window": 185,
+      "verification_window": 189
+    }
+  ],
+  "event": "VERIFICATION_INCOMPLETE_END_OF_TRAJECTORY",
+  "first_indication_status": "FIRST_INDICATION",
+  "confirmed_detection_status": "NO_CONFIRMED_DETECTION",
+  "should_stop": false
+}

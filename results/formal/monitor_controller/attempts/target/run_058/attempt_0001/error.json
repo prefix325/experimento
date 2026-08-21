@@ -1,0 +1,16 @@
+{
+  "cohort": "target",
+  "component": "llm",
+  "error_summary": "Formal operational component failed",
+  "error_type": "RuntimeError",
+  "exit_code": 1,
+  "historical": false,
+  "log_path": "X:\\PSQZA_TEP_LOCAL\\results\\formal\\monitor_controller\\attempts\\target\\run_058\\attempt_0001\\run-event-593e393ad8a942c7819fb62345a66d1d-traceback.log",
+  "message": "Formal target llm batch exited with 1; first causal stderr: Traceback (most recent call last):",
+  "operational_only": true,
+  "run_event_id": "run-event-593e393ad8a942c7819fb62345a66d1d",
+  "simulation_run": 58,
+  "status": "ACTIVE",
+  "timestamp": "2026-08-16T06:56:26.389883+00:00",
+  "traceback": "Traceback (most recent call last):\n  File \"X:\\PSQZA_TEP_LOCAL\\repo\\tools\\formal_monitor\\real_mode.py\", line 352, in run_one\n    self._run_component(lot, \"llm\", lot.llm_ordinal)\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"X:\\PSQZA_TEP_LOCAL\\repo\\tools\\formal_monitor\\real_mode.py\", line 304, in _run_component\n    raise RuntimeError(\n    ...<2 lines>...\n    )\nRuntimeError: Formal target llm batch exited with 1; first causal stderr: Traceback (most recent call last):\n"
+}

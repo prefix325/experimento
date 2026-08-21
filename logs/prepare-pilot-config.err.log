@@ -1,0 +1,56 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.29kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for ghcr.io/ggml-org/llama.cpp:server-cuda@sha256:6b0bf4974521b2c16a498c7dd0715f4eb077725f1483e0ee0f617679005b1e1f
+#2 DONE 0.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/9] FROM ghcr.io/ggml-org/llama.cpp:server-cuda@sha256:6b0bf4974521b2c16a498c7dd0715f4eb077725f1483e0ee0f617679005b1e1f
+#4 resolve ghcr.io/ggml-org/llama.cpp:server-cuda@sha256:6b0bf4974521b2c16a498c7dd0715f4eb077725f1483e0ee0f617679005b1e1f 0.0s done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 5.10kB done
+#5 DONE 0.0s
+
+#6 [2/9] RUN apt-get update     && apt-get install -y --no-install-recommends         ca-certificates         python3         python3-pip         python3-venv     && rm -rf /var/lib/apt/lists/*
+#6 CACHED
+
+#7 [3/9] WORKDIR /opt/tep
+#7 CACHED
+
+#8 [4/9] COPY experiments/tep/local_llm/requirements.lock /opt/tep/requirements.lock
+#8 CACHED
+
+#9 [5/9] RUN python3 -m venv /opt/venv     && /opt/venv/bin/python -m pip install --no-cache-dir --upgrade pip==25.1.1     && /opt/venv/bin/python -m pip install --no-cache-dir -r /opt/tep/requirements.lock
+#9 CACHED
+
+#10 [6/9] COPY experiments/tep/local_llm/src /opt/tep/src
+#10 CACHED
+
+#11 [7/9] COPY experiments/tep/local_llm/config /opt/tep/config
+#11 DONE 0.0s
+
+#12 [8/9] COPY experiments/tep/local_llm/tests /opt/tep/tests
+#12 DONE 0.1s
+
+#13 [9/9] RUN useradd --create-home --uid 10001 --shell /usr/sbin/nologin experiment     && mkdir -p /results /data/normal /data/test /models     && chown -R experiment:experiment /results /opt/tep
+#13 DONE 0.6s
+
+#14 exporting to image
+#14 exporting layers
+#14 exporting layers 0.3s done
+#14 exporting manifest sha256:a680d8cab3b2ddcc512ddbf817a4baca808b58dda2084f6671fd50a42c7f90cd 0.0s done
+#14 exporting config sha256:b2f280fe3918fee2220dfd054851c6c209941b1994358491d11b0c9ea388e836 0.0s done
+#14 exporting attestation manifest sha256:7adcd862d76c1d592cc3483d7e3bf7e483571c5cfd380dce723fa0d3ccf6c861 0.0s done
+#14 exporting manifest list sha256:5978406ae14e037e76ac66ed68de0e1530e1f92e3a97194b2fda20d59336bcfa
+#14 exporting manifest list sha256:5978406ae14e037e76ac66ed68de0e1530e1f92e3a97194b2fda20d59336bcfa 0.0s done
+#14 naming to docker.io/library/psqza-tep-local:dev done
+#14 unpacking to docker.io/library/psqza-tep-local:dev 0.1s done
+#14 DONE 0.6s

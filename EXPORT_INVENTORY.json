@@ -1,0 +1,53 @@
+{
+  "schema": "psqza-lightweight-export-inventory-v1",
+  "generated_at_utc": "2026-08-20T23:58:50Z",
+  "source_root": "X:\\PSQZA_TEP_LOCAL",
+  "destination_repository": "https://github.com/prefix325/experimento",
+  "destination_branch": "main",
+  "source_canonical_commit": "3083558c1aac86508ed7e4fbc9f9b2b33696e701",
+  "final_campaign_manifest_sha256": "d3f7cdde04b18182a2fe25cc8ea23e07833a0c3ab9441403d9eb1b17dd028db5",
+  "statistical_analysis_plan_sha256": "a5ff532c9b0147b30c92d24432ca92e13ad6541f8a00920598572158ad811b5b",
+  "statistics_scope": "source snapshot only; mirror-only policy and inventory documents are listed separately",
+  "source_snapshot": {
+    "files": 14243,
+    "bytes": 5651490169,
+    "selected_files": 7887,
+    "selected_bytes": 16687594,
+    "excluded_files": 6356,
+    "excluded_bytes": 5634802575
+  },
+  "included_categories": [
+    {"name": "repo_versioned_content", "origin": "repo/", "files": 247, "bytes": 2583385, "reason": "code, documentation, governance, tests and frozen project artifacts; nested .git excluded"},
+    {"name": "root_manifests", "origin": "manifests/", "files": 9, "bytes": 88505, "reason": "lightweight provenance and audit manifests"},
+    {"name": "small_preparation_logs", "origin": "logs/", "files": 8, "bytes": 33225, "reason": "small preparation logs useful for audit"},
+    {"name": "dataset_metadata", "origin": "data/", "files": 5, "bytes": 12735, "reason": "README, manifests and checksums only"},
+    {"name": "model_metadata_or_license", "origin": "models/", "files": 1, "bytes": 11343, "reason": "license/metadata only"},
+    {"name": "result_audit_artifacts", "origin": "results/", "files": 7571, "bytes": 13766900, "reason": "status, marker, manifest, command, summary or provenance"},
+    {"name": "technical_acceptance_and_observability", "origin": "results/technical_*", "files": 46, "bytes": 191501, "reason": "small non-scientific technical evidence"}
+  ],
+  "excluded_categories": [
+    {"name": "model_weights", "origin": "models/", "files": 1, "bytes": 4683073536, "reason": "model weight binary excluded"},
+    {"name": "raw_or_prepared_dataset", "origin": "data/", "files": 72, "bytes": 519250967, "reason": "dataset payload excluded"},
+    {"name": "scientific_bulk_or_raw_result", "origin": "results/", "files": 3365, "bytes": 391352706, "reason": "per-window/raw/scientific bulk result excluded"},
+    {"name": "tool_cache", "origin": "tools/", "files": 2772, "bytes": 38569365, "reason": "local package/tool cache excluded"},
+    {"name": "nested_git_metadata", "origin": "repo/.git/", "files": 74, "bytes": 1698504, "reason": "nested canonical Git metadata excluded"},
+    {"name": "repo_cache_or_untracked", "origin": "repo/", "files": 72, "bytes": 857497, "reason": "cache or non-selected untracked repository artifact"}
+  ],
+  "mirror_only_files": [
+    ".gitignore",
+    "README.md",
+    "data/README.md",
+    "models/README.md",
+    "results/README.md",
+    "EXPORT_INVENTORY.md",
+    "EXPORT_INVENTORY.json"
+  ],
+  "hard_gates": {
+    "model_files_staged": 0,
+    "raw_dataset_files_staged": 0,
+    "docker_image_files_staged": 0,
+    "files_over_20_mib_staged": 0,
+    "nested_git_metadata_staged": 0,
+    "known_secrets_staged": 0
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "original_artifact": "technical_acceptance.json",
+  "original_verdict": "FAIL",
+  "failure_stage": "HEALTHY_SERVER_BEFORE_INFERENCE",
+  "internal_llama_command": "/app/llama-server --model /models/qwen2.5-7b-instruct-q4_k_m.gguf --host 127.0.0.1 --port 8080 --ctx-size 8192 --n-gpu-layers -1 --seed 42 --metrics --no-webui",
+  "model_loaded": true,
+  "server_healthy": true,
+  "startup_log_evidence": {
+    "model_loaded_line_present": true,
+    "listening_line_present": true,
+    "cuda_backend_line_present": false,
+    "rtx_4060_line_present": false,
+    "offloaded_layers_line_present": false,
+    "vram_or_device_buffer_line_present": false,
+    "cpu_fallback_warning_present": false
+  },
+  "offloaded_layers_observed": null,
+  "gpu_offload_observed": false,
+  "inference_count": 0,
+  "parser_result": "NOT_RUN",
+  "network_mode": "none",
+  "network_none_verified": true,
+  "container_remaining_after_failure": false,
+  "retry_performed": false,
+  "ZERO_TARGET_ACCESS": true,
+  "ZERO_FAULTFREE_TESTING_ACCESS": true,
+  "formal_scientific_execution_started": false,
+  "formal_runs_started": false
+}

@@ -1,0 +1,14 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties":false,
+  "properties":{
+    "constraints":{"items":{"minLength":1,"type":"string"},"type":"array"},
+    "entities":{"items":{"type":"object"},"type":"array"},
+    "required_entity_types":{"items":{"minLength":1,"type":"string"},"type":"array"},
+    "schema_version":{"minLength":1,"type":"string"},
+    "status":{"enum":["PROVISIONAL","ACTIVE","FROZEN"]}
+  },
+  "required":["schema_version","status","entities","required_entity_types","constraints"],
+  "title":"PSQZA Research Graph",
+  "type":"object"
+}

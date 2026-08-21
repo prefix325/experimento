@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VERAS Academic Turn Classification",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["turn_id", "research_commit", "classification", "academic_relevance", "affected_entity_ids", "materiality", "requires_mecai", "requires_banca", "status"],
+  "properties": {
+    "turn_id": {"type": "string", "minLength": 1},
+    "research_commit": {"type": "string", "pattern": "^[a-f0-9]{40,64}$"},
+    "classification": {"enum": ["NON_ACADEMIC", "ACADEMIC_EXPLANATION", "EXPLORATORY_RESEARCH", "ACADEMIC_DELTA", "LITERATURE_DELTA", "DOCUMENT_DELTA", "MATERIAL_DECISION"]},
+    "academic_relevance": {"type": "boolean"},
+    "affected_entity_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "materiality": {"enum": ["NONE", "ORDINARY", "PROVISIONAL", "MATERIAL", "REJECTED"]},
+    "requires_mecai": {"type": "boolean"},
+    "requires_banca": {"type": "boolean"},
+    "flow_mode": {"enum": ["RESEARCH_FLOW", "TRANSACTIONAL"]},
+    "background_route": {"type": "boolean"},
+    "reason": {"type": "string", "minLength": 1},
+    "status": {"const": "CLASSIFIED"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"classification": {"const": "NON_ACADEMIC"}}, "required": ["classification"]},
+      "then": {"properties": {"academic_relevance": {"const": false}, "materiality": {"const": "NONE"}, "requires_mecai": {"const": false}, "requires_banca": {"const": false}}}
+    },
+    {
+      "if": {"properties": {"classification": {"enum": ["ACADEMIC_DELTA", "MATERIAL_DECISION"]}}, "required": ["classification"]},
+      "then": {"properties": {"academic_relevance": {"const": true}, "requires_mecai": {"const": true}, "requires_banca": {"const": true}}}
+    },
+    {
+      "if": {"properties": {"classification": {"const": "EXPLORATORY_RESEARCH"}}, "required": ["classification"]},
+      "then": {"properties": {"academic_relevance": {"const": true}, "materiality": {"enum": ["ORDINARY", "PROVISIONAL"]}}}
+    },
+    {
+      "if": {"properties": {"flow_mode": {"const": "RESEARCH_FLOW"}, "background_route": {"const": true}}, "required": ["flow_mode", "background_route"]},
+      "then": {"properties": {"materiality": {"enum": ["ORDINARY", "PROVISIONAL", "MATERIAL"]}}}
+    }
+  ]
+}

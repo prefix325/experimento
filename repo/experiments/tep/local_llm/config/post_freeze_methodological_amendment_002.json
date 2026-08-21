@@ -1,0 +1,63 @@
+{
+  "schema_version": "2.0.0",
+  "amendment_id": "POST_FREEZE_METHODOLOGICAL_AMENDMENT_002",
+  "amendment_type": "POST_FREEZE_METHODOLOGICAL_AMENDMENT",
+  "status": "AUTHORITATIVE_METHOD_REFREEZE_IMPLEMENTED",
+  "date": "2026-08-15",
+  "method_freeze_id": "TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH",
+  "governance": {
+    "mecai": "mecai:tep:full-window-refresh:20260815T0046-0300",
+    "researcher_decision": "APPROVED",
+    "research_delta": "research-delta:tep-full-window-refresh:20260815T0051-0300",
+    "research_delta_status": "ADMITTED",
+    "banca": "banca:tep:full-window-refresh:20260815T0053-0300",
+    "banca_status": "PASS_WITH_WARNINGS"
+  },
+  "base_method_freeze_commit": "c5ec02ecfff54845262238cd02558ea98f21b14d",
+  "superseded_formal_sha256": "921954a9b8b5822b096259ac7746beab2373200fe095c686740ba51f093a464c",
+  "refrozen_formal_file": "formal.json",
+  "refrozen_formal_sha256": "c8affff60f9e64af02698ef1b03a0ea4a2fdf07d8ef73d52de1e38bba7bf2a66",
+  "supersedes": "POST_FREEZE_METHODOLOGICAL_AMENDMENT_001",
+  "scientific_parameters_changed": true,
+  "llm_inference_performed": false,
+  "frozen_parameters": {
+    "window_samples": 20,
+    "stride_samples": 5,
+    "sample_interval_minutes": 3,
+    "fault_onset_sample": 161,
+    "representation": "NORMAL_REFERENCE_STANDARDIZED_SYMMETRIC_SUMMARY_V1",
+    "model": "Qwen2.5-7B-Instruct Q4_K_M",
+    "dpca": "unchanged"
+  },
+  "new_rule": {
+    "name": "FIRST_INDICATION_CONCURRENT_FULL_SAMPLE_REFRESH_V1",
+    "derived_refresh_strides_formula": "ceil(window_samples / stride_samples)",
+    "derived_refresh_strides": 4,
+    "derived_value_independently_tunable": false,
+    "candidate_concurrency": true,
+    "candidate_creation": "Every eligible ANOMALY starts its own candidate at k.",
+    "candidate_confirmation": "Candidate k confirms iff decision(k+R) is ANOMALY.",
+    "candidate_failure": "A non-ANOMALY at k+R fails only candidate k.",
+    "candidate_end": "A candidate with k+R beyond trajectory end is VERIFICATION_INCOMPLETE_END_OF_TRAJECTORY.",
+    "first_indication": "First eligible post-onset raw ANOMALY.",
+    "no_first_indication": "NO_FIRST_INDICATION",
+    "no_confirmed_detection": "NO_CONFIRMED_DETECTION",
+    "onset_reset": "Pre-onset candidates cannot cross sample 161.",
+    "target_early_stop": "Only after the first confirmed detection and durable writes for the indication and confirmation horizon.",
+    "normal_early_stop": false,
+    "normal_confirmation_machine": "same concurrent full-sample-refresh candidate machine",
+    "statistical_independence_claimed": false
+  },
+  "hypothesis_impact": {
+    "H1": "Reports FIRST_INDICATION and CONFIRMED_DETECTION incidence separately, plus raw and confirmed normal false-alarm layers.",
+    "H2": "Reports separate first-indication and confirmed-detection delays from sample 161.",
+    "H3": "Unchanged PROCESS-EVIDENCE GROUNDEDNESS.",
+    "DPCA": "Unchanged native raw and persistence-3 operational layers."
+  },
+  "execution_gate": {
+    "implementation_conformance_required": true,
+    "technical_acceptance_required": true,
+    "gpu_offload_acceptance_required": true,
+    "formal_runs_must_not_autostart": true
+  }
+}

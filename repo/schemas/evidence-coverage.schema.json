@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VERAS Evidence Coverage Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["report_id", "research_commit", "claims", "accepted_claims_without_accepted_evidence", "references_without_verified_identity", "verdict"],
+  "properties": {
+    "report_id": {"type": "string", "minLength": 1},
+    "research_commit": {"type": "string", "pattern": "^[a-f0-9]{40,64}$"},
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["claim_id", "claim_status", "evidence_ids", "coverage"],
+        "properties": {
+          "claim_id": {"type": "string", "minLength": 1},
+          "claim_status": {"enum": ["DISCUSSED", "PROPOSED", "PROVISIONAL", "ACCEPTED", "REJECTED", "SUPERSEDED"]},
+          "evidence_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+          "coverage": {"enum": ["NONE", "PARTIAL", "SUFFICIENT", "CONTRADICTED"]}
+        }
+      }
+    },
+    "accepted_claims_without_accepted_evidence": {"type": "integer", "minimum": 0},
+    "references_without_verified_identity": {"type": "integer", "minimum": 0},
+    "verdict": {"enum": ["PASS", "PASS_WITH_WARNINGS", "REMEDIATION_REQUIRED", "INCONCLUSIVE"]}
+  },
+  "allOf": [{"if": {"properties": {"verdict": {"const": "PASS"}}}, "then": {"properties": {"accepted_claims_without_accepted_evidence": {"const": 0}, "references_without_verified_identity": {"const": 0}}}}]
+}

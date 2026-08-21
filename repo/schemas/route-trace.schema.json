@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/prefix325/psqza-research/main/schemas/route-trace.schema.json",
+  "title": "Observable Academic Route Trace",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "architecture_generation",
+    "trace_id",
+    "session_id",
+    "turn_id",
+    "assurance_mode",
+    "entries",
+    "user_visible_summary",
+    "private_reasoning_included"
+  ],
+  "properties": {
+    "schema_version": {"enum": ["1.0.0", "2.0.0"]},
+    "architecture_generation": {"enum": ["LEGACY_PRE_VERAS_3", "VERAS_3"]},
+    "trace_id": {"type": "string", "minLength": 1},
+    "session_id": {"type": "string", "minLength": 1},
+    "turn_id": {"type": "string", "minLength": 1},
+    "assurance_mode": {"const": "PROCEDURAL_SAME_CONTEXT"},
+    "governance_binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["agent_suite_repository", "agent_suite_commit", "veras_path", "veras_package_version", "control_plane"],
+      "properties": {
+        "agent_suite_repository": {"const": "prefix325/agentes"},
+        "agent_suite_commit": {"type": "string", "pattern": "^[a-f0-9]{40,64}$"},
+        "veras_path": {"const": "active/specialized/VERAS"},
+        "veras_package_version": {"type": "string", "minLength": 1},
+        "control_plane": {"const": "VERSA"}
+      }
+    },
+    "entries": {"type": "array", "minItems": 1},
+    "user_visible_summary": {"type": "string", "minLength": 1},
+    "private_reasoning_included": {"const": false}
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "schema_version": {"const": "2.0.0"},
+        "architecture_generation": {"const": "VERAS_3"},
+        "entries": {
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["sequence", "source", "target", "objective", "projected_artifacts", "record_id", "outcome"],
+            "properties": {
+              "sequence": {"type": "integer", "minimum": 1},
+              "source": {"enum": ["PSQZA", "VERSA", "MECAI", "BANCA"]},
+              "target": {"enum": ["PSQZA", "VERSA", "MECAI", "BANCA"]},
+              "objective": {"type": "string", "minLength": 1},
+              "projected_artifacts": {"type": "array", "items": {"type": "string"}},
+              "record_id": {"type": ["string", "null"]},
+              "outcome": {"enum": ["REQUESTED", "ISSUED", "SUBMITTED", "PASS", "PASS_WITH_WARNINGS", "FAIL", "BLOCKED", "INCONCLUSIVE"]},
+              "capability": {"enum": ["RESTRICTED_WRITE_EXECUTION"]}
+            },
+            "allOf": [
+              {
+                "if": {"required": ["capability"]},
+                "then": {
+                  "properties": {
+                    "source": {"const": "VERSA"},
+                    "target": {"const": "VERSA"}
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "required": ["governance_binding"]
+    },
+    {
+      "properties": {
+        "schema_version": {"const": "1.0.0"},
+        "architecture_generation": {"const": "LEGACY_PRE_VERAS_3"},
+        "entries": {
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["sequence", "source", "target", "objective", "projected_artifacts", "record_id", "outcome"],
+            "properties": {
+              "sequence": {"type": "integer", "minimum": 1},
+              "source": {"type": "string", "minLength": 1},
+              "target": {"type": "string", "minLength": 1},
+              "objective": {"type": "string", "minLength": 1},
+              "projected_artifacts": {"type": "array", "items": {"type": "string"}},
+              "record_id": {"type": ["string", "null"]},
+              "outcome": {"enum": ["REQUESTED", "ISSUED", "SUBMITTED", "PASS", "PASS_WITH_WARNINGS", "FAIL", "BLOCKED", "INCONCLUSIVE"]}
+            }
+          }
+        }
+      },
+      "not": {"required": ["governance_binding"]}
+    }
+  ]
+}

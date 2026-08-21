@@ -1,0 +1,10 @@
+{
+  "status": "PILOT_NOT_FOR_SCIENTIFIC_INFERENCE",
+  "experiment_id": "tep-local-pilot-20260814T030149Z",
+  "normal_rows": 2500,
+  "test_rows": 4800,
+  "x_columns": 52,
+  "llm_records": 5,
+  "dpca_records": 4800,
+  "completed_at": "2026-08-14T03:09:57.639917+00:00"
+}

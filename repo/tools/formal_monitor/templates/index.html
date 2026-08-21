@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TEP Formal Process Monitor</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/diagnostics.css">
+  <style>.gate[hidden] { display: none; }</style>
+</head>
+<body>
+  <main>
+    <header>
+      <div><p class="eyebrow">TEP / LLM / DPCA</p><h1>Formal Process Monitor</h1></div>
+      <div id="global-status" class="status blocked">BLOCKED</div>
+    </header>
+    <section id="gate-banner" class="gate"><strong>FORMAL EXECUTION BLOCKED</strong><span id="gate-reasons">Carregando gates…</span></section>
+    <section class="grid">
+      <article class="card wide">
+        <div class="card-title"><h2>Processo</h2><span id="cohort">—</span></div>
+        <div class="metric-row"><span>Lotes COMPLETE</span><strong id="batch-count">0 / 50</strong></div>
+        <div class="bar"><div id="total-bar"></div></div>
+        <div class="metric-row"><span>simulationRun atual</span><strong id="simulation-run">—</strong></div>
+        <div class="metric-row"><span>Janelas concluídas</span><strong id="completed-windows">0</strong></div>
+        <div class="metric-row"><span>Janela atual / máximo</span><strong id="window-count">0 / 189</strong></div>
+        <div class="bar secondary"><div id="batch-bar"></div></div>
+      </article>
+      <article class="card">
+        <h2>Detecção LLM</h2>
+        <p id="detection-state" class="big">SEARCHING</p>
+        <dl><dt>First indication</dt><dd id="first-window">—</dd><dt>Full-window verification</dt><dd id="verification">0 / 4 advances</dd><dt>Confirmação</dt><dd id="confirmation-window">—</dd><dt>Early-stop</dt><dd id="early-stop">—</dd><dt>Última decisão</dt><dd id="last-decision">—</dd></dl>
+      </article>
+      <article class="card">
+        <h2>Detectores</h2>
+        <dl><dt>LLM STATUS</dt><dd id="llm-status">PENDING</dd><dt>DPCA STATUS</dt><dd id="dpca-status">PENDING</dd><dt>LOT STATUS</dt><dd id="lot-status">PENDING</dd></dl>
+        <h2>Tempo</h2>
+        <dl><dt>Lote ativo</dt><dd id="batch-time">—</dd><dt>Acumulado</dt><dd id="total-time">—</dd><dt>ETA lote</dt><dd id="batch-eta">—</dd><dt>ETA total</dt><dd id="total-eta">—</dd></dl>
+      </article>
+      <article class="card wide">
+        <h2>Recursos operacionais</h2>
+        <div class="resources"><span>CPU host<strong id="host-cpu">—</strong></span><span>CPU experimento<strong id="experiment-cpu">—</strong></span><span>RAM host<strong id="host-ram">—</strong></span><span>RAM container<strong id="container-ram">—</strong></span><span>GPU<strong id="gpu-name">—</strong></span><span>GPU util.<strong id="gpu-util">—</strong></span><span>VRAM<strong id="vram">—</strong></span></div>
+      </article>
+      <article class="card wide diagnostics">
+        <h2>LOGS / DIAGNÓSTICO</h2>
+        <section id="error-diagnostic" class="error-diagnostic" hidden>
+          <h3 id=current-error-heading>CURRENT ERROR</h3>
+          <h3 id=error-history-heading hidden>ERROR HISTORY</h3>
+          <span hidden>ERROR SUMMARY</span>
+          <dl>
+            <dt>STATUS</dt><dd id="error-status">—</dd>
+            <dt>ERROR TYPE</dt><dd id="error-type">—</dd>
+            <dt>MESSAGE</dt><dd id="error-message">—</dd>
+            <dt>TIMESTAMP</dt><dd id="error-timestamp">—</dd>
+            <dt>SIMULATION RUN</dt><dd id="error-run">—</dd>
+            <dt>COMPONENT</dt><dd id="error-component">—</dd>
+            <dt>EXIT CODE</dt><dd id="error-exit-code">—</dd>
+            <dt>FIRST CAUSAL STDERR</dt><dd id="error-first-causal">—</dd>
+            <dt>LOG PATH</dt><dd id="error-log-path">—</dd>
+            <dt>COMPONENT STDERR PATH</dt><dd id="error-stderr-path">—</dd>
+            <dt>COMPONENT STDOUT PATH</dt><dd id="error-stdout-path">—</dd>
+          </dl>
+          <details>
+            <summary>VER DETALHES</summary>
+            <h4>TRACEBACK</h4><pre id="error-traceback"></pre>
+            <h4>RAW COMPONENT STDERR</h4><pre id="error-component-stderr"></pre>
+            <h4>RAW COMPONENT STDOUT</h4><pre id="error-component-stdout"></pre>
+            <h4>COMMAND</h4><pre id="error-component-command"></pre>
+          </details>
+        </section>
+        <div id="operational-events" class="operational-events" aria-live="polite"></div>
+      </article>
+    </section>
+    <section class="controls">
+      <label>Runs nesta sessão <input id="runs-this-session" type="number" min="1" max="50" value="5"></label>
+      <button id="start" disabled>INICIAR / RETOMAR</button>
+      <button id="revalidate" class="secondary-button" disabled>REVALIDAR / LIMPAR ERRO OPERACIONAL</button>
+      <button id="stop-after" class="secondary-button">PARAR APÓS ESTE LOTE</button>
+      <button id="stop-now" class="danger">PARAR AGORA</button>
+    </section>
+    <footer>Telemetria exclusivamente operacional — nunca enviada à LLM, DPCA ou avaliação H1/H2/H3.</footer>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "attempt_id": "attempt_0001",
+  "cohort": "normal_holdout",
+  "complete": false,
+  "dpca_status": "COMPLETE",
+  "ended_at": "2026-08-19T19:59:56.215915+00:00",
+  "llm_status": "FAILED",
+  "lot_status": "FAILED",
+  "mock": false,
+  "process_started": true,
+  "run_event_id": "run-event-2b6ed569922e4fc38e81eb31eccb6e14",
+  "simulation_run": 312,
+  "started_at": "2026-08-19T19:45:04.072009+00:00",
+  "status": "FAILED"
+}

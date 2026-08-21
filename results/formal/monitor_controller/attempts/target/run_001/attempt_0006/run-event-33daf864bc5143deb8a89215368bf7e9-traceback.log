@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "X:\PSQZA_TEP_LOCAL\repo\tools\formal_monitor\real_mode.py", line 343, in run_one
+    self._run_component(lot, "dpca", lot.dpca_ordinal)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "X:\PSQZA_TEP_LOCAL\repo\tools\formal_monitor\real_mode.py", line 301, in _run_component
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: Formal target dpca batch exited with 1; first causal stderr: Traceback (most recent call last):

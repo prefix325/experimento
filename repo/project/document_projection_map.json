@@ -1,0 +1,392 @@
+{
+  "schema_version": "1.0.0",
+  "research_graph": "project/research_graph.json",
+  "generated_file": "deliverables/shared/latex/research_state.tex",
+  "content_format": "LATEX",
+  "macros": {
+    "ResearchTitlePT": {
+      "language": "pt-BR",
+      "source_entity_ids": [
+        "problem.local_llm_gradual_fault",
+        "question.local_llm_idv13"
+      ],
+      "text": "Detecção zero-shot de falhas por LLM em sistema industrial multivariado: estudo no Tennessee Eastman Process com IDV(13)"
+    },
+    "ResearchTitleEN": {
+      "language": "en",
+      "source_entity_ids": [
+        "problem.local_llm_gradual_fault",
+        "question.local_llm_idv13"
+      ],
+      "text": "Zero-Shot Fault Detection by a General-Purpose LLM in a Multivariate Industrial System: A Tennessee Eastman Process Study with IDV(13)"
+    },
+    "ResearchProblemPT": {
+      "language": "pt-BR",
+      "source_entity_ids": [
+        "problem.local_llm_gradual_fault"
+      ],
+      "text": "Investigar se uma LLM de propósito geral, executada localmente e contextualizada apenas com conhecimento do processo e de sua operação normal, é capaz de detectar o surgimento de uma condição anormal em um sistema industrial multivariado em regime zero-shot quanto à falha."
+    },
+    "ResearchProblemEN": {
+      "language": "en",
+      "source_entity_ids": [
+        "problem.local_llm_gradual_fault"
+      ],
+      "text": "This study investigates whether a general-purpose LLM, executed locally and contextualized only with process knowledge and normal operation, can detect the emergence of an abnormal condition in a multivariate industrial system under a fault-zero-shot protocol."
+    },
+    "ResearchQuestionPT": {
+      "language": "pt-BR",
+      "source_entity_ids": [
+        "question.local_llm_idv13"
+      ],
+      "text": "Uma LLM de propósito geral, sem treinamento específico para falhas e contextualizada apenas pelo conhecimento do processo e de sua operação normal, é capaz de detectar em regime zero-shot o surgimento de uma condição anormal em um sistema industrial multivariado?"
+    },
+    "ResearchQuestionEN": {
+      "language": "en",
+      "source_entity_ids": [
+        "question.local_llm_idv13"
+      ],
+      "text": "Can a general-purpose LLM, without fault-specific training and contextualized only with knowledge of the process and its normal operation, detect in a fault-zero-shot setting the emergence of an abnormal condition in a multivariate industrial system?"
+    },
+    "ResearchObjectivePT": {
+      "language": "pt-BR",
+      "source_entity_ids": [
+        "question.local_llm_idv13",
+        "experiment.progressive_windows"
+      ],
+      "text": "Avaliar, em janelas temporais progressivas e causais do Tennessee Eastman Process, a capacidade de uma LLM local e fault-blind de detectar o surgimento da anormalidade provocada pela IDV(13), usando o instante real de ativação como ground truth experimental e DPCA como referência estatística independente."
+    },
+    "ResearchObjectiveEN": {
+      "language": "en",
+      "source_entity_ids": [
+        "question.local_llm_idv13",
+        "experiment.progressive_windows"
+      ],
+      "text": "To evaluate, through progressive causal windows of the Tennessee Eastman Process, the ability of a local fault-blind LLM to detect the abnormal condition induced by IDV(13), using the true simulator-controlled activation time as experimental ground truth and DPCA as an independent statistical reference."
+    },
+    "ResearchHypothesisPT": {
+      "language": "pt-BR",
+      "source_entity_ids": [
+        "hypothesis.h1_zero_shot_detection",
+        "hypothesis.h2_temporal_evidence_accumulation",
+        "hypothesis.h3_multivariate_evidence_coherence"
+      ],
+      "text": "H1: uma LLM de propósito geral contextualizada apenas com o processo e a operação normal é capaz de detectar uma condição anormal provocada por uma falha não vista, sem treinamento específico para a falha. H2: essa capacidade de detecção aumenta à medida que evidências multivariadas se acumulam em janelas temporais causais, com transição observável de NORMAL ou EVIDÊNCIA_INSUFICIENTE para ANOMALIA após o início real da falha. H3: quando a LLM indica anomalia, as variáveis e tendências citadas em sua justificativa apresentam correspondência verificável com alterações efetivamente observadas no sistema."
+    },
+    "ResearchHypothesisEN": {
+      "language": "en",
+      "source_entity_ids": [
+        "hypothesis.h1_zero_shot_detection",
+        "hypothesis.h2_temporal_evidence_accumulation",
+        "hypothesis.h3_multivariate_evidence_coherence"
+      ],
+      "text": "H1: a general-purpose LLM contextualized only with process knowledge and normal operation can detect an abnormal condition caused by a previously unseen fault without fault-specific training. H2: detection capability increases as multivariate evidence accumulates across causal temporal windows, producing an observable transition from NORMAL or EVIDENCE_INSUFFICIENT to ANOMALY after true fault onset. H3: when the LLM indicates an anomaly, the variables and trends cited in its justification show verifiable correspondence with changes actually observable in the system."
+    },
+    "ResearchMethodPT": {
+      "language": "pt-BR",
+      "source_entity_ids": [
+        "dataset.tep",
+        "method.dpca_reference",
+        "method.local_llm",
+        "experiment.progressive_windows"
+      ],
+      "text": "O estudo utilizará o Tennessee Eastman Process como ambiente público e simulado, com foco provisório na IDV(13). O instante de ativação controlado pelo simulador fornecerá o ground truth experimental. A DPCA com T2 e SPE/Q será uma referência estatística independente. A LLM será executada localmente, sem API externa e sem treinamento específico, exemplos rotulados ou descrição da IDV(13) na condição primária; poderá receber conhecimento do processo, referência de operação normal e representação temporal estruturada em janelas causais."
+    },
+    "ResearchMethodEN": {
+      "language": "en",
+      "source_entity_ids": [
+        "dataset.tep",
+        "method.dpca_reference",
+        "method.local_llm",
+        "experiment.progressive_windows"
+      ],
+      "text": "The study uses the Tennessee Eastman Process as a public simulated environment, provisionally focusing on IDV(13). Simulator-controlled fault activation provides the experimental ground truth. DPCA with T-squared and SPE/Q serves as an independent statistical reference. The LLM is executed locally without an external API and without fault-specific training, labeled IDV(13) examples, or the IDV(13) description in the primary condition; it may receive process knowledge, normal-operation reference information, and a structured temporal representation through causal windows."
+    },
+    "ResearchContributionPT": {
+      "language": "pt-BR",
+      "source_entity_ids": [
+        "contribution.reproducible_local_llm_protocol"
+      ],
+      "text": "A contribuição proposta é um protocolo reproduzível para avaliar detecção zero-shot de anormalidades por LLMs de propósito geral executadas localmente sobre dados temporais industriais multivariados, incluindo referência de normalidade, janelas causais, regras de alarme e abstenção, avaliação de coerência das evidências e execução local verificável."
+    },
+    "ResearchContributionEN": {
+      "language": "en",
+      "source_entity_ids": [
+        "contribution.reproducible_local_llm_protocol"
+      ],
+      "text": "The proposed contribution is a reproducible protocol for evaluating fault-zero-shot anomaly detection by general-purpose local LLMs on multivariate industrial temporal data, including normal-operation reference, causal windows, alarm and abstention rules, evidence-coherence evaluation, and verifiable local execution."
+    },
+    "ResearchLimitationsPT": {
+      "language": "pt-BR",
+      "source_entity_ids": [
+        "dataset.tep",
+        "decision.avoid_model_swap_framing"
+      ],
+      "text": "O TEP é público e simulado; portanto, o experimento poderá demonstrar uma arquitetura sem externalização, mas não provar proteção de segredos industriais reais ou conformidade completa. A execução local é condição experimental mensurável, não novidade suficiente. A lacuna específica de detecção zero-shot normal-reference em sistemas industriais multivariados permanece provisória até revisão bibliográfica aprofundada."
+    },
+    "ResearchLimitationsEN": {
+      "language": "en",
+      "source_entity_ids": [
+        "dataset.tep",
+        "decision.avoid_model_swap_framing"
+      ],
+      "text": "The TEP is public and simulated; therefore, the experiment may demonstrate a non-externalizing architecture but cannot prove protection of real industrial secrets or complete compliance. Local execution is a measurable experimental condition rather than a sufficient novelty claim. The specific gap concerning normal-reference fault-zero-shot detection in multivariate industrial systems remains provisional pending deeper literature review."
+    },
+    "LiteratureStatusPT": {
+      "language": "pt-BR",
+      "source_entity_ids": [
+        "reference.triad.xing_2024",
+        "reference.triad.khan_2024",
+        "reference.triad.kai_2025"
+      ],
+      "text": "A revisão bibliográfica está em construção. A tríade Xing, Khan e Kai constitui uma base preliminar, mas identidade bibliográfica, texto integral, locadores, aderência à IDV(13) e capacidade de sustentar alegações ainda precisam ser verificadas. A matriz de lacuna deve incluir antecedentes de detecção zero-shot, normal-only e uso direto de LLM em séries temporais antes de qualquer alegação de novidade."
+    },
+    "LiteratureStatusEN": {
+      "language": "en",
+      "source_entity_ids": [
+        "reference.triad.xing_2024",
+        "reference.triad.khan_2024",
+        "reference.triad.kai_2025"
+      ],
+      "text": "The literature review remains under construction. The Xing, Khan, and Kai triad is a preliminary basis, but bibliographic identity, legitimate full text, precise locators, relevance to IDV(13), and claim-support capacity still require verification. The gap matrix must include zero-shot detection, normal-only detection, and direct LLM time-series antecedents before any novelty claim is made."
+    },
+    "ResultsStatusPT": {
+      "language": "pt-BR",
+      "source_entity_ids": [
+        "experiment.progressive_windows"
+      ],
+      "text": "Ainda não existem resultados experimentais aceitos. Esta versão registra o desenho e as hipóteses H1-H3; resultados somente poderão ser incorporados após execução reproduzível, preservação dos artefatos, cálculo das métricas e avaliação do snapshot congelado."
+    },
+    "ResultsStatusEN": {
+      "language": "en",
+      "source_entity_ids": [
+        "experiment.progressive_windows"
+      ],
+      "text": "No experimental results have yet been accepted. This version records the design and hypotheses H1-H3; results may be incorporated only after reproducible execution, artifact preservation, metric calculation, and evaluation of a frozen snapshot."
+    },
+    "DoctoralAgendaScopePT": {
+      "language": "pt-BR",
+      "source_entity_ids": [
+        "contribution.reproducible_local_llm_protocol",
+        "experiment.progressive_windows"
+      ],
+      "text": "Esta agenda reúne extensões prospectivas derivadas das limitações do estudo de mestrado. Ela não constitui tese, projeto doutoral formal, aprovação institucional ou compromisso de execução."
+    },
+    "DoctoralFutureQuestionsPT": {
+      "language": "pt-BR",
+      "source_entity_ids": [
+        "experiment.progressive_windows",
+        "method.local_llm"
+      ],
+      "text": "Questões futuras incluem generalização para múltiplas falhas e processos, avaliação de arquiteturas locais distintas, diagnóstico nominal de falhas não vistas, integração controlada entre evidência estatística e explicação por LLM, robustez a mudanças de domínio, validação com dados industriais autorizados e estudo de governança para ambientes regulados."
+    }
+  },
+  "documents": {
+    "PREPROJECT": {
+      "path": "deliverables/preproject/main.tex",
+      "language": "pt-BR",
+      "required_macros": [
+        "ResearchTitlePT",
+        "ResearchProblemPT",
+        "ResearchQuestionPT",
+        "ResearchObjectivePT",
+        "ResearchHypothesisPT",
+        "ResearchMethodPT",
+        "ResearchContributionPT",
+        "ResearchLimitationsPT",
+        "LiteratureStatusPT"
+      ],
+      "section_projection": [
+        {
+          "section": "Problema e pergunta de pesquisa",
+          "entity_types": [
+            "PROBLEM",
+            "QUESTION"
+          ]
+        },
+        {
+          "section": "Objetivos",
+          "entity_types": [
+            "QUESTION",
+            "EXPERIMENT"
+          ]
+        },
+        {
+          "section": "Referencial teórico",
+          "entity_types": [
+            "REFERENCE"
+          ]
+        },
+        {
+          "section": "Metodologia",
+          "entity_types": [
+            "DATASET",
+            "METHOD",
+            "EXPERIMENT"
+          ]
+        },
+        {
+          "section": "Resultados esperados",
+          "entity_types": [
+            "HYPOTHESIS",
+            "CONTRIBUTION",
+            "LIMITATION"
+          ]
+        }
+      ]
+    },
+    "ARTICLE": {
+      "path": "deliverables/article/main.tex",
+      "language": "en",
+      "required_macros": [
+        "ResearchTitleEN",
+        "ResearchProblemEN",
+        "ResearchQuestionEN",
+        "ResearchObjectiveEN",
+        "ResearchHypothesisEN",
+        "ResearchMethodEN",
+        "ResearchContributionEN",
+        "ResearchLimitationsEN",
+        "LiteratureStatusEN",
+        "ResultsStatusEN"
+      ],
+      "section_projection": [
+        {
+          "section": "Introduction",
+          "entity_types": [
+            "PROBLEM",
+            "QUESTION",
+            "CONTRIBUTION"
+          ]
+        },
+        {
+          "section": "Related Work",
+          "entity_types": [
+            "REFERENCE"
+          ]
+        },
+        {
+          "section": "Method",
+          "entity_types": [
+            "DATASET",
+            "METHOD",
+            "EXPERIMENT"
+          ]
+        },
+        {
+          "section": "Results",
+          "entity_types": [
+            "RESULT"
+          ]
+        },
+        {
+          "section": "Discussion",
+          "entity_types": [
+            "CLAIM",
+            "LIMITATION"
+          ]
+        }
+      ]
+    },
+    "DISSERTATION": {
+      "path": "deliverables/dissertation/main.tex",
+      "language": "pt-BR",
+      "required_macros": [
+        "ResearchTitlePT",
+        "ResearchProblemPT",
+        "ResearchQuestionPT",
+        "ResearchObjectivePT",
+        "ResearchHypothesisPT",
+        "ResearchMethodPT",
+        "ResearchContributionPT",
+        "ResearchLimitationsPT",
+        "LiteratureStatusPT",
+        "ResultsStatusPT"
+      ],
+      "section_projection": [
+        {
+          "section": "Introdução",
+          "entity_types": [
+            "PROBLEM",
+            "QUESTION",
+            "CONTRIBUTION"
+          ]
+        },
+        {
+          "section": "Fundamentação",
+          "entity_types": [
+            "REFERENCE"
+          ]
+        },
+        {
+          "section": "Método",
+          "entity_types": [
+            "DATASET",
+            "METHOD",
+            "EXPERIMENT"
+          ]
+        },
+        {
+          "section": "Resultados",
+          "entity_types": [
+            "RESULT"
+          ]
+        },
+        {
+          "section": "Discussão",
+          "entity_types": [
+            "CLAIM",
+            "LIMITATION"
+          ]
+        }
+      ]
+    },
+    "DOCTORAL_AGENDA": {
+      "path": "deliverables/doctoral-agenda/main.tex",
+      "language": "pt-BR",
+      "required_macros": [
+        "DoctoralAgendaScopePT",
+        "DoctoralFutureQuestionsPT",
+        "ResearchLimitationsPT"
+      ],
+      "section_projection": [
+        {
+          "section": "Questões emergentes",
+          "entity_types": [
+            "QUESTION"
+          ]
+        },
+        {
+          "section": "Limitações geradoras",
+          "entity_types": [
+            "LIMITATION"
+          ]
+        },
+        {
+          "section": "Hipóteses futuras",
+          "entity_types": [
+            "HYPOTHESIS"
+          ]
+        },
+        {
+          "section": "Programa de pesquisa",
+          "entity_types": [
+            "METHOD",
+            "DATASET",
+            "EXPERIMENT"
+          ]
+        }
+      ]
+    }
+  },
+  "invariants": [
+    "QUESTION_CONSISTENT",
+    "HYPOTHESIS_CONSISTENT",
+    "METHOD_CONSISTENT",
+    "EVIDENCE_STATUS_CONSISTENT",
+    "LIMITATIONS_PROPAGATED",
+    "DOCTORAL_AGENDA_NOT_THESIS",
+    "NO_UNSUPPORTED_CLAIMS",
+    "NO_FROZEN_PLACEHOLDERS"
+  ]
+}

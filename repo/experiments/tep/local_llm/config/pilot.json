@@ -1,0 +1,30 @@
+{
+  "status": "PILOT_NOT_FOR_SCIENTIFIC_INFERENCE",
+  "methodology_frozen": false,
+  "experiment_id_prefix": "tep-local-pilot",
+  "normal_run_limit": 5,
+  "test_run_limit": 5,
+  "window_samples": 20,
+  "stride_samples": 5,
+  "sample_interval_minutes": 3,
+  "max_windows_per_run": 1,
+  "representation": "PROVISIONAL_SUMMARY_STATS_V1",
+  "dpca": {
+    "lags": 2,
+    "n_components": null,
+    "variance_target": 0.95,
+    "threshold_quantile": 0.99,
+    "alarm_persistence": 3
+  },
+  "llm": {
+    "model_file": "qwen2.5-7b-instruct-q4_k_m.gguf",
+    "runtime": "llama.cpp llama-server",
+    "context_size": 8192,
+    "n_gpu_layers": 0,
+    "temperature": 0.0,
+    "seed": 42,
+    "max_output_tokens": 768,
+    "port": 8080,
+    "request_timeout_seconds": 300
+  }
+}

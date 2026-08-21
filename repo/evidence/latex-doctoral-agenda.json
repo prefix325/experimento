@@ -1,0 +1,14 @@
+{
+  "document_id": "psqza.doctoral-agenda",
+  "source_commit": "85f113f77db0f18b55e730723912a32284a3fe11",
+  "source_tree_sha256": "b733f7403097355eecbef4443e5a4ba563a8df72b133daa39f568d407799d2db",
+  "toolchain": "Latexmk, John Collins, 11 Dec. 2024. Version 4.86; pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+  "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex",
+  "exit_code": 0,
+  "warnings": ["Initial skeleton has an empty bibliography."],
+  "unresolved_citations": [],
+  "missing_assets": [],
+  "log_sha256": "09d327e95c0e1d9cd5b33e32a71c1c0b652fa80979ec9085efb6493223bd1066",
+  "pdf_sha256": "e8dd53c40f3a198d5895ad77f0c0e1309d311c146283310001fb4ba032731e11",
+  "status": "PASS"
+}

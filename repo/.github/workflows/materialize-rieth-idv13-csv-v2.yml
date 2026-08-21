@@ -1,0 +1,45 @@
+name: Materialize Rieth IDV13 CSV v2
+
+on:
+  push:
+    branches:
+      - research/record-zero-shot-multivariate-20260813
+    paths:
+      - .github/workflows/materialize-rieth-idv13-csv-v2.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --upgrade gdown
+      - name: Download source data
+        run: |
+          mkdir -p .cache/rieth
+          gdown 1PVox8Kkjcs5yEeKf6T6UsNwwa0RrJZEq -O .cache/rieth/TEP_FaultFree_Training.RData
+          gdown 1w5I1l3-whygkbI9ozdm-WNEFXRMRyKm- -O .cache/rieth/TEP_Faulty_Testing.RData
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: 'release'
+      - name: Convert to CSV and filter IDV13
+        run: |
+          Rscript experiments/tep/scripts/materialize_rieth_idv13_csv.R \
+            .cache/rieth/TEP_FaultFree_Training.RData \
+            .cache/rieth/TEP_Faulty_Testing.RData \
+            build/rieth_csv
+          sha256sum $(find build/rieth_csv -name '*.csv' | sort) > build/rieth_csv/CSV_SHA256SUMS.txt
+          sha256sum .cache/rieth/TEP_FaultFree_Training.RData .cache/rieth/TEP_Faulty_Testing.RData > build/rieth_csv/SOURCE_SHA256SUMS.txt
+          du -sh build/rieth_csv
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rieth-idv13-csv
+          path: build/rieth_csv
+          retention-days: 30
