@@ -1,6 +1,7 @@
 # Resultados publicados seletivamente
 
-Este diretório preserva somente artefatos leves necessários para auditoria e continuidade: estados, markers `COMPLETE`, manifests, comandos, provenance operacional, resumos finais já persistidos e registros de aceitação técnica.
+Este diretório preserva estados, markers `COMPLETE`, manifests, comandos, provenance operacional, resumos finais já persistidos, registros de aceitação técnica e os artefatos científicos primários das attempts finais válidas.
 
-Foram omitidos outputs por janela, métricas DPCA em JSONL, decisões LLM em JSONL, logs científicos volumosos, imagens e resultados piloto/smoke. A omissão não altera o corpus científico original nem recalcula resultados.
+As métricas DPCA `dpca_metrics.jsonl` e as decisões LLM `llm_decisions.jsonl` das attempts científicas finais referenciadas pelo `FINAL_CAMPAIGN_MANIFEST` foram publicadas por cópia byte-exact. Attempts históricas permanecem apenas onde já estavam preservadas para provenance e não integram o corpus científico final. Nenhuma estatística agregada foi recalculada durante esta promoção.
 
+Logs científicos volumosos, imagens e resultados piloto/smoke continuam omitidos.
