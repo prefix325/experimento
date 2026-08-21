@@ -1,0 +1,44 @@
+# Calculation 3 audit
+
+- `calculation`: `3`
+- `generated_at_utc`: `2026-08-21T04:34:20.722164+00:00`
+- `source_commit`: `536cd4462b2fdc7e1bac8317adc64534e546c809`
+- `branch`: `validation/calculation3-independent-20260821`
+- `method_freeze_id`: `TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH`
+- `prior_analysis_contamination_risk`: `NO`
+- `final_manifest_sha256`: `d3f7cdde04b18182a2fe25cc8ea23e07833a0c3ab9441403d9eb1b17dd028db5`
+- `final_manifest_gate`: `PASS`
+- `sap_git_blob`: `401c245f6b222e85662d8e47d4312ce27e8e8c60`
+- `sap_sha256`: `f5808362f57ed8ebc5b5548ec3d36270c9899deb93df7a9460fe1f6cbde29bfd`
+- `sap_gate`: `PASS`
+- `total_primary_jsonl_expected`: `1100`
+- `primary_files_found`: `1100`
+- `missing_primary_files`: `0`
+- `primary_hash_mismatches`: `0`
+- `duplicate_final_runs`: `0`
+- `out_of_selection_llm`: `0`
+- `historical_attempts_included`: `0`
+- `dpca_target`: `500`
+- `dpca_normal_holdout`: `500`
+- `llm_target`: `50`
+- `llm_normal_holdout`: `50`
+- `denominator_gate`: `PASS`
+- `input_validation_note`: `Git-tracked JSON/Markdown metadata are validated after deterministic CRLF-to-LF normalization when the Windows checkout converted line endings; primary JSONL artifacts are validated as exact raw bytes.`
+- `llm_reconstruction_crosscheck`: `PASS`
+- `llm_runs_crosschecked`: `100`
+- `llm_mismatches`: `0`
+- `dpca_reconstruction_crosscheck`: `PASS`
+- `dpca_runs_crosschecked`: `1000`
+- `dpca_raw_record_mismatches`: `0`
+- `dpca_persistent_record_mismatches`: `0`
+- `event_ledger_rows`: `393519`
+- `endpoint_ledger_rows`: `1000`
+- `input_results_modified`: `NO`
+- `final_campaign_manifest_modified`: `NO`
+- `sap_modified`: `NO`
+- `formal_json_modified`: `NO`
+- `statistical_analysis_executed`: `YES`
+- `outputs_restricted_to_calculation3_root`: `YES`
+- `figures_generated`: `NO`
+- `historical_attempts_used_for_performance`: `0`
+- `tests`: `PASS (48 synthetic tests)`

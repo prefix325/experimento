@@ -1,0 +1,409 @@
+{
+  "confidence_intervals": {
+    "H2::DPCA_EXPANDED::CONFIRMED_DETECTION::MEAN": {
+      "estimate": 120.504,
+      "lower": 115.82623395149861,
+      "method": "BCa",
+      "upper": 125.45262582046476
+    },
+    "H2::DPCA_EXPANDED::CONFIRMED_DETECTION::MEDIAN": {
+      "estimate": 112.5,
+      "lower": 108.0,
+      "method": "BCa",
+      "upper": 120.0
+    },
+    "H2::DPCA_EXPANDED::RAW_INDICATION::MEAN": {
+      "estimate": 84.438,
+      "lower": 79.708026630551,
+      "method": "BCa",
+      "upper": 89.154
+    },
+    "H2::DPCA_EXPANDED::RAW_INDICATION::MEDIAN": {
+      "estimate": 82.5,
+      "lower": 73.5,
+      "method": "BCa",
+      "upper": 87.0
+    },
+    "H2::DPCA_PAIRED::CONFIRMED_DETECTION::MEAN": {
+      "estimate": 127.56,
+      "lower": 113.7,
+      "method": "BCa",
+      "upper": 143.58
+    },
+    "H2::DPCA_PAIRED::CONFIRMED_DETECTION::MEDIAN": {
+      "estimate": 132.0,
+      "lower": 105.0,
+      "method": "percentile",
+      "upper": 144.0
+    },
+    "H2::DPCA_PAIRED::RAW_INDICATION::MEAN": {
+      "estimate": 88.98,
+      "lower": 75.18,
+      "method": "BCa",
+      "upper": 103.08
+    },
+    "H2::DPCA_PAIRED::RAW_INDICATION::MEDIAN": {
+      "estimate": 90.0,
+      "lower": 81.0,
+      "method": "percentile",
+      "upper": 102.0
+    },
+    "H2::LLM_PRIMARY::CONFIRMED_DETECTION::MEAN": {
+      "estimate": 309.9,
+      "lower": 284.7,
+      "method": "BCa",
+      "upper": 339.6
+    },
+    "H2::LLM_PRIMARY::CONFIRMED_DETECTION::MEDIAN": {
+      "estimate": 297.0,
+      "lower": 282.0,
+      "method": "percentile",
+      "upper": 334.5
+    },
+    "H2::LLM_PRIMARY::RAW_INDICATION::MEAN": {
+      "estimate": 144.6,
+      "lower": 122.4,
+      "method": "BCa",
+      "upper": 168.3
+    },
+    "H2::LLM_PRIMARY::RAW_INDICATION::MEDIAN": {
+      "estimate": 147.0,
+      "lower": 117.0,
+      "method": "percentile",
+      "upper": 177.0
+    },
+    "H3::MACRO_MEAN": {
+      "estimate": 0.1396402830065706,
+      "lower": 0.12817746261897955,
+      "method": "BCa",
+      "upper": 0.1522550239368868
+    },
+    "H3::MACRO_MEDIAN": {
+      "estimate": 0.1390710108604845,
+      "lower": 0.12120535714285714,
+      "method": "BCa",
+      "upper": 0.14873370757517101
+    },
+    "NORMAL_FULL_TRAJECTORY::DPCA_EXPANDED::ANY_CONFIRMED_FALSE_ALARM": {
+      "estimate": 0.76,
+      "lower": 0.7206732029933738,
+      "method": "WILSON_95_MODEL_BASED_EXTRAPOLATION",
+      "upper": 0.7953621399666191
+    },
+    "NORMAL_FULL_TRAJECTORY::DPCA_EXPANDED::ANY_RAW_FALSE_ALARM": {
+      "estimate": 1.0,
+      "lower": 0.9923756595384479,
+      "method": "WILSON_95_MODEL_BASED_EXTRAPOLATION",
+      "upper": 1.0
+    },
+    "NORMAL_FULL_TRAJECTORY::DPCA_EXPANDED::ANY_RAW_FALSE_ALARM::SENSITIVITY": {
+      "estimate": 1.0,
+      "lower": 0.9926493899480923,
+      "method": "CLOPPER_PEARSON_EXACT_95_SENSITIVITY_MODEL_BASED_EXTRAPOLATION",
+      "upper": 1.0
+    },
+    "NORMAL_FULL_TRAJECTORY::DPCA_EXPANDED::NO_CONFIRMED_FALSE_ALARM": {
+      "estimate": 0.24,
+      "lower": 0.204637860033381,
+      "method": "WILSON_95_MODEL_BASED_EXTRAPOLATION",
+      "upper": 0.2793267970066262
+    },
+    "NORMAL_FULL_TRAJECTORY::DPCA_PAIRED::ANY_CONFIRMED_FALSE_ALARM": {
+      "estimate": 0.84,
+      "lower": 0.7148578393696501,
+      "method": "WILSON_95",
+      "upper": 0.916625793219666
+    },
+    "NORMAL_FULL_TRAJECTORY::DPCA_PAIRED::ANY_RAW_FALSE_ALARM": {
+      "estimate": 1.0,
+      "lower": 0.9286524008666414,
+      "method": "WILSON_95",
+      "upper": 1.0
+    },
+    "NORMAL_FULL_TRAJECTORY::DPCA_PAIRED::ANY_RAW_FALSE_ALARM::SENSITIVITY": {
+      "estimate": 1.0,
+      "lower": 0.9288782635358024,
+      "method": "CLOPPER_PEARSON_EXACT_95_SENSITIVITY",
+      "upper": 1.0
+    },
+    "NORMAL_FULL_TRAJECTORY::DPCA_PAIRED::NO_CONFIRMED_FALSE_ALARM": {
+      "estimate": 0.16,
+      "lower": 0.08337420678033405,
+      "method": "WILSON_95",
+      "upper": 0.2851421606303499
+    },
+    "NORMAL_FULL_TRAJECTORY::LLM_PRIMARY::ANY_CONFIRMED_FALSE_ALARM": {
+      "estimate": 0.4,
+      "lower": 0.27608389730256544,
+      "method": "WILSON_95",
+      "upper": 0.5381856225241064
+    },
+    "NORMAL_FULL_TRAJECTORY::LLM_PRIMARY::ANY_RAW_FALSE_ALARM": {
+      "estimate": 1.0,
+      "lower": 0.9286524008666414,
+      "method": "WILSON_95",
+      "upper": 1.0
+    },
+    "NORMAL_FULL_TRAJECTORY::LLM_PRIMARY::ANY_RAW_FALSE_ALARM::SENSITIVITY": {
+      "estimate": 1.0,
+      "lower": 0.9288782635358024,
+      "method": "CLOPPER_PEARSON_EXACT_95_SENSITIVITY",
+      "upper": 1.0
+    },
+    "NORMAL_FULL_TRAJECTORY::LLM_PRIMARY::NO_CONFIRMED_FALSE_ALARM": {
+      "estimate": 0.6,
+      "lower": 0.4618143774758936,
+      "method": "WILSON_95",
+      "upper": 0.7239161026974346
+    },
+    "PAIRED_BINARY::NORMAL_HOLDOUT::CONFIRMED::DIFFERENCE": {
+      "estimate": -0.44,
+      "lower": -0.6,
+      "method": "BCa",
+      "upper": -0.26
+    },
+    "PAIRED_BINARY::NORMAL_HOLDOUT::RAW::DIFFERENCE": {
+      "estimate": 0.0,
+      "lower": 0.0,
+      "method": "percentile",
+      "upper": 0.0
+    },
+    "PAIRED_BINARY::TARGET::CONFIRMED::DIFFERENCE": {
+      "estimate": 0.0,
+      "lower": 0.0,
+      "method": "percentile",
+      "upper": 0.0
+    },
+    "PAIRED_BINARY::TARGET::RAW::DIFFERENCE": {
+      "estimate": 0.0,
+      "lower": 0.0,
+      "method": "percentile",
+      "upper": 0.0
+    },
+    "PAIRED_DELAY::CONFIRMED::MEAN_DIFFERENCE": {
+      "estimate": 182.34,
+      "lower": 159.18,
+      "method": "BCa",
+      "upper": 209.52
+    },
+    "PAIRED_DELAY::CONFIRMED::MEDIAN_DIFFERENCE": {
+      "estimate": 174.0,
+      "lower": 150.0,
+      "method": "BCa",
+      "upper": 195.0
+    },
+    "PAIRED_DELAY::RAW::MEAN_DIFFERENCE": {
+      "estimate": 55.62,
+      "lower": 29.58,
+      "method": "BCa",
+      "upper": 81.66216649292407
+    },
+    "PAIRED_DELAY::RAW::MEDIAN_DIFFERENCE": {
+      "estimate": 63.0,
+      "lower": 34.5,
+      "method": "percentile",
+      "upper": 87.0
+    },
+    "TARGET_POST_ONSET::DPCA_EXPANDED::CONFIRMED_DETECTION": {
+      "estimate": 1.0,
+      "lower": 0.9923756595384479,
+      "method": "WILSON_95_MODEL_BASED_EXTRAPOLATION",
+      "upper": 1.0
+    },
+    "TARGET_POST_ONSET::DPCA_EXPANDED::CONFIRMED_DETECTION::SENSITIVITY": {
+      "estimate": 1.0,
+      "lower": 0.9926493899480923,
+      "method": "CLOPPER_PEARSON_EXACT_95_SENSITIVITY_MODEL_BASED_EXTRAPOLATION",
+      "upper": 1.0
+    },
+    "TARGET_POST_ONSET::DPCA_EXPANDED::NO_CONFIRMED_DETECTION": {
+      "estimate": 0.0,
+      "lower": 0.0,
+      "method": "WILSON_95_MODEL_BASED_EXTRAPOLATION",
+      "upper": 0.007624340461552241
+    },
+    "TARGET_POST_ONSET::DPCA_EXPANDED::NO_CONFIRMED_DETECTION::SENSITIVITY": {
+      "estimate": 0.0,
+      "lower": 0.0,
+      "method": "CLOPPER_PEARSON_EXACT_95_SENSITIVITY_MODEL_BASED_EXTRAPOLATION",
+      "upper": 0.007350610051907784
+    },
+    "TARGET_POST_ONSET::DPCA_EXPANDED::RAW_INDICATION": {
+      "estimate": 1.0,
+      "lower": 0.9923756595384479,
+      "method": "WILSON_95_MODEL_BASED_EXTRAPOLATION",
+      "upper": 1.0
+    },
+    "TARGET_POST_ONSET::DPCA_EXPANDED::RAW_INDICATION::SENSITIVITY": {
+      "estimate": 1.0,
+      "lower": 0.9926493899480923,
+      "method": "CLOPPER_PEARSON_EXACT_95_SENSITIVITY_MODEL_BASED_EXTRAPOLATION",
+      "upper": 1.0
+    },
+    "TARGET_POST_ONSET::DPCA_PAIRED::CONFIRMED_DETECTION": {
+      "estimate": 1.0,
+      "lower": 0.9286524008666414,
+      "method": "WILSON_95",
+      "upper": 1.0
+    },
+    "TARGET_POST_ONSET::DPCA_PAIRED::CONFIRMED_DETECTION::SENSITIVITY": {
+      "estimate": 1.0,
+      "lower": 0.9288782635358024,
+      "method": "CLOPPER_PEARSON_EXACT_95_SENSITIVITY",
+      "upper": 1.0
+    },
+    "TARGET_POST_ONSET::DPCA_PAIRED::NO_CONFIRMED_DETECTION": {
+      "estimate": 0.0,
+      "lower": 0.0,
+      "method": "WILSON_95",
+      "upper": 0.07134759913335872
+    },
+    "TARGET_POST_ONSET::DPCA_PAIRED::NO_CONFIRMED_DETECTION::SENSITIVITY": {
+      "estimate": 0.0,
+      "lower": 0.0,
+      "method": "CLOPPER_PEARSON_EXACT_95_SENSITIVITY",
+      "upper": 0.07112173646419764
+    },
+    "TARGET_POST_ONSET::DPCA_PAIRED::RAW_INDICATION": {
+      "estimate": 1.0,
+      "lower": 0.9286524008666414,
+      "method": "WILSON_95",
+      "upper": 1.0
+    },
+    "TARGET_POST_ONSET::DPCA_PAIRED::RAW_INDICATION::SENSITIVITY": {
+      "estimate": 1.0,
+      "lower": 0.9288782635358024,
+      "method": "CLOPPER_PEARSON_EXACT_95_SENSITIVITY",
+      "upper": 1.0
+    },
+    "TARGET_POST_ONSET::LLM_PRIMARY::CONFIRMED_DETECTION": {
+      "estimate": 1.0,
+      "lower": 0.9286524008666414,
+      "method": "WILSON_95",
+      "upper": 1.0
+    },
+    "TARGET_POST_ONSET::LLM_PRIMARY::CONFIRMED_DETECTION::SENSITIVITY": {
+      "estimate": 1.0,
+      "lower": 0.9288782635358024,
+      "method": "CLOPPER_PEARSON_EXACT_95_SENSITIVITY",
+      "upper": 1.0
+    },
+    "TARGET_POST_ONSET::LLM_PRIMARY::NO_CONFIRMED_DETECTION": {
+      "estimate": 0.0,
+      "lower": 0.0,
+      "method": "WILSON_95",
+      "upper": 0.07134759913335872
+    },
+    "TARGET_POST_ONSET::LLM_PRIMARY::NO_CONFIRMED_DETECTION::SENSITIVITY": {
+      "estimate": 0.0,
+      "lower": 0.0,
+      "method": "CLOPPER_PEARSON_EXACT_95_SENSITIVITY",
+      "upper": 0.07112173646419764
+    },
+    "TARGET_POST_ONSET::LLM_PRIMARY::RAW_INDICATION": {
+      "estimate": 1.0,
+      "lower": 0.9286524008666414,
+      "method": "WILSON_95",
+      "upper": 1.0
+    },
+    "TARGET_POST_ONSET::LLM_PRIMARY::RAW_INDICATION::SENSITIVITY": {
+      "estimate": 1.0,
+      "lower": 0.9288782635358024,
+      "method": "CLOPPER_PEARSON_EXACT_95_SENSITIVITY",
+      "upper": 1.0
+    },
+    "TARGET_PRE_ONSET_1_160::DPCA_EXPANDED::ANY_CONFIRMED_FALSE_ALARM": {
+      "estimate": 0.196,
+      "lower": 0.16357810661426447,
+      "method": "WILSON_95_MODEL_BASED_EXTRAPOLATION",
+      "upper": 0.2330574923863593
+    },
+    "TARGET_PRE_ONSET_1_160::DPCA_EXPANDED::ANY_RAW_FALSE_ALARM": {
+      "estimate": 0.806,
+      "lower": 0.7690603702807669,
+      "method": "WILSON_95_MODEL_BASED_EXTRAPOLATION",
+      "upper": 0.8382735333567634
+    },
+    "TARGET_PRE_ONSET_1_160::DPCA_PAIRED::ANY_CONFIRMED_FALSE_ALARM": {
+      "estimate": 0.1,
+      "lower": 0.04347576493189041,
+      "method": "WILSON_95",
+      "upper": 0.21360231437479654
+    },
+    "TARGET_PRE_ONSET_1_160::DPCA_PAIRED::ANY_RAW_FALSE_ALARM": {
+      "estimate": 0.86,
+      "lower": 0.7381380628941446,
+      "method": "WILSON_95",
+      "upper": 0.9304916657298371
+    },
+    "TARGET_PRE_ONSET_1_160::LLM_PRIMARY::ANY_CONFIRMED_FALSE_ALARM": {
+      "estimate": 0.06,
+      "lower": 0.02061497034897397,
+      "method": "WILSON_95",
+      "upper": 0.16217091688838173
+    },
+    "TARGET_PRE_ONSET_1_160::LLM_PRIMARY::ANY_RAW_FALSE_ALARM": {
+      "estimate": 0.68,
+      "lower": 0.5418970269185592,
+      "method": "WILSON_95",
+      "upper": 0.7924178373934316
+    }
+  },
+  "dpca_expanded_normal_confirmed_fa_count": 380,
+  "dpca_expanded_normal_raw_fa_count": 500,
+  "dpca_expanded_target_confirmed_count": 500,
+  "dpca_expanded_target_raw_count": 500,
+  "dpca_paired_confirmed_delay_mean": 127.56,
+  "dpca_paired_confirmed_delay_median": 132.0,
+  "dpca_paired_raw_delay_mean": 88.98,
+  "dpca_paired_raw_delay_median": 90.0,
+  "h3_applicable_responses": 2493,
+  "h3_applicable_runs": 50,
+  "h3_coverage": 0.9999498997995993,
+  "h3_macro_mean": 0.1396402830065706,
+  "h3_median": 0.1390710108604845,
+  "h3_micro_score": 0.12855711422845692,
+  "h3_satisfied_items": 2566,
+  "h3_total_items": 19960,
+  "h3_verifiable_items": 19959,
+  "llm_confirmed_delay_mean": 309.9,
+  "llm_confirmed_delay_median": 297.0,
+  "llm_raw_delay_mean": 144.6,
+  "llm_raw_delay_median": 147.0,
+  "normal_dpca_paired_confirmed_fa_count": 42,
+  "normal_dpca_paired_raw_fa_count": 50,
+  "normal_llm_confirmed_fa_count": 20,
+  "normal_llm_raw_fa_count": 50,
+  "normal_mcnemar_holm_p": 5.488097667694092e-05,
+  "normal_mcnemar_raw_p": 2.744048833847046e-05,
+  "normal_paired_00": 5,
+  "normal_paired_01": 25,
+  "normal_paired_10": 3,
+  "normal_paired_11": 17,
+  "normal_paired_difference": -0.44,
+  "paired_confirmed_delay_mean_difference": 182.34,
+  "paired_confirmed_delay_median_difference": 174.0,
+  "paired_confirmed_sign_negative": 1,
+  "paired_confirmed_sign_positive": 49,
+  "paired_confirmed_sign_ties": 0,
+  "paired_raw_delay_mean_difference": 55.62,
+  "paired_raw_delay_median_difference": 63.0,
+  "paired_raw_sign_negative": 12,
+  "paired_raw_sign_positive": 37,
+  "paired_raw_sign_ties": 1,
+  "target_dpca_paired_confirmed_count": 50,
+  "target_dpca_paired_raw_count": 50,
+  "target_llm_confirmed_count": 50,
+  "target_llm_raw_count": 50,
+  "target_mcnemar_holm_p": 1.0,
+  "target_mcnemar_raw_p": 1.0,
+  "target_paired_00": 0,
+  "target_paired_01": 0,
+  "target_paired_10": 0,
+  "target_paired_11": 50,
+  "target_paired_difference": 0.0,
+  "target_prefault_dpca_paired_confirmed_count": 5,
+  "target_prefault_dpca_paired_raw_count": 43,
+  "target_prefault_llm_confirmed_count": 3,
+  "target_prefault_llm_raw_count": 34
+}

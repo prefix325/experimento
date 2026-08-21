@@ -1,0 +1,162 @@
+{
+  "bootstrap_implementation": "scipy.stats.bootstrap BCa; percentile fallback only when BCa is mathematically undefined",
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20260820,
+  "branch": "validation/calculation3-independent-20260821",
+  "calculation": 3,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "381c1376466315cc3284de6f7ae163bb8fc9ff130264d8d85f39f1fdab3b0fa3",
+      "size_bytes": 68
+    },
+    {
+      "path": "00_integrity/denominator_table.csv",
+      "sha256": "e6efe173040de0d5cc6d81642f37e0bc1a13087ffa1dae635b7b4a4fa44754ee",
+      "size_bytes": 1009
+    },
+    {
+      "path": "00_integrity/integrity_report.json",
+      "sha256": "cfa23e4439e466b6ed255fdd196ab0e7ad6ff42c0bab9d38cdffa2b187058b61",
+      "size_bytes": 1207
+    },
+    {
+      "path": "01_ledgers/event_ledger.csv",
+      "sha256": "2945e4ac112d730e91503adcfd530c4f427d20bc4f3e60ac9bae3302579f56e9",
+      "size_bytes": 28259288
+    },
+    {
+      "path": "01_ledgers/run_endpoint_ledger.csv",
+      "sha256": "9a47ab88463cc088b434f12e3f2136198587c1a04171827d4d11f9f41c5c7335",
+      "size_bytes": 71650
+    },
+    {
+      "path": "02_primary/h1_target.csv",
+      "sha256": "d91c6ce3c4771ce0ca3994099d57530b4cfeaf5e96373215a3fbb91d285035bd",
+      "size_bytes": 1737
+    },
+    {
+      "path": "02_primary/holm_adjustment.csv",
+      "sha256": "4cac80d0cdaf9ad2daa432a430ca458b4c869024eff0a1db7c42927f5bbfb62e",
+      "size_bytes": 218
+    },
+    {
+      "path": "02_primary/normal_holdout.csv",
+      "sha256": "6f80747860e2eec2977bcd65e41bd772bb3f372d0f70e3f5a8ff1fda0f4964f7",
+      "size_bytes": 1516
+    },
+    {
+      "path": "02_primary/paired_binary.csv",
+      "sha256": "25e6678fe6d092de6ab320d0f694671b0c341243f4c43164a137f1631ed0e9cb",
+      "size_bytes": 1562
+    },
+    {
+      "path": "02_primary/primary_statistics.json",
+      "sha256": "922445372635f9e1b9d1ce47ea9083c9ce378151f0c8a043c9e8b7d7eaf821cd",
+      "size_bytes": 14931
+    },
+    {
+      "path": "03_secondary/amendment_provenance.csv",
+      "sha256": "24a4a530ea302db9c78e0c5b40896eb7a45950952a9e846fb6f1db7e0a11810e",
+      "size_bytes": 6729
+    },
+    {
+      "path": "03_secondary/dpca_expanded.csv",
+      "sha256": "a7d69f40843f8b9e87b2b9b83035f01a193f7a8f8d65436f01dac0deea1a863d",
+      "size_bytes": 2300
+    },
+    {
+      "path": "03_secondary/h2_delays.csv",
+      "sha256": "8366c4c21ed70f150d769c01bc7750222e968ee3013c0c74793465dddfaf9ec9",
+      "size_bytes": 2586
+    },
+    {
+      "path": "03_secondary/paired_delays.csv",
+      "sha256": "a041021ab3b0b7ff0bccf76221a0923ecff01c2f4b05dde19fd5f27da45299c4",
+      "size_bytes": 1032
+    },
+    {
+      "path": "03_secondary/target_preonset.csv",
+      "sha256": "6a10042759027e3cc80571612e4b0d56a0a1b2f398faffeddfcb9a3c44f158c3",
+      "size_bytes": 963
+    },
+    {
+      "path": "04_h3/h3_item_audit.csv",
+      "sha256": "68be292ec97fb1a36fb12468cd4ec7a4cc50345beb6f6039454b246e4b302852",
+      "size_bytes": 1363008
+    },
+    {
+      "path": "04_h3/h3_run_scores.csv",
+      "sha256": "1089487a69f8db34e3f72cece8f0256a0118d561e4eb95e7ec6a99d51b7eb2a0",
+      "size_bytes": 3513
+    },
+    {
+      "path": "04_h3/h3_statistics.json",
+      "sha256": "eb9193ff6b68bc435f85e932e8e09d7581f5aec54071bbcc4238d37183db05cf",
+      "size_bytes": 1418
+    },
+    {
+      "path": "05_audit/CALCULATION3_AUDIT.json",
+      "sha256": "99aef4e797c22fb7fc9eea7454706c028986e64d399ef7f49e7c1244b5ddc97c",
+      "size_bytes": 1935
+    },
+    {
+      "path": "05_audit/CALCULATION3_AUDIT.md",
+      "sha256": "1c06ae92295c476aad4928c37df3fc476aa47e351d654725d21d5be7382c4289",
+      "size_bytes": 1887
+    },
+    {
+      "path": "05_audit/environment.json",
+      "sha256": "8566e3119c0deb4dfe863962e19ba18a7866b6d06bbf52b9aaadbc4140990cf8",
+      "size_bytes": 998
+    },
+    {
+      "path": "05_audit/input_hash_validation.json",
+      "sha256": "aa9f162cb20752b0859b913897fc6eae3413f2c0ce436f49c20aba3ed72faadc",
+      "size_bytes": 2603718
+    },
+    {
+      "path": "05_audit/METHODS.md",
+      "sha256": "beb655185615446e8c45d082c9d735d8923faf3b4e09ef27de9505df1bf8f6d4",
+      "size_bytes": 3756
+    },
+    {
+      "path": "code/calculation3.py",
+      "sha256": "70701c245e0db3f045108b9900ce70661139c1ea20d29a87cc40d39c94382cce",
+      "size_bytes": 92354
+    },
+    {
+      "path": "code/stats_core.py",
+      "sha256": "6f550bc02d4b884b66b3328390b787d0b109baf72476f52c59e0592dee603baa",
+      "size_bytes": 25933
+    },
+    {
+      "path": "RECONCILIATION_KEYS.json",
+      "sha256": "8da1d37ce402d0627dc95ecf000c3224d8ccc587a179bf377ee1f0e592b5f2ec",
+      "size_bytes": 12980
+    },
+    {
+      "path": "tests/test_calculation3.py",
+      "sha256": "c4a0eaea2675af66de331bf11376db37b93f6ae91fc3eb7abc6fb5265ee3426a",
+      "size_bytes": 9036
+    },
+    {
+      "path": "tests/test_stats_core.py",
+      "sha256": "a1cd5926279b790f8b727711ae61833f80f69e163dc1f1a6d356eaf79db9dcc1",
+      "size_bytes": 9783
+    }
+  ],
+  "final_campaign_manifest_sha256": "d3f7cdde04b18182a2fe25cc8ea23e07833a0c3ab9441403d9eb1b17dd028db5",
+  "generated_at_utc": "2026-08-21T04:34:53.956135+00:00",
+  "language": "PYTHON",
+  "library_versions": {
+    "numpy": "2.1.3",
+    "scipy": "1.15.3"
+  },
+  "method_freeze_id": "TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH",
+  "runtime_version": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+  "sap_git_blob": "401c245f6b222e85662d8e47d4312ce27e8e8c60",
+  "sap_sha256": "f5808362f57ed8ebc5b5548ec3d36270c9899deb93df7a9460fe1f6cbde29bfd",
+  "schema_version": "1.0.0",
+  "source_commit": "536cd4462b2fdc7e1bac8317adc64534e546c809"
+}

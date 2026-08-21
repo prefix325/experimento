@@ -1,0 +1,11 @@
+scope,analysis_set,detector,cohort,n_runs,unit,selection,gate
+TARGET_POST_ONSET,LLM_PRIMARY,LLM,target,50,simulationRun,formal_run_selection.json,PASS
+TARGET_POST_ONSET,DPCA_PAIRED,DPCA,target,50,simulationRun,same 50 target LLM runs,PASS
+TARGET_POST_ONSET,DPCA_EXPANDED,DPCA,target,500,simulationRun,complete formal corpus,PASS
+NORMAL_FULL_TRAJECTORY,LLM_PRIMARY,LLM,normal_holdout,50,simulationRun,formal_normal_holdout_selection.json,PASS
+NORMAL_FULL_TRAJECTORY,DPCA_PAIRED,DPCA,normal_holdout,50,simulationRun,same 50 normal LLM runs,PASS
+NORMAL_FULL_TRAJECTORY,DPCA_EXPANDED,DPCA,normal_holdout,500,simulationRun,complete formal corpus,PASS
+TARGET_PRE_ONSET_1_160,LLM_PRIMARY,LLM,target,50,simulationRun,formal_run_selection.json,PASS
+TARGET_PRE_ONSET_1_160,DPCA_PAIRED,DPCA,target,50,simulationRun,same 50 target LLM runs,PASS
+TARGET_PRE_ONSET_1_160,DPCA_EXPANDED,DPCA,target,500,simulationRun,complete formal corpus,PASS
+H3_TARGET,LLM_PRIMARY,LLM,target,50,simulationRun,formal_run_selection.json,PASS

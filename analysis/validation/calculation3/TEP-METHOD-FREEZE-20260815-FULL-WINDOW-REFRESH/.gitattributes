@@ -1,0 +1,5 @@
+.gitattributes -text
+*.csv -text
+*.json -text
+*.md -text
+*.py -text
