@@ -1,0 +1,66 @@
+{
+  "analysis_branch": "analysis/formal-sap-results-20260820",
+  "analysis_code_commit": null,
+  "analysis_code_commit_policy": "The final commit cannot self-reference its own SHA; it is reported in Git branch history and the delivery report. Internal code identity is analysis_code_sha256.",
+  "analysis_head_at_execution": "536cd4462b2fdc7e1bac8317adc64534e546c809",
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20260820,
+  "dpca_executed": false,
+  "generated_at_utc": "2026-08-21T02:16:24.129550+00:00",
+  "linked_technical_git_blobs": [
+    {
+      "expected_git_blob": "183297c3570c6a6b2ceab3c9838ae3ec4ca3cd0e",
+      "observed_git_blob": "183297c3570c6a6b2ceab3c9838ae3ec4ca3cd0e",
+      "path": "repo/experiments/tep/local_llm/config/evaluation_contract.json",
+      "valid": true,
+      "worktree_sha256": "f7ca83deddcee2a02f7b4cd0a4c1ec362403a22f91441551d091db4d3990c5f4"
+    },
+    {
+      "expected_git_blob": "09b164f567b504b57e070f416910bd13d77dda7c",
+      "observed_git_blob": "09b164f567b504b57e070f416910bd13d77dda7c",
+      "path": "repo/experiments/tep/local_llm/config/formal_run_selection.json",
+      "valid": true,
+      "worktree_sha256": "9263bc65a911fe1957bab57c9904a50f56a814434bec1b6022b4330e13ccf004"
+    },
+    {
+      "expected_git_blob": "8fddb354a7c8853a8760b41a1012b4c16e85d930",
+      "observed_git_blob": "8fddb354a7c8853a8760b41a1012b4c16e85d930",
+      "path": "repo/experiments/tep/local_llm/config/formal_normal_holdout_selection.json",
+      "valid": true,
+      "worktree_sha256": "317de7e995af67828e25235dfd46b4260f2fac08628dd7f55993cba756668098"
+    },
+    {
+      "expected_git_blob": "fbda319ba744054d33af2bf4f2cd99d264a100fc",
+      "observed_git_blob": "fbda319ba744054d33af2bf4f2cd99d264a100fc",
+      "path": "repo/experiments/tep/local_llm/config/h3_evidence_reference.json",
+      "valid": true,
+      "worktree_sha256": "3dffd455d721e77ebfe2f2a85ef19e8ba4f6bd56cc94dd190e09d700592109e6"
+    },
+    {
+      "expected_git_blob": "668255aff7819032dd3aeb204e24cb2cca213b91",
+      "observed_git_blob": "668255aff7819032dd3aeb204e24cb2cca213b91",
+      "path": "repo/experiments/tep/local_llm/src/tep_local/dpca.py",
+      "valid": true,
+      "worktree_sha256": "1f732672d9f5d94aa8b0b9589980b7813d6216a44c9fd458f91963cf578c0e0c"
+    },
+    {
+      "expected_git_blob": "7b992d573dfc34d09d9811bb04db66ce064520c5",
+      "observed_git_blob": "7b992d573dfc34d09d9811bb04db66ce064520c5",
+      "path": "repo/experiments/tep/local_llm/src/tep_local/evaluation.py",
+      "valid": true,
+      "worktree_sha256": "fc8e3e52a8a8b5e39a23f38cdcd1afdfdfb0d8c1e5a8a51b29f560d021dfd862"
+    }
+  ],
+  "matplotlib_version": "3.10.0",
+  "network_access_required": false,
+  "numpy_version": "2.1.3",
+  "pandas_version": "2.2.3",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "python_implementation": "CPython",
+  "python_version": "3.13.5",
+  "scientific_inference_executed": false,
+  "scientific_inputs_opened_read_only": true,
+  "scipy_version": "1.15.3",
+  "source_main_commit": "536cd4462b2fdc7e1bac8317adc64534e546c809",
+  "source_repository": "prefix325/experimento"
+}

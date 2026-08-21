@@ -1,0 +1,7 @@
+cohort,detector,analysis_set,endpoint,events,runs_eligible,proportion,point_estimate_interpretation,interval_primary,interval_interpretation,wilson_95_lower,wilson_95_upper,clopper_pearson_sensitivity_applicable,clopper_pearson_95_lower,clopper_pearson_95_upper
+normal_holdout,LLM,principal,any_raw_false_alarm,50,50,1,RUN_LEVEL_SAMPLE_ESTIMATE,WILSON_95,RUN_LEVEL_BINOMIAL_PROPORTION_INTERVAL,0.928652400867,1,True,0.928878263536,1
+normal_holdout,LLM,principal,any_confirmed_false_alarm,20,50,0.4,RUN_LEVEL_SAMPLE_ESTIMATE,WILSON_95,RUN_LEVEL_BINOMIAL_PROPORTION_INTERVAL,0.276083897303,0.538185622524,False,,
+normal_holdout,LLM,principal,no_confirmed_false_alarm,30,50,0.6,RUN_LEVEL_SAMPLE_ESTIMATE,WILSON_95,RUN_LEVEL_BINOMIAL_PROPORTION_INTERVAL,0.461814377476,0.723916102697,False,,
+normal_holdout,DPCA,paired,any_raw_false_alarm,50,50,1,RUN_LEVEL_SAMPLE_ESTIMATE,WILSON_95,RUN_LEVEL_BINOMIAL_PROPORTION_INTERVAL,0.928652400867,1,True,0.928878263536,1
+normal_holdout,DPCA,paired,any_confirmed_false_alarm,42,50,0.84,RUN_LEVEL_SAMPLE_ESTIMATE,WILSON_95,RUN_LEVEL_BINOMIAL_PROPORTION_INTERVAL,0.71485783937,0.91662579322,False,,
+normal_holdout,DPCA,paired,no_confirmed_false_alarm,8,50,0.16,RUN_LEVEL_SAMPLE_ESTIMATE,WILSON_95,RUN_LEVEL_BINOMIAL_PROPORTION_INTERVAL,0.0833742067803,0.28514216063,False,,

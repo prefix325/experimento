@@ -1,0 +1,283 @@
+{
+  "analysis_branch": "analysis/formal-sap-results-20260820",
+  "analysis_code_commit": null,
+  "analysis_code_commit_policy": "Final commit SHA is intentionally external to this self-contained file to avoid an impossible Git self-reference; use branch history plus analysis_code_sha256.",
+  "analysis_code_files": [
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/code/endpoint_rules.py",
+      "sha256": "6d20a107ad174d2ac3f1e1536f9ec57c4b4d0f1ee1c63fdc597e512a094cebe8",
+      "size_bytes": 17072
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/code/README.md",
+      "sha256": "b8586387918a923e1bacac315f65bff4ed4732238c3fb8c9edfaa4c08a14977d",
+      "size_bytes": 2689
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/code/run_frozen_sap_analysis.py",
+      "sha256": "c198ef7e1b0767338670ed5e3c3962e3c8fb9c4c9f2e660d4a7c283bfffce4a9",
+      "size_bytes": 72263
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/code/statistical_utils.py",
+      "sha256": "984822229700817768bf0e4c64a63ed66452a0698967aba2a1879638901b117d",
+      "size_bytes": 11905
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/code/tests/test_endpoint_rules.py",
+      "sha256": "886cc5cc2279418d6f6c1486af62f33a9d8726110e34fed7e39149aa4262c77b",
+      "size_bytes": 7805
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/code/tests/test_statistical_utils.py",
+      "sha256": "bcef9cc1cb76bc896f077111084c168d919250fb116a24d5300d2cb03701b8a2",
+      "size_bytes": 3685
+    }
+  ],
+  "analysis_code_sha256": "537bced286b44d9520eb23adaa1be44524296a5d48696f8b4d596f716a567669",
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20260820,
+  "final_campaign_manifest_sha256": "d3f7cdde04b18182a2fe25cc8ea23e07833a0c3ab9441403d9eb1b17dd028db5",
+  "generated_at_utc": "2026-08-21T02:16:24.382096+00:00",
+  "input_artifact_count": 1100,
+  "input_hash_validation_status": "PASS",
+  "input_results_modified": false,
+  "linked_technical_git_blobs": [
+    {
+      "expected_git_blob": "183297c3570c6a6b2ceab3c9838ae3ec4ca3cd0e",
+      "observed_git_blob": "183297c3570c6a6b2ceab3c9838ae3ec4ca3cd0e",
+      "path": "repo/experiments/tep/local_llm/config/evaluation_contract.json",
+      "valid": true,
+      "worktree_sha256": "f7ca83deddcee2a02f7b4cd0a4c1ec362403a22f91441551d091db4d3990c5f4"
+    },
+    {
+      "expected_git_blob": "09b164f567b504b57e070f416910bd13d77dda7c",
+      "observed_git_blob": "09b164f567b504b57e070f416910bd13d77dda7c",
+      "path": "repo/experiments/tep/local_llm/config/formal_run_selection.json",
+      "valid": true,
+      "worktree_sha256": "9263bc65a911fe1957bab57c9904a50f56a814434bec1b6022b4330e13ccf004"
+    },
+    {
+      "expected_git_blob": "8fddb354a7c8853a8760b41a1012b4c16e85d930",
+      "observed_git_blob": "8fddb354a7c8853a8760b41a1012b4c16e85d930",
+      "path": "repo/experiments/tep/local_llm/config/formal_normal_holdout_selection.json",
+      "valid": true,
+      "worktree_sha256": "317de7e995af67828e25235dfd46b4260f2fac08628dd7f55993cba756668098"
+    },
+    {
+      "expected_git_blob": "fbda319ba744054d33af2bf4f2cd99d264a100fc",
+      "observed_git_blob": "fbda319ba744054d33af2bf4f2cd99d264a100fc",
+      "path": "repo/experiments/tep/local_llm/config/h3_evidence_reference.json",
+      "valid": true,
+      "worktree_sha256": "3dffd455d721e77ebfe2f2a85ef19e8ba4f6bd56cc94dd190e09d700592109e6"
+    },
+    {
+      "expected_git_blob": "668255aff7819032dd3aeb204e24cb2cca213b91",
+      "observed_git_blob": "668255aff7819032dd3aeb204e24cb2cca213b91",
+      "path": "repo/experiments/tep/local_llm/src/tep_local/dpca.py",
+      "valid": true,
+      "worktree_sha256": "1f732672d9f5d94aa8b0b9589980b7813d6216a44c9fd458f91963cf578c0e0c"
+    },
+    {
+      "expected_git_blob": "7b992d573dfc34d09d9811bb04db66ce064520c5",
+      "observed_git_blob": "7b992d573dfc34d09d9811bb04db66ce064520c5",
+      "path": "repo/experiments/tep/local_llm/src/tep_local/evaluation.py",
+      "valid": true,
+      "worktree_sha256": "fc8e3e52a8a8b5e39a23f38cdcd1afdfdfb0d8c1e5a8a51b29f560d021dfd862"
+    }
+  ],
+  "method_freeze": "TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH",
+  "numpy_version": "2.1.3",
+  "outputs": [
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/.gitattributes",
+      "sha256": "c089985639038cc07dc37c07a8d0d543df7ddf9b1873a948000494a6e230530d",
+      "size_bytes": 27
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/00_integrity/denominator_table.csv",
+      "sha256": "25b05f2694703612a030241d968398b0ec064e48d4f3107ca7b48633fa670ed6",
+      "size_bytes": 474
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/00_integrity/integrity_report.json",
+      "sha256": "13d142d94c3fa73b13a0d8ea1d45e6a59962f33759bac861643e82150bc79d90",
+      "size_bytes": 1939622
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/01_run_level/h3_run_scores.csv",
+      "sha256": "5b6694b0e5254e50c180bb81267c332ccb80ca4e5e7ac069ff01b01905b7fc4f",
+      "size_bytes": 3052
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/01_run_level/run_level_endpoints.csv",
+      "sha256": "17a8db09de5160199490f5429e55015048e68abdb1cf412127f1a728ff514d2b",
+      "size_bytes": 121625
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/02_primary/primary_paired_binary.csv",
+      "sha256": "08591fc7cef2df1a7e550210163f4df164eacfb6c5fe58c5c9685ae80f3d281c",
+      "size_bytes": 1192
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/02_primary/primary_statistics.json",
+      "sha256": "26f97a089480b893a08628d6ae81acdfe705228361de51030e258350f5ec2cb0",
+      "size_bytes": 11753
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/02_primary/table_B_h1_target.csv",
+      "sha256": "89a03f023586c9aa5b7ba071fb6f4948acc9a32f33e803f2fad440b1c567df6a",
+      "size_bytes": 1298
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/02_primary/table_C_false_alarm_normal.csv",
+      "sha256": "31edaf13ab9426ffe7866b0b5c1396068d3c175545796a90e1dd158cd7cf7479",
+      "size_bytes": 1307
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/03_secondary/amendment_provenance.csv",
+      "sha256": "e0805cab9831238775f61067cbf2989ce806740bc18df568a4991f65c1babe0c",
+      "size_bytes": 7080
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/03_secondary/dpca_expanded.csv",
+      "sha256": "f90d8fa6cd16bba663388de0c8c91e02f9de618bb6692ba67a332a32867aba8f",
+      "size_bytes": 1760
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/03_secondary/incident_provenance.csv",
+      "sha256": "8242f4ffed44c25f9242a5a5a3c72b81649ea75eb7c9127da92d66af7d3af9ff",
+      "size_bytes": 2485
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/03_secondary/paired_delays.csv",
+      "sha256": "7d33f43c812ba734dd24366a901ef05b6e8073d7259c5e8a1fc99805afd85402",
+      "size_bytes": 1791
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/03_secondary/table_D_target_preonset.csv",
+      "sha256": "7b28997e7843802d619824f7d740d09c803f63a5917c9a035296d8d5dbe3212d",
+      "size_bytes": 1448
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/03_secondary/table_E_h2_delays.csv",
+      "sha256": "03907735928c206317f87c976d5263294a8dc443ad3de739910d11434f808e8b",
+      "size_bytes": 2244
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/04_h3/h3_evidence_audit.csv",
+      "sha256": "40ab2d2b70edcf01adf22a1e4b0c3b3e34a5a455072465d1d120e134166769db",
+      "size_bytes": 8511250
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/04_h3/h3_statistics.json",
+      "sha256": "77822a7eb3aa345aa195c32d5856338ef3c601a81f54442b083a3e98863c9952",
+      "size_bytes": 1462
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/04_h3/table_G_h3.csv",
+      "sha256": "0114e18bb0aa02fcc08f2c122580f305241122413d60386ae8cac154a0f7b968",
+      "size_bytes": 744
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/05_figures/01_population_flow.png",
+      "sha256": "ec2813aa53fb1d4ae4ca9089c81846c37fe75b04eaeccc667051741d24885883",
+      "size_bytes": 73618
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/05_figures/02_proportions_wilson.png",
+      "sha256": "663c73dc4db3516223bede0ab2a77909d97489c9ceeefadd07d47434feb77cc0",
+      "size_bytes": 51056
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/05_figures/03_paired_concordance.png",
+      "sha256": "a5d60337fef3ae0ac23b73482c872cbd3d07ea7f4d77a80661e971c6cb9b1ea8",
+      "size_bytes": 49123
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/05_figures/04_delay_ecdf.png",
+      "sha256": "01d538b8d14d9d8bbcbd51833b9dbc78b60948eba03b04096481b24d8022ac93",
+      "size_bytes": 66205
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/05_figures/05_paired_delay_differences.png",
+      "sha256": "1fb9efdb24162c8ae2df1e24e0271b6abb606f7cb19126b59238041927cc846c",
+      "size_bytes": 98648
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/05_figures/06_h3_run_score_distribution.png",
+      "sha256": "2988f839fb1b504e758b4a41cd445ba11cac433177b12682ccfecd844f492ef2",
+      "size_bytes": 35968
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/05_figures/07_dpca_expanded.png",
+      "sha256": "432b574dc8942a5e6909726c5ee9f7e38cf283167442bae8471fb7313f364ea8",
+      "size_bytes": 51408
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/05_figures/08_provenance_incidents.png",
+      "sha256": "be69c1752265e459d1c5f20531d9d45f15cef7571151470ff28fcef8b3311bbe",
+      "size_bytes": 80763
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/06_audit/ANALYSIS_AUDIT.md",
+      "sha256": "f06f18d56b912cb4813800b49bbaec1005f7976c474e856ee802069d3a3682fe",
+      "size_bytes": 1765
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/06_audit/analysis_environment.json",
+      "sha256": "1353cc4a6cabdaab8ef49c8c5f017a182107514ea26bffb9145b9ea7829482da",
+      "size_bytes": 3115
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/06_audit/input_hash_validation.json",
+      "sha256": "c61ebe3c613cb02ee6927319c7a7a3c37b30d28fbd9aa15e34724ac65d2bfd9a",
+      "size_bytes": 1933726
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/06_audit/statistical_methods.json",
+      "sha256": "63090cc911399abd2bc27f048335d7ed25ca363a519adf7c0e4e2ed7c430a17b",
+      "size_bytes": 1956
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/code/endpoint_rules.py",
+      "sha256": "6d20a107ad174d2ac3f1e1536f9ec57c4b4d0f1ee1c63fdc597e512a094cebe8",
+      "size_bytes": 17072
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/code/README.md",
+      "sha256": "b8586387918a923e1bacac315f65bff4ed4732238c3fb8c9edfaa4c08a14977d",
+      "size_bytes": 2689
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/code/run_frozen_sap_analysis.py",
+      "sha256": "c198ef7e1b0767338670ed5e3c3962e3c8fb9c4c9f2e660d4a7c283bfffce4a9",
+      "size_bytes": 72263
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/code/statistical_utils.py",
+      "sha256": "984822229700817768bf0e4c64a63ed66452a0698967aba2a1879638901b117d",
+      "size_bytes": 11905
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/code/tests/test_endpoint_rules.py",
+      "sha256": "886cc5cc2279418d6f6c1486af62f33a9d8726110e34fed7e39149aa4262c77b",
+      "size_bytes": 7805
+    },
+    {
+      "path": "analysis/formal/TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH/code/tests/test_statistical_utils.py",
+      "sha256": "bcef9cc1cb76bc896f077111084c168d919250fb116a24d5300d2cb03701b8a2",
+      "size_bytes": 3685
+    }
+  ],
+  "pandas_version": "2.2.3",
+  "python_version": "3.13.5",
+  "sap_git_blob": "401c245f6b222e85662d8e47d4312ce27e8e8c60",
+  "sap_sha256_canonical_git_blob": "f5808362f57ed8ebc5b5548ec3d36270c9899deb93df7a9460fe1f6cbde29bfd",
+  "sap_sha256_worktree_bytes": "d493aa95af1a4340fce1f780dbb5756893b419fd895cd3ad52b81effe9bc4862",
+  "schema_version": "1.0.0",
+  "scipy_version": "1.15.3",
+  "self_hash_policy": "ANALYSIS_MANIFEST.json is excluded from its own output hash inventory",
+  "source_main_commit": "536cd4462b2fdc7e1bac8317adc64534e546c809",
+  "source_repository": "prefix325/experimento"
+}

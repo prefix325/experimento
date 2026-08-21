@@ -1,0 +1,17 @@
+metric,value,denominator,classification
+total_target_llm_runs,50,50,PRIMARY_SCOPE
+applicable_runs,50,50,PRIMARY
+non_applicable_runs,0,50,PRIMARY
+total_evidence_items,19960,19960,AUDIT
+verifiable_evidence_items,19959,19960,AUDIT
+coverage,0.9999498998,19960,PRIMARY
+macro_mean_run_score,0.139640283007,50,PRIMARY
+macro_mean_ci95_lower,0.128177462619,50,PRIMARY
+macro_mean_ci95_upper,0.152255023937,50,PRIMARY
+run_score_sd,0.0437395144456,50,DESCRIPTIVE
+run_score_median,0.13907101086,50,DESCRIPTIVE
+run_score_q1,0.111304863365,50,DESCRIPTIVE
+run_score_q3,0.164428660053,50,DESCRIPTIVE
+run_score_minimum,0.0378004535147,50,DESCRIPTIVE
+run_score_maximum,0.266939484127,50,DESCRIPTIVE
+secondary_micro_item_score,0.128557114228,19960,SECONDARY_MICRO

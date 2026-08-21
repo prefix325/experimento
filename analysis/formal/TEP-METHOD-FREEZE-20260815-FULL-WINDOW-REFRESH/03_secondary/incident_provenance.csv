@@ -1,0 +1,16 @@
+record_type,namespace,cohort,simulationRun,attempt_id,status,component,description,superseded_by_complete,invalidates_campaign,scientific_result_effect
+HISTORICAL_ATTEMPT,outer_monitor,normal_holdout,312,attempt_0001,FAILED,llm,Formal normal_holdout llm batch exited with 1; causal stderr: + FullyQualifiedErrorId : Formal normal_holdout llm simulationRun batch 34 failed with exit code 125,True,False,NONE_FINAL_ATTEMPT_FROM_MANIFEST_ONLY
+HISTORICAL_ATTEMPT,scientific_checkpoint_llm,normal_holdout,312,0001,PARTIAL,llm,,True,False,NONE_FINAL_ATTEMPT_FROM_MANIFEST_ONLY
+HISTORICAL_ATTEMPT,outer_monitor,target,1,attempt_0001,FAILED,,,True,False,NONE_FINAL_ATTEMPT_FROM_MANIFEST_ONLY
+HISTORICAL_ATTEMPT,outer_monitor,target,1,attempt_0002,FAILED,,,True,False,NONE_FINAL_ATTEMPT_FROM_MANIFEST_ONLY
+HISTORICAL_ATTEMPT,outer_monitor,target,1,attempt_0003,FAILED,,,True,False,NONE_FINAL_ATTEMPT_FROM_MANIFEST_ONLY
+HISTORICAL_ATTEMPT,outer_monitor,target,1,attempt_0004,FAILED,,,True,False,NONE_FINAL_ATTEMPT_FROM_MANIFEST_ONLY
+HISTORICAL_ATTEMPT,outer_monitor,target,1,attempt_0005,FAILED,dpca,Formal target dpca batch exited with 1,True,False,NONE_FINAL_ATTEMPT_FROM_MANIFEST_ONLY
+HISTORICAL_ATTEMPT,outer_monitor,target,1,attempt_0006,FAILED,dpca,Formal target dpca batch exited with 1; first causal stderr: Traceback (most recent call last):,True,False,NONE_FINAL_ATTEMPT_FROM_MANIFEST_ONLY
+HISTORICAL_ATTEMPT,outer_monitor,target,58,attempt_0001,FAILED,llm,Formal target llm batch exited with 1; first causal stderr: Traceback (most recent call last):,True,False,NONE_FINAL_ATTEMPT_FROM_MANIFEST_ONLY
+HISTORICAL_ATTEMPT,scientific_checkpoint_llm,target,58,0001,FAILED,llm,RuntimeError: LLM output reached max_output_tokens before completing JSON,True,False,NONE_FINAL_ATTEMPT_FROM_MANIFEST_ONLY
+HISTORICAL_ATTEMPT,outer_monitor,target,150,attempt_0001,FAILED_TO_START,,[Errno 13] Permission denied: 'X:\\PSQZA_TEP_LOCAL\\results\\formal\\monitor_controller\\monitor_state.json.tmp',True,False,NONE_FINAL_ATTEMPT_FROM_MANIFEST_ONLY
+HISTORICAL_ATTEMPT,outer_monitor,target,402,attempt_0001,ABORTED,dpca,I/O operation on closed file.,True,False,NONE_FINAL_ATTEMPT_FROM_MANIFEST_ONLY
+NON_INVALIDATING_ANOMALY,,target,150,,DOCUMENTED,,"outer final registered llm_status=COMPLETE and reused_components=[""llm""]",,False,NONE
+NON_INVALIDATING_ANOMALY,,target,1,,DOCUMENTED,,causal provenance is incomplete,,False,none
+NON_INVALIDATING_ANOMALY,,,,,DOCUMENTED,,duration_seconds=0.0,,False,NONE

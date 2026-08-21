@@ -1,0 +1,46 @@
+{
+  "applicable_runs": 50,
+  "coverage": 0.9999498997995993,
+  "non_applicable_runs": 0,
+  "observation_used_for_primary_score": false,
+  "primary_macro_run_score": {
+    "conditional_n": 50,
+    "iqr": 0.0531237966884867,
+    "maximum": 0.26693948412698415,
+    "mean": 0.1396402830065706,
+    "mean_ci": {
+      "estimate": 0.1396402830065706,
+      "fallback_reason": null,
+      "lower": 0.12817746261897953,
+      "method": "BCa_95",
+      "replicates": 10000,
+      "resampling_unit": "simulationRun",
+      "seed": 20260820,
+      "upper": 0.1522550239368868
+    },
+    "median": 0.1390710108604845,
+    "median_ci": {
+      "estimate": 0.1390710108604845,
+      "fallback_reason": null,
+      "lower": 0.12120535714285714,
+      "method": "BCa_95",
+      "replicates": 10000,
+      "resampling_unit": "simulationRun",
+      "seed": 20260820,
+      "upper": 0.14873370757517101
+    },
+    "minimum": 0.03780045351473922,
+    "q1": 0.11130486336493269,
+    "q3": 0.16442866005341938,
+    "sd": 0.04373951444562208
+  },
+  "resampling_unit": "simulationRun",
+  "scope": "50 TARGET LLM final scientific attempts",
+  "secondary_micro_denominator_evidence_items": 19960,
+  "secondary_micro_item_score": 0.12855711422845692,
+  "secondary_micro_numerator_passing_items": 2566,
+  "total_evidence_items": 19960,
+  "total_target_llm_runs": 50,
+  "unsupported_process_claims": "NOT_CODED_NO_FROZEN_RULE_QUALITATIVE_AUDIT_ONLY",
+  "verifiable_evidence_items": 19959
+}

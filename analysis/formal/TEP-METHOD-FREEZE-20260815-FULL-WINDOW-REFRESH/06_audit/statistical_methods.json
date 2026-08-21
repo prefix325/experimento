@@ -1,0 +1,38 @@
+{
+  "authority": "repo/project/final_campaign/STATISTICAL_ANALYSIS_PLAN.md",
+  "automatic_hypothesis_accept_reject": false,
+  "bootstrap": {
+    "base_seed": 20260820,
+    "interval": "BCa 95% preferred; percentile 95% fallback with reason",
+    "replicates": 10000,
+    "rng_initialization": "Each interval initializes numpy.default_rng with the exact frozen seed 20260820",
+    "unit": "whole simulationRun or indivisible paired run difference"
+  },
+  "boundary_sensitivity_interval": "Clopper-Pearson exact 95% when events=0 or events=n",
+  "dpca_onset_reset": true,
+  "dpca_persistence": 3,
+  "h3": {
+    "micro": "secondary only with explicit evidence-item denominator",
+    "observation_in_primary_score": false,
+    "primary": "equal-weight macro mean of applicable run_scores",
+    "scope": "50 TARGET LLM final attempts",
+    "unsupported_process_claims": "qualitative audit only; no frozen automatic rule"
+  },
+  "inferential_unit": "simulationRun",
+  "llm_confirmation": "FIRST_INDICATION_CONCURRENT_FULL_SAMPLE_REFRESH_V1; candidate k ANOMALY confirmed only by ANOMALY at k+4",
+  "llm_onset_reset": true,
+  "method_freeze": "TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH",
+  "n_one": "individual value; no SD/IQR/inferential interval",
+  "n_zero": "undefined/null; no interval",
+  "non_detection_delay": null,
+  "paired_binary_test": "exact two-sided McNemar using discordant pairs",
+  "paired_cluster": "same simulationRun LLM-DPCA pair",
+  "primary_p_value_adjustment": "Holm over TARGET confirmed detection and NORMAL confirmed false alarm",
+  "proportion_interval_primary": "Wilson 95%",
+  "secondary_p_value_adjustment": {
+    "paired_delay_sign_test_family": "Holm over raw and confirmed TARGET paired-delay sign tests",
+    "raw_paired_binary_family": "Holm over TARGET raw indication and NORMAL raw false alarm"
+  },
+  "sign_test": "exact two-sided binomial, exact-zero ties reported and excluded",
+  "window_level_inference": false
+}

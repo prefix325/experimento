@@ -1,0 +1,7 @@
+cohort,detector,analysis_set,endpoint,events,runs_eligible,proportion,point_estimate_interpretation,interval_primary,interval_interpretation,wilson_95_lower,wilson_95_upper,clopper_pearson_sensitivity_applicable,clopper_pearson_95_lower,clopper_pearson_95_upper
+target,LLM,principal,raw_post_onset_indication,50,50,1,RUN_LEVEL_SAMPLE_ESTIMATE,WILSON_95,RUN_LEVEL_BINOMIAL_PROPORTION_INTERVAL,0.928652400867,1,True,0.928878263536,1
+target,LLM,principal,confirmed_post_onset_detection,50,50,1,RUN_LEVEL_SAMPLE_ESTIMATE,WILSON_95,RUN_LEVEL_BINOMIAL_PROPORTION_INTERVAL,0.928652400867,1,True,0.928878263536,1
+target,LLM,principal,no_confirmed_post_onset_detection,0,50,0,RUN_LEVEL_SAMPLE_ESTIMATE,WILSON_95,RUN_LEVEL_BINOMIAL_PROPORTION_INTERVAL,0,0.0713475991334,True,0,0.0711217364642
+target,DPCA,paired,raw_post_onset_indication,50,50,1,RUN_LEVEL_SAMPLE_ESTIMATE,WILSON_95,RUN_LEVEL_BINOMIAL_PROPORTION_INTERVAL,0.928652400867,1,True,0.928878263536,1
+target,DPCA,paired,confirmed_post_onset_detection,50,50,1,RUN_LEVEL_SAMPLE_ESTIMATE,WILSON_95,RUN_LEVEL_BINOMIAL_PROPORTION_INTERVAL,0.928652400867,1,True,0.928878263536,1
+target,DPCA,paired,no_confirmed_post_onset_detection,0,50,0,RUN_LEVEL_SAMPLE_ESTIMATE,WILSON_95,RUN_LEVEL_BINOMIAL_PROPORTION_INTERVAL,0,0.0713475991334,True,0,0.0711217364642

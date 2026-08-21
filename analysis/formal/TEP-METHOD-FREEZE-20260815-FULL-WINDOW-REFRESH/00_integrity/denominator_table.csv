@@ -1,0 +1,7 @@
+cohort,detector,analysis_set,formal_universe_runs,main_analysis_set_runs,paired_set_runs,number_of_runs,final_artifacts,missing_artifacts,missingness_rate,integrity_status
+target,LLM,principal,490,50,50,50,50,0,0,PASS
+target,DPCA,paired,500,50,50,50,50,0,0,PASS
+target,DPCA,expanded,500,500,50,500,500,0,0,PASS
+normal_holdout,LLM,principal,500,50,50,50,50,0,0,PASS
+normal_holdout,DPCA,paired,500,50,50,50,50,0,0,PASS
+normal_holdout,DPCA,expanded,500,500,50,500,500,0,0,PASS
