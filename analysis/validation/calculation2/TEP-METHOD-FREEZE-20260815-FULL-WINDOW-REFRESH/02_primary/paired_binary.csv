@@ -1,0 +1,3 @@
+cohort,endpoint,pairs,00_neither,01_dpca_only,10_llm_only,11_both,concordant_pairs,discordant_pairs,paired_difference_llm_minus_dpca,paired_bootstrap_95_lower,paired_bootstrap_95_upper,paired_bootstrap_method,paired_bootstrap_fallback_reason,mcnemar_exact_raw_p,mcnemar_zero_discordance,holm_rank,holm_multiplier,holm_adjusted_p
+target,confirmed_detection,50,0,0,0,50,50,0,0,0,0,percentile,BCa undefined: jackknife acceleration has zero denominator,1,True,2,1,1
+normal_holdout,confirmed_false_alarm,50,5,25,3,17,22,28,-0.44,-0.59999999999999998,-0.26000000000000001,bca,,2.7440488338470459e-05,False,1,2,5.4880976676940918e-05

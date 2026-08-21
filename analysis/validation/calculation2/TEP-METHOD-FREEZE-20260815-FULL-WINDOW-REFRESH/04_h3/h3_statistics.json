@@ -1,0 +1,35 @@
+{
+  "applicable_responses": 2493,
+  "applicable_runs": 50,
+  "coverage": 0.9999498997995993,
+  "macro_mean_bootstrap_95": {
+    "fallback_reason": null,
+    "lower": 0.12817746261897947,
+    "method": "bca",
+    "resamples": 10000,
+    "seed": 20260820,
+    "upper": 0.15225502393688664
+  },
+  "micro_evidence_score_secondary": 0.12855711422845692,
+  "non_applicable_responses": 0,
+  "non_applicable_runs": 0,
+  "passed_evidence_items": 2566,
+  "run_score_distribution": {
+    "iqr": 0.05312379668848674,
+    "max": 0.2669394841269841,
+    "mean_macro": 0.13964028300657058,
+    "median": 0.13907101086048457,
+    "min": 0.0378004535147392,
+    "q1": 0.11130486336493264,
+    "q3": 0.16442866005341938,
+    "sample_sd": 0.04373951444562208
+  },
+  "scope": "50 TARGET LLM simulationRuns",
+  "total_evidence_items": 19960,
+  "total_responses": 2493,
+  "unsupported_process_claims": {
+    "classified": false,
+    "reason": "No frozen codebook; observation text excluded from primary score"
+  },
+  "verifiable_evidence_items": 19959
+}

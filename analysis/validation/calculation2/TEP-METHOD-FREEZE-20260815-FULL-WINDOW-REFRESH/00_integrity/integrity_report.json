@@ -1,0 +1,77 @@
+{
+  "branch": "validation/calculation2-independent-20260820",
+  "calculation": "CALCULATION_2_INDEPENDENT",
+  "counts": {
+    "artifact_size_mismatches": 0,
+    "duplicate_final_runs": 0,
+    "duplicate_primary_paths": 0,
+    "final_matrix_rows": 1000,
+    "historical_attempts_indexed": 12,
+    "historical_partial_artifacts_missing_nonprimary": 2,
+    "jsonl_schema_failures": 0,
+    "manifest_hash_mismatches": 0,
+    "marker_hash_mismatches": 0,
+    "missing_primary_files": 0,
+    "normal_holdout_rows": 500,
+    "out_of_selection_llm": 0,
+    "primary_files_expected": 1100,
+    "primary_files_found": 1100,
+    "primary_hash_mismatches": 0,
+    "target_rows": 500
+  },
+  "denominator_gate": "PASS",
+  "errors": [],
+  "final_campaign_manifest": {
+    "canonical_sha256_expected": "d3f7cdde04b18182a2fe25cc8ea23e07833a0c3ab9441403d9eb1b17dd028db5",
+    "canonical_sha256_observed": "d3f7cdde04b18182a2fe25cc8ea23e07833a0c3ab9441403d9eb1b17dd028db5",
+    "gate": "PASS",
+    "raw_checkout_sha256": "e65ea80bcb820eb17c338f36f3f15883a3bab254e53c34780532e5dbaeecf777"
+  },
+  "final_manifest_gate": "PASS",
+  "hash_policy": {
+    "primary_jsonl": "SHA-256 over raw filesystem bytes; JSONL is -text in .gitattributes",
+    "raw_text_files_different_only_by_checkout_eol_count": 3307,
+    "tracked_json_markdown": "SHA-256 over canonical LF Git content; raw checkout hashes retained for mutation audit"
+  },
+  "input_snapshot_file_count": 4407,
+  "input_snapshot_sha256": "2389a4697e9920fc94033c586bb468e07e5630588522b294d9d42839f4ef232c",
+  "integrity_gate": "PASS",
+  "method_freeze_id": "TEP-METHOD-FREEZE-20260815-FULL-WINDOW-REFRESH",
+  "origin": "https://github.com/prefix325/experimento.git",
+  "prior_analysis_contamination_risk": "NO",
+  "sap": {
+    "canonical_sha256_expected": "f5808362f57ed8ebc5b5548ec3d36270c9899deb93df7a9460fe1f6cbde29bfd",
+    "canonical_sha256_observed": "f5808362f57ed8ebc5b5548ec3d36270c9899deb93df7a9460fe1f6cbde29bfd",
+    "gate": "PASS",
+    "git_blob_expected": "401c245f6b222e85662d8e47d4312ce27e8e8c60",
+    "git_blob_observed": "401c245f6b222e85662d8e47d4312ce27e8e8c60",
+    "raw_checkout_sha256": "d493aa95af1a4340fce1f780dbb5756893b419fd895cd3ad52b81effe9bc4862"
+  },
+  "sap_gate": "PASS",
+  "source_commit": "536cd4462b2fdc7e1bac8317adc64534e546c809",
+  "statistical_aggregation_released": true,
+  "warnings": [
+    {
+      "affected_files": 3307,
+      "code": "WINDOWS_EOL_NORMALIZATION",
+      "message": "Text files use CRLF in the checkout; declared digests were validated on canonical LF bytes"
+    },
+    {
+      "code": "HISTORICAL_PARTIAL_ARTIFACTS_NOT_MATERIALIZED",
+      "count": 2,
+      "message": "Historical partial artifacts referenced for provenance are absent; none is a final scientific input",
+      "runs": [
+        {
+          "attempt_id": "0001",
+          "cohort": "normal_holdout",
+          "simulationRun": 312
+        },
+        {
+          "attempt_id": "0001",
+          "cohort": "target",
+          "simulationRun": 58
+        }
+      ]
+    }
+  ]
+}

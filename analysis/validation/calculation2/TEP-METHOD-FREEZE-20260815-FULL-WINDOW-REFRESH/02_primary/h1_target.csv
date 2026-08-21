@@ -1,0 +1,10 @@
+cohort,detector,analysis_set,endpoint,events,denominator,proportion,wilson_95_lower,wilson_95_upper,clopper_pearson_sensitivity_reported,clopper_pearson_95_lower,clopper_pearson_95_upper,interval_interpretation
+target,LLM,llm_50,raw_indication,50,50,1,0.92865240086664136,1,True,0.92887826353580238,1,Wilson estimation interval for the specified run regime
+target,LLM,llm_50,confirmed_detection,50,50,1,0.92865240086664136,1,True,0.92887826353580238,1,Wilson estimation interval for the specified run regime
+target,LLM,llm_50,no_confirmation,0,50,0,0,0.071347599133358724,True,0,0.071121736464197644,Wilson estimation interval for the specified run regime
+target,DPCA,dpca_paired_50,raw_indication,50,50,1,0.92865240086664136,1,True,0.92887826353580238,1,Wilson estimation interval for the specified run regime
+target,DPCA,dpca_paired_50,confirmed_detection,50,50,1,0.92865240086664136,1,True,0.92887826353580238,1,Wilson estimation interval for the specified run regime
+target,DPCA,dpca_paired_50,no_confirmation,0,50,0,0,0.071347599133358724,True,0,0.071121736464197644,Wilson estimation interval for the specified run regime
+target,DPCA,dpca_expanded_500,raw_indication,500,500,1,0.99237565953844786,1,True,0.99264938994809226,1,model-based extrapolation for analogous trajectories
+target,DPCA,dpca_expanded_500,confirmed_detection,500,500,1,0.99237565953844786,1,True,0.99264938994809226,1,model-based extrapolation for analogous trajectories
+target,DPCA,dpca_expanded_500,no_confirmation,0,500,0,0,0.0076243404615522412,True,0,0.0073506100519077841,model-based extrapolation for analogous trajectories

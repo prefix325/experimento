@@ -1,0 +1,340 @@
+{
+  "bootstrap": {
+    "calls": [
+      {
+        "analysis": "delay:llm_50:raw_indication:mean",
+        "ci_lower": 122.4,
+        "ci_upper": 168.3,
+        "confidence_level": 0.95,
+        "estimate": 144.6,
+        "fallback_reason": null,
+        "method_used": "bca",
+        "n": 50,
+        "requested_method": "bca",
+        "resamples": 10000,
+        "seed": 20260820
+      },
+      {
+        "analysis": "delay:llm_50:raw_indication:median",
+        "ci_lower": 117.0,
+        "ci_upper": 177.0,
+        "confidence_level": 0.95,
+        "estimate": 147.0,
+        "fallback_reason": "BCa undefined: jackknife acceleration has zero denominator",
+        "method_used": "percentile",
+        "n": 50,
+        "requested_method": "bca",
+        "resamples": 10000,
+        "seed": 20260820
+      },
+      {
+        "analysis": "delay:llm_50:confirmed_detection:mean",
+        "ci_lower": 284.7,
+        "ci_upper": 339.6,
+        "confidence_level": 0.95,
+        "estimate": 309.9,
+        "fallback_reason": null,
+        "method_used": "bca",
+        "n": 50,
+        "requested_method": "bca",
+        "resamples": 10000,
+        "seed": 20260820
+      },
+      {
+        "analysis": "delay:llm_50:confirmed_detection:median",
+        "ci_lower": 282.0,
+        "ci_upper": 334.5,
+        "confidence_level": 0.95,
+        "estimate": 297.0,
+        "fallback_reason": "BCa undefined: jackknife acceleration has zero denominator",
+        "method_used": "percentile",
+        "n": 50,
+        "requested_method": "bca",
+        "resamples": 10000,
+        "seed": 20260820
+      },
+      {
+        "analysis": "delay:dpca_paired_50:raw_indication:mean",
+        "ci_lower": 75.18,
+        "ci_upper": 103.08,
+        "confidence_level": 0.95,
+        "estimate": 88.98,
+        "fallback_reason": null,
+        "method_used": "bca",
+        "n": 50,
+        "requested_method": "bca",
+        "resamples": 10000,
+        "seed": 20260820
+      },
+      {
+        "analysis": "delay:dpca_paired_50:raw_indication:median",
+        "ci_lower": 81.0,
+        "ci_upper": 102.0,
+        "confidence_level": 0.95,
+        "estimate": 90.0,
+        "fallback_reason": "BCa undefined: jackknife acceleration has zero denominator",
+        "method_used": "percentile",
+        "n": 50,
+        "requested_method": "bca",
+        "resamples": 10000,
+        "seed": 20260820
+      },
+      {
+        "analysis": "delay:dpca_paired_50:confirmed_detection:mean",
+        "ci_lower": 113.7,
+        "ci_upper": 143.58,
+        "confidence_level": 0.95,
+        "estimate": 127.56,
+        "fallback_reason": null,
+        "method_used": "bca",
+        "n": 50,
+        "requested_method": "bca",
+        "resamples": 10000,
+        "seed": 20260820
+      },
+      {
+        "analysis": "delay:dpca_paired_50:confirmed_detection:median",
+        "ci_lower": 105.0,
+        "ci_upper": 144.0,
+        "confidence_level": 0.95,
+        "estimate": 132.0,
+        "fallback_reason": "BCa undefined: jackknife acceleration has zero denominator",
+        "method_used": "percentile",
+        "n": 50,
+        "requested_method": "bca",
+        "resamples": 10000,
+        "seed": 20260820
+      },
+      {
+        "analysis": "delay:dpca_expanded_500:raw_indication:mean",
+        "ci_lower": 79.708026630551,
+        "ci_upper": 89.154,
+        "confidence_level": 0.95,
+        "estimate": 84.438,
+        "fallback_reason": null,
+        "method_used": "bca",
+        "n": 500,
+        "requested_method": "bca",
+        "resamples": 10000,
+        "seed": 20260820
+      },
+      {
+        "analysis": "delay:dpca_expanded_500:raw_indication:median",
+        "ci_lower": 73.5,
+        "ci_upper": 87.0,
+        "confidence_level": 0.95,
+        "estimate": 82.5,
+        "fallback_reason": null,
+        "method_used": "bca",
+        "n": 500,
+        "requested_method": "bca",
+        "resamples": 10000,
+        "seed": 20260820
+      },
+      {
+        "analysis": "delay:dpca_expanded_500:confirmed_detection:mean",
+        "ci_lower": 115.82623395149861,
+        "ci_upper": 125.45262582046476,
+        "confidence_level": 0.95,
+        "estimate": 120.504,
+        "fallback_reason": null,
+        "method_used": "bca",
+        "n": 500,
+        "requested_method": "bca",
+        "resamples": 10000,
+        "seed": 20260820
+      },
+      {
+        "analysis": "delay:dpca_expanded_500:confirmed_detection:median",
+        "ci_lower": 108.0,
+        "ci_upper": 120.0,
+        "confidence_level": 0.95,
+        "estimate": 112.5,
+        "fallback_reason": null,
+        "method_used": "bca",
+        "n": 500,
+        "requested_method": "bca",
+        "resamples": 10000,
+        "seed": 20260820
+      },
+      {
+        "analysis": "paired_binary:target:confirmed_detection",
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "confidence_level": 0.95,
+        "direction": "LLM - DPCA",
+        "estimate": 0.0,
+        "fallback_reason": "BCa undefined: jackknife acceleration has zero denominator",
+        "method_used": "percentile",
+        "n": 50,
+        "pairs": 50,
+        "requested_method": "bca",
+        "resamples": 10000,
+        "seed": 20260820
+      },
+      {
+        "analysis": "paired_binary:normal_holdout:confirmed_false_alarm",
+        "ci_lower": -0.6,
+        "ci_upper": -0.26,
+        "confidence_level": 0.95,
+        "direction": "LLM - DPCA",
+        "estimate": -0.44,
+        "fallback_reason": null,
+        "method_used": "bca",
+        "n": 50,
+        "pairs": 50,
+        "requested_method": "bca",
+        "resamples": 10000,
+        "seed": 20260820
+      },
+      {
+        "analysis": "paired_delay:raw_indication:mean",
+        "ci_lower": 29.58,
+        "ci_upper": 81.66216649292407,
+        "confidence_level": 0.95,
+        "direction": "LLM - DPCA",
+        "estimate": 55.62,
+        "fallback_reason": null,
+        "method_used": "bca",
+        "n": 50,
+        "pairs": 50,
+        "requested_method": "bca",
+        "resamples": 10000,
+        "seed": 20260820
+      },
+      {
+        "analysis": "paired_delay:raw_indication:median",
+        "ci_lower": 34.5,
+        "ci_upper": 87.0,
+        "confidence_level": 0.95,
+        "direction": "LLM - DPCA",
+        "estimate": 63.0,
+        "fallback_reason": "BCa undefined: jackknife acceleration has zero denominator",
+        "method_used": "percentile",
+        "n": 50,
+        "pairs": 50,
+        "requested_method": "bca",
+        "resamples": 10000,
+        "seed": 20260820
+      },
+      {
+        "analysis": "paired_delay:confirmed_detection:mean",
+        "ci_lower": 159.18,
+        "ci_upper": 209.52,
+        "confidence_level": 0.95,
+        "direction": "LLM - DPCA",
+        "estimate": 182.34,
+        "fallback_reason": null,
+        "method_used": "bca",
+        "n": 50,
+        "pairs": 50,
+        "requested_method": "bca",
+        "resamples": 10000,
+        "seed": 20260820
+      },
+      {
+        "analysis": "paired_delay:confirmed_detection:median",
+        "ci_lower": 150.0,
+        "ci_upper": 195.0,
+        "confidence_level": 0.95,
+        "direction": "LLM - DPCA",
+        "estimate": 174.0,
+        "fallback_reason": null,
+        "method_used": "bca",
+        "n": 50,
+        "pairs": 50,
+        "requested_method": "bca",
+        "resamples": 10000,
+        "seed": 20260820
+      },
+      {
+        "analysis": "h3:macro_run_score_mean",
+        "ci_lower": 0.12817746261897947,
+        "ci_upper": 0.15225502393688664,
+        "confidence_level": 0.95,
+        "estimate": 0.13964028300657058,
+        "fallback_reason": null,
+        "method_used": "bca",
+        "n": 50,
+        "requested_method": "bca",
+        "resamples": 10000,
+        "seed": 20260820
+      }
+    ],
+    "fallback": "percentile using the same run-level replicates when BCa is undefined",
+    "n_0": "undefined",
+    "n_1": "no inferential interval under SAP",
+    "preferred": "BCa with explicit bias correction and delete-one jackknife acceleration",
+    "resamples": 10000,
+    "seed": 20260820
+  },
+  "dpca": {
+    "confirmed": "third consecutive alarm_raw after scientific-region reset",
+    "delay_minutes": "(event sample - 161) * 3",
+    "raw_source": "alarm_raw from dpca_metrics.jsonl",
+    "target_postonset_reset": 161
+  },
+  "dpca_expanded_intervals": "explicitly labeled model-based extrapolation for analogous trajectories",
+  "h3": {
+    "item_rules": {
+      "HIGH": "max_z >= high_max_z_q99",
+      "INCREASE": "slope_z_per_sample >= increase_slope_q99 AND end_z > start_z",
+      "LOW": "min_z <= low_min_z_q01",
+      "REDUCTION": "slope_z_per_sample <= reduction_slope_q01 AND end_z < start_z",
+      "VARIABILITY": "round(max_z - min_z, 4) >= high_variability_range_q99"
+    },
+    "micro_score": "secondary mean item score over all evidence items",
+    "observation_used_in_score": false,
+    "primary_aggregate": "equal-run macro mean of applicable run_score",
+    "unsupported_process_claims": "not classified without a frozen codebook"
+  },
+  "holm_primary_family": [
+    "TARGET confirmed detection LLM x DPCA",
+    "NORMAL HOLDOUT confirmed false alarm LLM x DPCA"
+  ],
+  "holm_secondary_families": {
+    "paired_delay_sign_tests_secondary": [
+      "TARGET paired raw-delay exact sign test",
+      "TARGET paired confirmed-delay exact sign test"
+    ]
+  },
+  "llm": {
+    "candidate_concurrency": true,
+    "confirmed": "decision[k] == ANOMALY and decision[k+4] == ANOMALY",
+    "delay_minutes": "(event sample_end - 161) * 3",
+    "onset_reset": 161,
+    "raw": "eligible ANOMALY in the scientific region"
+  },
+  "paired_binary": {
+    "bootstrap": "paired simulationRun clusters",
+    "difference": "mean(LLM - DPCA)",
+    "mcnemar": "exact two-sided binomial on discordant pairs; p=1 at zero discordance"
+  },
+  "paired_delays": {
+    "conditioning": "both detectors have the same endpoint defined",
+    "difference": "LLM - DPCA minutes",
+    "sign_test": "exact two-sided binomial p=0.5; zero differences excluded as ties; the two secondary p-values form a separate Holm-adjusted family"
+  },
+  "proportions": {
+    "clopper_pearson": "equal-tail scipy Beta quantiles; reported as sensitivity at 0/n or n/n",
+    "confidence": 0.95,
+    "wilson_formula": "[(p+z^2/(2n)) +/- z*sqrt(p(1-p)/n+z^2/(4n^2))]/(1+z^2/n)"
+  },
+  "reconstruction_crosscheck": {
+    "dpca": {
+      "continuous_sample_flags_compared": 960000,
+      "runs_continuous_native_compared": 1000,
+      "status": "PASS",
+      "target_postreset_runs_compared": 500,
+      "target_postreset_sample_flags_compared": 399000,
+      "target_reset_boundary_native_flags_skipped_as_noncomparable": 1000
+    },
+    "llm": {
+      "detection_summary_role": "audit only",
+      "runs_compared": 100,
+      "status": "PASS"
+    }
+  },
+  "run_level_table_is_only_aggregate_source": true,
+  "unit_of_inference": "simulationRun"
+}

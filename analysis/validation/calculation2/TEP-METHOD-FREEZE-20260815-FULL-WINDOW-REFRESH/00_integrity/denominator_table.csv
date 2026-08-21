@@ -1,0 +1,7 @@
+cohort,detector,analysis_set,expected_runs,found_runs,gate
+target,LLM,primary,50,50,PASS
+normal_holdout,LLM,primary,50,50,PASS
+target,DPCA,paired,50,50,PASS
+normal_holdout,DPCA,paired,50,50,PASS
+target,DPCA,expanded,500,500,PASS
+normal_holdout,DPCA,expanded,500,500,PASS
